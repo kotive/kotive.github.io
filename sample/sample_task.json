@@ -1,0 +1,23 @@
+{
+	"name": "",
+	"description": "",
+	"documentation": "",
+	"fields": [
+		{
+			"label": "",
+			"properties": {
+  			"fieldType": ""
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
