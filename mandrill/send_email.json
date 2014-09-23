@@ -5,52 +5,58 @@
 	"fields": [
 		{
 			"label": "To",
-			"pattern": "Str[]",
+			"properties": {
+  			"fieldType": "text"
+  		},
 			"readonly": false,
 			"required": true,
 			"visible": true
 		},
 		{
 			"label": "Subject",
-			"pattern": "Str[]",
+			"properties": {
+				"fieldType": "text"
+			},
 			"readonly": false,
 			"required": true,
 			"visible": true
 		},
 		{
 			"label": "Message",
-			"pattern": "Str[]",
+			"properties": {
+				"fieldType": "textarea"
+			},
 			"readonly": false,
 			"required": true,
 			"visible": true
 		}
 	],
-	"method": "POST",	
+	"method": "POST",
 	"endpoint": "/messages/send.json",
 	"request": {
-		"key": "{settings.mandrill.apikey}", 
+		"key": "{settings.mandrill.apikey}",
 		"message": {
 			"html":"{field.message}",
 			"subject":"{field.subject}",
-			"from_email":"notifications@kotive.com", 
-			"from_name":"Kotive",
+			"from_email":"notifications@kotive.com",
+			"from_name":"{group.label} (via Kotive)",
 			"to": "{field.to}"
 		}
 	},
 	"response": {
 		"success": [
-    	{
-        "email": "recipient.email@example.com",
-        "status": "sent",
-        "reject_reason": "hard-bounce",
-        "_id": "abc123abc123abc123abc123abc123"
-    	}
+			{
+				"email": "recipient.email@example.com",
+				"status": "sent",
+				"reject_reason": "hard-bounce",
+				"_id": "abc123abc123abc123abc123abc123"
+			}
 		],
 		"error": {
-    	"status": "error",
-    	"code": 12,
-    	"name": "Unknown_Subaccount",
-    	"message": "No subaccount exists with the id 'customer-123'"
+			"status": "error",
+			"code": 12,
+			"name": "Unknown_Subaccount",
+			"message": "No subaccount exists with the id 'customer-123'"
 		}
 	}
 }
