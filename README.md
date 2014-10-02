@@ -61,3 +61,21 @@ Fields are displayed in the UI
 	]
 }
 ```
+
+Validating JSON files
+---
+Before commiting any changes make sure you validate your JSON file changes using the repo's tests.
+
+Set up the required dependencies using npm
+
+	npm install .
+
+Then run the JSON lint validator
+	
+	npm test
+
+If all tests pass the repo is clear of any JSON syntax errors.
+
+Note
+----
+Testing should be improved to maybe do some logical checks on the confgurations being uploaded.
