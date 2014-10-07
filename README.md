@@ -7,7 +7,7 @@ Adding your service as a task in Kotive
 1. Fork this repo
 2. Duplicate the /sample/ folder and rename it to the name of your service, e.g. /awesomeapp/
 3. Update /awesomeapp/config.json
-4. Save your logo as /awesomeapp/icon.png (100 pixels by 100 pixels). __The name of the PNG has to be icon.png otherwise it won't be displayed.__
+4. Save your logo as /awesomeapp/icon.png (128 pixels by 128 pixels). __The name of the PNG has to be icon.png otherwise it won't be displayed.__
 5. Rename /awesomeapp/sample_task.json to the name of your first task. Update the json to connect with your service. _You can add many services in this folder by creating a copy of this file, renaming it and updating its properties._
 6. Add your service to services.json in the root folder. E.g.
     {
