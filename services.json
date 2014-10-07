@@ -1,6 +1,10 @@
 {
 	"services": [
 		{
+			"name": "Asana",
+			"service": "asana"
+		},
+		{
 			"name": "Mandrill",
 			"service": "mandrill"
 		}
