@@ -1,0 +1,10 @@
+{
+  "name": "Asana",
+  "description": "Teamwork without email",
+  "auth": {
+    "method": "Basic",
+    "username": "{settings.asana.apikey}",
+    "password": ""
+  },
+  "domain": "https://app.asana.com/api/1.0"
+}

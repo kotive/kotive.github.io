@@ -1,0 +1,84 @@
+{
+	"name": "Create a new task",
+	"description": "Create a new task in Asana",
+	"documentation": "http://developers.asana.com/documentation/#tasks",
+	"fields": [
+		{
+			"label": "name",
+			"properties": {
+  			"fieldType": "text"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "notes",
+			"properties": {
+				"fieldType": "textarea"
+			},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "due_on",
+			"properties": {
+				"fieldType": "date"
+			},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "/tasks",
+	"request": {
+		"name": "{field.name}",
+		"notes": "{field.notes}",
+		"due_on": "{field.due_on}"
+	},
+	"response": {
+		"success": {
+    	"data": {
+        "assignee": {
+            "id": 1235,
+            "name": "Tim Bizarro"
+        },
+        "assignee_status": "inbox",
+        "completed": false,
+        "completed_at": null,
+        "created_at": "2012-02-22T02:06:58.158Z",
+        "due_on": null,
+        "followers": [
+            {
+                "id": 5678,
+                "name": "Greg Sanchez"
+            }
+        ],
+        "id": 1001,
+        "modified_at": "2012-02-22T02:06:58.158Z",
+        "name": "Hello, world!",
+        "notes": "How are you today?",
+        "parent": null,
+        "projects": [
+            {
+                "id": 14641,
+                "name": "Cat Stuff"
+            }
+        ],
+        "workspace": {
+            "id": 14916,
+            "name": "My Favorite Workspace"
+        }
+    	}
+		},
+		"error": { 
+			"errors": [ 
+				{ 
+					"message": "Not Authorized" 
+				} 
+			] 
+		}
+	}
+}
