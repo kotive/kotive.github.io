@@ -9,7 +9,6 @@
             "service": "basecamp"
         },
         {
-<<<<<<< HEAD
             "name": "Campaign Monitor",
             "service": "campaignmonitor"
         },
@@ -25,22 +24,17 @@
             "name": "Freshbooks",
             "service": "freshbooks"
         },
-        
         {
             "name": "Github",
             "service": "github"
-=======
+        },
+        {
             "name": "Hacker News",
             "service": "hackernews"
->>>>>>> hackernews
         },
         {
             "name": "Mandrill",
             "service": "mandrill"
         }
     ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> hackernews

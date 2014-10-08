@@ -96,7 +96,7 @@ List of services
  - [x] Github
  - [ ] Google docs
  - [ ] Gmail
- - [ ] Hackernews
+ - [x] Hackernews
  - [ ] Harvest
  - [ ] HelloSign
  - [ ] Hipchat
