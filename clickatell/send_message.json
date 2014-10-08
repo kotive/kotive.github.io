@@ -15,7 +15,7 @@
         {
             "label": "text",
             "properties": {
-                "fieldType": "textarea",
+                "fieldType": "textarea"
             },
             "readonly": false,
             "required": true,
