@@ -1,0 +1,10 @@
+{
+    "name": "Github",
+    "description": "Build better software, together.",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.github.username}",
+        "password": "{settings.github.password}"
+    },
+    "domain": "https://api.github.com"
+}

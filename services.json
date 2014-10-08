@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"services": [
 		{
 			"name": "Asana",
@@ -27,6 +28,8 @@
 =======
 =======
 >>>>>>> desk
+=======
+>>>>>>> origin/github
     "services": [
         {
             "name": "Asana",
@@ -34,16 +37,24 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "name": "Campaign Monitor",
             "service": "campaignmonitor"
 =======
+=======
+>>>>>>> origin/github
             "name": "Basecamp",
             "service": "basecamp"
         },
         {
+<<<<<<< HEAD
             "name": "Desk",
             "service": "desk"
 >>>>>>> desk
+=======
+            "name": "Github",
+            "service": "github"
+>>>>>>> origin/github
         },
         {
             "name": "Mandrill",
@@ -51,7 +62,10 @@
         }
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> campaignmonitor
 =======
 >>>>>>> desk
+=======
+>>>>>>> origin/github
 }
