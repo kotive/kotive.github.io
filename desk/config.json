@@ -1,0 +1,10 @@
+{
+	"name": "Desk",
+	"description": "Out-of-the-box customer support for fast-growing companies..",
+	"auth": {
+		"method": "Basic",
+		"email": "{settings.desk.email}",
+		"password": "{settings.desk.password}"
+		},
+	"domain": "https://{settings.desk.domain}.desk.com/api/v2"
+}
