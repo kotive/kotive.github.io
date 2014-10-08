@@ -10,6 +10,10 @@
 			"service": "basecamp"
 		},
 		{
+			"name": "Clickatell",
+			"service": "clickatell"
+		},
+		{
 			"name": "Mandrill",
 			"service": "mandrill"
 		}
