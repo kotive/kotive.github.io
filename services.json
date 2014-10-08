@@ -11,8 +11,13 @@
 			"service": "basecamp"
 		},
 		{
+<<<<<<< HEAD
 			"name": "Clickatell",
 			"service": "clickatell"
+=======
+			"name": "Freshbooks",
+			"service": "freshbooks"
+>>>>>>> freshbooks
 		},
 		{
 			"name": "Mandrill",

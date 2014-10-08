@@ -1,0 +1,299 @@
+{
+    "name": "Send an invoice",
+    "description": "Send a new invoice using Freshbooks.",
+    "documentation": "http://developers.freshbooks.com/docs/invoices/#invoice.create",
+    "fields": [
+        {
+            "label": "client_id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "number",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "status",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    {
+                        "key": "one",
+                        "value": "sent"
+                    },
+                    {
+                        "key": "two",
+                        "value": "viewed"
+                    },
+                    {
+                        "key": "three",
+                        "value": "draft"
+                    }
+                ],
+                "default": "three"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "date",
+            "properties": {
+                "fieldType": "date"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "po_number",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "discount",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "notes",
+            "properties": {
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "currency_code",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "terms",
+            "properties": {
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "return_uri",
+            "properties": {
+                "fieldType": "web"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "first_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "last_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "organisation",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_street1",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_street2",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_city",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_state",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_country",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_code",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_vat_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "p_vat_number",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "description",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "unit_cost",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "quantity",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "tax1_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "tax2_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "tax1_percent",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "tax2_percent",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "type",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "",
+    "request": "<request method=\"invoice.create\"><invoice><client_id>{field.client_id}</client_id><contacts><contact><contact_id>{field.contact_id}</contact_id></contact></contacts><number>{field.number}</number><status>{field.status}</status><date>{field.date}</date><po_number>{field.po_number}</po_number><discount>{field.discount}</discount><notes>{field.notes}</notes><currency_code>{field.currency_code}</currency_code><terms>{field.terms}</terms><return_uri>{field.uri}</return_uri><first_name>{field.first_name}</first_name><last_name>{field.last_name}</last_name><organization>{field.organisation}</organization><p_street1>{field.p_street1}</p_street1><p_street2>{field.p_street2}</p_street2><p_city>{field.p_city}</p_city><p_state>{field.p_state}</p_state><p_country>{field.p_country}</p_country><p_code>{field.p_code}</p_code><vat_name>{field.vat_name}</vat_name><vat_number>{field.vat_number}</vat_number><lines><line><name>{field.name}</name><description>{field.description}</description><unit_cost>{field.unit_cost}</unit_cost><quantity>{field.quantity}</quantity><tax1_name>{field.tax1_name</tax1_name><tax2_name>{field.tax2_name</tax2_name><tax1_percent>{field.tax1_percent}</tax1_percent><tax2_percent>{field.tax2_percent}</tax2_percent><type>{field.type}</type></line></lines></invoice></request>",
+    "response": {
+        "success": "<?xml version=\"1.0\" encoding=\"utf-8\"?><response xmlns=\"http://www.freshbooks.com/api/\" status=\"ok\"><invoice_id>344</invoice_id></response>",
+        "error": {}
+    }
+}
