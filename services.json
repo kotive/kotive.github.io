@@ -9,6 +9,10 @@
 			"service": "basecamp"
 		},
 		{
+			"name": "Desk"
+			"service"" "desk"	
+		},
+		{
 			"name": "Mandrill",
 			"service": "mandrill"
 		}
