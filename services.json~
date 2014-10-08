@@ -5,10 +5,6 @@
 			"service": "asana"
 		},
 		{
-			"name": "Basecamp",
-			"service": "basecamp"
-		},
-		{
 			"name": "Mandrill",
 			"service": "mandrill"
 		}

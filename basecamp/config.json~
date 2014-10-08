@@ -1,0 +1,10 @@
+{
+	"name": "Basecamp",
+	"description": "Basecamp is a place to share files, have discussions, collaborate on documents, assign tasks, and check due dates.",
+	"auth": {
+		"method": "Basic",
+		"username": "{settings.basecamp.username}",
+		"password": "{settings.basecamp.password}"
+		},
+	"domain": "https://github.com/basecamp/bcx-api"
+}
