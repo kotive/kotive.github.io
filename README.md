@@ -64,7 +64,7 @@ Fields are displayed in the UI
 
 Validating JSON files
 ---
-Before commiting any changes make sure you validate your JSON file changes using the repo's tests.
+Before committing any changes make sure you validate your JSON file changes using the repo's tests.
 
 Set up the required dependencies using npm
 
@@ -78,39 +78,45 @@ If all tests pass the repo is clear of any JSON syntax errors.
 
 Note
 ----
-Testing should be improved to maybe do some logical checks on the confgurations being uploaded.
+Testing should be improved to maybe do some logical checks on the configurations being uploaded.
 
 List of services
 ---
-- Asana
-- Basecamp
-- Braintree
-- Campaign monitor
-- Clickatell
-- Desk
-- Email*
-- Fogbugz
-- Freshbooks
-- Github
-- Google docs
-- Gmail
-- Harvest
-- HelloSign
-- Hipchat
-- Hubspot
-- Intercom
-- PDF*
-- Phone*
-- Mailchimp
-- Mandrill
-- Mixpanel
-- Podio
-- Sendgrid
-- Slack
-- SMS*
-- Stripe
-- Trello
-- Twilio
-- Twitter
-- Webhook
-- Zapier
+ - [x] Asana
+ - [x] Basecamp
+ - [ ] Braintree
+ - [ ] Camfind
+ - [x] Campaign monitor
+ - [x] Clickatell
+ - [x] Desk
+ - [ ] Email*
+ - [ ] Fedex
+ - [ ] Fogbugz
+ - [x] Freshbooks
+ - [ ] Github
+ - [ ] Google docs
+ - [ ] Gmail
+ - [ ] Hackernews
+ - [ ] Harvest
+ - [ ] HelloSign
+ - [ ] Hipchat
+ - [ ] Hubspot
+ - [ ] IBM Watson
+ - [ ] Intercom
+ - [ ] PDF*
+ - [ ] Phone*
+ - [ ] Lambdal
+ - [ ] Mailchimp
+ - [ ] Mandrill
+ - [ ] Mixpanel
+ - [ ] NYTimes
+ - [ ] Podio
+ - [ ] Sendgrid
+ - [ ] Slack
+ - [ ] SMS*
+ - [ ] Stripe
+ - [ ] Trello
+ - [ ] Twilio
+ - [ ] Twitter
+ - [ ] Webhook
+ - [ ] Zapier
