@@ -1,71 +1,37 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	"services": [
-		{
-			"name": "Asana",
-			"service": "asana"
-		},
-		{
-			"name": "Basecamp",
-			"service": "basecamp"
-		},
-		{
-<<<<<<< HEAD
-			"name": "Clickatell",
-			"service": "clickatell"
-=======
-			"name": "Freshbooks",
-			"service": "freshbooks"
->>>>>>> freshbooks
-		},
-		{
-			"name": "Mandrill",
-			"service": "mandrill"
-		}
-	]
-=======
-=======
->>>>>>> desk
-=======
->>>>>>> origin/github
     "services": [
         {
             "name": "Asana",
             "service": "asana"
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "name": "Campaign Monitor",
-            "service": "campaignmonitor"
-=======
-=======
->>>>>>> origin/github
             "name": "Basecamp",
             "service": "basecamp"
         },
         {
-<<<<<<< HEAD
+            "name": "Campaign Monitor",
+            "service": "campaignmonitor"
+        },
+        {
+            "name": "Clickatell",
+            "service": "clickatell"
+        },
+        {
             "name": "Desk",
             "service": "desk"
->>>>>>> desk
-=======
+        },
+        {
+            "name": "Freshbooks",
+            "service": "freshbooks"
+        },
+        
+        {
             "name": "Github",
             "service": "github"
->>>>>>> origin/github
         },
         {
             "name": "Mandrill",
             "service": "mandrill"
         }
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> campaignmonitor
-=======
->>>>>>> desk
-=======
->>>>>>> origin/github
 }

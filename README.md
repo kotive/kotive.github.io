@@ -93,7 +93,7 @@ List of services
  - [ ] Fedex
  - [ ] Fogbugz
  - [x] Freshbooks
- - [ ] Github
+ - [x] Github
  - [ ] Google docs
  - [ ] Gmail
  - [ ] Hackernews
@@ -107,7 +107,7 @@ List of services
  - [ ] Phone*
  - [ ] Lambdal
  - [ ] Mailchimp
- - [ ] Mandrill
+ - [x] Mandrill
  - [ ] Mixpanel
  - [ ] NYTimes
  - [ ] Podio
