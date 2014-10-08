@@ -1,0 +1,8 @@
+{
+    "name": "Hacker News",
+    "description": "The lastest news and technology",
+    "auth": {
+        "method": ""
+    },
+    "domain": "https://hacker-news.firebaseio.com/v0"
+}
