@@ -9,6 +9,10 @@
 			"service": "basecamp"
 		},
 		{
+			"name": "Freshbooks",
+			"service": "freshbooks"
+		},
+		{
 			"name": "Mandrill",
 			"service": "mandrill"
 		}
