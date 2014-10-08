@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"services": [
 		{
 			"name": "Asana",
@@ -19,19 +20,33 @@
 		}
 	]
 =======
+=======
+>>>>>>> desk
     "services": [
         {
             "name": "Asana",
             "service": "asana"
         },
         {
+<<<<<<< HEAD
             "name": "Campaign Monitor",
             "service": "campaignmonitor"
+=======
+            "name": "Basecamp",
+            "service": "basecamp"
+        },
+        {
+            "name": "Desk",
+            "service": "desk"
+>>>>>>> desk
         },
         {
             "name": "Mandrill",
             "service": "mandrill"
         }
     ]
+<<<<<<< HEAD
 >>>>>>> campaignmonitor
+=======
+>>>>>>> desk
 }
