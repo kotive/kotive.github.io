@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"services": [
 		{
 			"name": "Asana",
@@ -13,4 +14,20 @@
 			"service": "mandrill"
 		}
 	]
+=======
+    "services": [
+        {
+            "name": "Asana",
+            "service": "asana"
+        },
+        {
+            "name": "Campaign Monitor",
+            "service": "campaignmonitor"
+        },
+        {
+            "name": "Mandrill",
+            "service": "mandrill"
+        }
+    ]
+>>>>>>> campaignmonitor
 }
