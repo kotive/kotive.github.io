@@ -1,16 +1,20 @@
 {
-	"services": [
-		{
-			"name": "Asana",
-			"service": "asana"
-		},
-		{
-			"name": "Basecamp",
-			"service": "basecamp"
-		},
-		{
-			"name": "Mandrill",
-			"service": "mandrill"
-		}
-	]
+    "services": [
+        {
+            "name": "Asana",
+            "service": "asana"
+        },
+        {
+            "name": "Basecamp",
+            "service": "basecamp"
+        },
+        {
+            "name": "Github",
+            "service": "github"
+        },
+        {
+            "name": "Mandrill",
+            "service": "mandrill"
+        }
+    ]
 }
