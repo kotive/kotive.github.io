@@ -1,0 +1,71 @@
+{
+    "name": "Submit a new event",
+    "description": "Submit a new event using Intercom.",
+    "documentation": "http://doc.intercom.io/api/#submitting-events",
+    "fields": [
+        {
+            "label": "event_name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "created_at",
+            "properties": {
+                "fieldType": "date"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "user_id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "email",
+            "properties": {
+                "fieldType": "email"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "metadata",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/events",
+    "request": {
+        "event_name": "{field.event_name}",
+        "created_at": "{field.created_at}",
+        "user_id": "{field.user_id}",
+        "email": "{field.email}",
+        "metadata": "{field.metadata}"
+    },
+    "response": {
+        "success": {
+            "Code": 202,
+            "Message": "Accepted"
+        },
+        "error": {
+            "Code": 401,
+            "Message": "Unauthorized"
+        }
+    }
+}
