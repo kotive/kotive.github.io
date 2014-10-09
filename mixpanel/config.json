@@ -1,0 +1,8 @@
+{
+    "name": "Mixpanel",
+    "description": "Actions speak louder than page views.",
+    "auth": {
+        "method": ""
+    },
+    "domain": "http://api.mixpanel.com"
+}

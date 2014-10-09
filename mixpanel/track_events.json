@@ -1,0 +1,38 @@
+{
+    "name": "Track an event",
+    "description": "Track an event using MixPanel.",
+    "documentation": "https://mixpanel.com/help/reference/http#tracking-events",
+    "fields": [
+        {
+            "label": "event",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "distinct_id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/track/",
+    "request": {
+        "event": "{field.event}",
+        "properties": {
+            "token": "{settings.mixpanel.token}",
+            "distinct_id": "{field.distinct_id}"
+        }
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
