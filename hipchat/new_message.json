@@ -1,0 +1,102 @@
+{
+    "name": "Send a message",
+    "description": "Send a new message using HipChat.",
+    "documentation": "https://www.hipchat.com/docs/api/method/rooms/message",
+    "fields": [
+        {
+            "label": "room_id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "from",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "message",
+            "properties": {
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "message_format",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "html",
+                    "text"
+                ],
+                "default": "html"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "notify",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    {
+                        "key": 0,
+                        "value": false
+                    },
+                    {
+                        "key": 1,
+                        "value": true
+                    }
+                ],
+                "default": 0
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "color",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "yellow",
+                    "red",
+                    "green",
+                    "purple",
+                    "gray",
+                    "random"
+                ],
+                "default": "yellow"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "//rooms/message?format=json&auth_token={settings.hipchat.auth_token}",
+    "request": {
+        "room_id": "{field.room_id}",
+        "from": "{field.from}",
+        "message": "{field.message}",
+        "message_format": "{field.message_format}",
+        "notify": "{field.notify}",
+        "color": "{field.color}"
+    },
+    "response": {
+        "success": {
+            "status": "sent"
+        },
+        "error": {}
+    }
+}
