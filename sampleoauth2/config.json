@@ -1,0 +1,18 @@
+{
+    "name": "MailChimp",
+    "description": "Send better email",
+    "auth": {
+        "method": "OAuth2",
+
+	"client_id": "{settings.mailchimp.client_id}",
+	"client_secret": "{settings.mailchimp.client_secret}",
+	"redirect_uri": "",
+
+	"authorize_uri": "https://login.mailchimp.com/oauth2/authorize",
+	"access_token_ui": "https://login.mailchimp.com/oauth2/token",
+	"base_uri": "https://login.mailchimp.com/oauth2/",
+
+	"metadata_uri": "https://login.mailchimp.com/oauth2/metadata"
+    },
+    "domain": "https://{settings.mailchimp.district}.api.mailchimp.com/2.0"
+}
