@@ -1,0 +1,10 @@
+{
+    "name": "Stripe",
+    "description": "A suite of APIs that powers commerce for businesses of all sizes.",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.stripe.api_key}",
+        "password": ""
+    },
+    "domain": "https://api.stripe.com"
+}

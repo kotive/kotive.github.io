@@ -1,0 +1,107 @@
+{
+    "name": "Capture a charge",
+    "description": "Capture the payment of an existing, uncaptured, charge using Stripe.",
+    "documentation": "https://stripe.com/docs/api#charge_capture",
+    "fields": [
+        {
+            "label": "id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "amount",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "application_fee",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "receipt_email",
+            "properties": {
+                "fieldType": "email"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/v1/charges",
+    "request": {
+        "id": "{field.id}",
+        "amount": "{field.amount}",
+        "application_fee": "{field.application_fee}",
+        "receipt_email": "{field.receipt_email}"
+    },
+    "response": {
+        "success": {
+            "id": "ch_14len22eZvKYlo2CPjlCeU5E",
+            "object": "charge",
+            "created": 1412852940,
+            "livemode": false,
+            "paid": true,
+            "amount": 500,
+            "currency": "usd",
+            "refunded": false,
+            "card": {
+                "id": "card_14len22eZvKYlo2CG1JKM3WU",
+                "object": "card",
+                "last4": "4242",
+                "brand": "Visa",
+                "funding": "credit",
+                "exp_month": 1,
+                "exp_year": 2050,
+                "fingerprint": "Xt5EWLLDS7FJjR1c",
+                "country": "US",
+                "name": null,
+                "address_line1": null,
+                "address_line2": null,
+                "address_city": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_country": null,
+                "cvc_check": "pass",
+                "address_line1_check": null,
+                "address_zip_check": null,
+                "customer": null
+            },
+            "captured": true,
+            "refunds": {
+                "object": "list",
+                "total_count": 0,
+                "has_more": false,
+                "url": "/v1/charges/ch_14len22eZvKYlo2CPjlCeU5E/refunds",
+                "data": []
+            },
+            "balance_transaction": "txn_14lAir2eZvKYlo2CjO5FqNo3",
+            "failure_message": null,
+            "failure_code": null,
+            "amount_refunded": 0,
+            "customer": null,
+            "invoice": null,
+            "description": null,
+            "dispute": null,
+            "metadata": {},
+            "statement_description": null,
+            "receipt_email": null,
+            "receipt_number": null,
+            "shipping": null
+        },
+        "error": {}
+    }
+}
