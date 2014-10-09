@@ -25,21 +25,8 @@
             "label": "status",
             "properties": {
                 "fieldType": "radio",
-                "choices": [
-                    {
-                        "key": "one",
-                        "value": "sent"
-                    },
-                    {
-                        "key": "two",
-                        "value": "viewed"
-                    },
-                    {
-                        "key": "three",
-                        "value": "draft"
-                    }
-                ],
-                "default": "three"
+                "choices": ["sent", "viewed", "draft"],
+                "default": "draft"
             },
             "readonly": false,
             "required": true,
