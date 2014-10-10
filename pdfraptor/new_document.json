@@ -1,0 +1,141 @@
+{
+    "name": "Create a new document",
+    "description": "Create a new document using PDFRaptor",
+    "documentation": "https://docraptor.com/documentation",
+    "fields": [
+        {
+            "label": "doc[document_type]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "xls",
+                    "xlsx",
+                    "pdf"
+                ]
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[document_content]",
+            "properties": {
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[name]",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[test]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "true",
+                    "false"
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[help]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "true",
+                    "false"
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[tag]",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[strict]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "none",
+                    "html"
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[javascript]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "true",
+                    "false"
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "doc[async]",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "true",
+                    "false"
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "",
+    "request": {
+        "doc[document_type]": "{field.doc[document_type]}",
+        "doc[document_content]": "{field.doc[document_content]}",
+        "doc[name]": "{field.doc[name]}",
+        "doc[test]": "{field.doc[test]}",
+        "doc[help]": "{field.doc[help]}",
+        "doc[tag]": "{field.doc[tag]}",
+        "doc[strict]": "{field.doc[strict]}",
+        "doc[javascript]": "{field.doc[javascript]}",
+        "doc[async]": "{field.doc[async]}"
+    },
+    "response": {
+        "success": {
+            "Code": 200,
+            "Message": "Ok"
+        },
+        "error": {
+            "Code": 400,
+            "Message": "Bad Request"
+        }
+    }
+}
