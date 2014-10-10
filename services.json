@@ -29,6 +29,10 @@
             "service": "github"
         },
         {
+            "name": "Google sheets",
+            "service": "googlesheets"
+        },
+        {
             "name": "Hacker News",
             "service": "hackernews"
         },
@@ -39,6 +43,10 @@
         {
             "name": "Hipchat",
             "service": "hipchat"
+        },
+        {
+            "name": "IBM Watson",
+            "service": "ibmwatson"
         },
         {
             "name": "Intercom",
@@ -59,6 +67,10 @@
         {
             "name": "PDFRaptor",
             "service": "pdfraptor"
+        },
+        {
+            "name": "Salesforce",
+            "service": "salesforce"
         },
         {
             "name": "Stripe",

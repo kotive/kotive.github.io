@@ -94,14 +94,15 @@ List of services
  - [ ] Fogbugz
  - [x] Freshbooks
  - [x] Github
- - [ ] Google docs
+ - [x] Google sheets
+ - [x] Salesforce
  - [ ] Gmail
  - [x] Hackernews
  - [ ] Harvest
  - [x] HelloSign
  - [x] Hipchat
  - [ ] Hubspot
- - [ ] IBM Watson
+ - [x] IBM Watson
  - [x] Intercom
  - [ ] PDF*
  - [ ] Phone*
@@ -111,6 +112,7 @@ List of services
  - [x] Mixpanel
  - [ ] NYTimes
  - [ ] Podio
+ - [x] Salesforce
  - [ ] Sendgrid
  - [ ] Slack
  - [ ] SMS*
