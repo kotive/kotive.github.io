@@ -1,0 +1,8 @@
+{
+    "name": "HipChat",
+    "description": "Bring your team to life",
+    "auth": {
+        "method": ""
+    },
+    "domain": "https://api.hipchat.com/v1"
+}
