@@ -1,0 +1,168 @@
+{
+    "name": "Ask a question",
+    "description": "Ask IBM Watson a question",
+    "documentation": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/Question_Answer/question",
+    "fields": [
+        {
+            "label": "id",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "healthcare",
+                    "travel"
+                ]
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "questionText",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "items",
+            "properties": {
+                "fieldType": "number",
+                "default": 5
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "eItems",
+            "properties": {
+                "fieldType": "number",
+                "default": 3
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "eProfile",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    true,
+                    false
+                ],
+                "default": true
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "formattedAnswer",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    true,
+                    false
+                ],
+                "default": false
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "X-SyncTimeout",
+            "properties": {
+                "fieldType": "text",
+                "default": "{settings.ibmwatson.xsynctimeout}"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/v1/question/{field.id}",
+    "request": {
+        "question": {
+            "questionText": "{field.questionText}",
+            "items": "{field.items}",
+            "evidenceRequest": {
+                "items": "{field.eItems}",
+                "profile": "{field.eProfile}"
+            },
+            "formattedAnswer": "{field.formattedAnswer}"
+        }
+    },
+    "response": {
+        "success": {
+            "id": 0,
+            "answers": {
+                "answers": [
+                    {
+                        "id": 0,
+                        "text": "",
+                        "confidence": "",
+                        "evidence": [
+                            {
+                                "copyright": "",
+                                "document": "",
+                                "termsOfUse": "",
+                                "text": "",
+                                "title": ""
+                            }
+                        ],
+                        "evidenceProfile": [
+                            {
+                                "featureGroup": [
+                                    {
+                                        "name": "",
+                                        "value": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "formattedText": ""
+                    }
+                ]
+            },
+            "category": "",
+            "errorNotifications": [
+                {
+                    "error": "",
+                    "text": ""
+                }
+            ],
+            "evidenceList": [
+                {
+                    "copyright": "",
+                    "metadataMap": "",
+                    "termsOfUse": "",
+                    "text": "",
+                    "title": "",
+                    "document": "",
+                    "value": ""
+                }
+            ],
+            "focusList": "",
+            "latList": "",
+            "pipelineid": "",
+            "qclasslist": "",
+            "status": "",
+            "supplemental": "",
+            "synonymList": [
+                {
+                    "term": "",
+                    "synSet": "",
+                    "synonym": ""
+                }
+            ]
+        },
+        "error": {
+            "Code": 400
+        }
+    }
+}
