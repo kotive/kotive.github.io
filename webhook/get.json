@@ -1,0 +1,114 @@
+{
+    "name": "Create a new GET request",
+    "description": "Create a new GET request using webhooks.",
+    "documentation": "",
+    "fields": [
+        {
+            "label": "url",
+            "properties": {
+                "fieldType": "web",
+                "help-text": "Any URL with a querystring will be re-encoded properly."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "payload_type",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    "form",
+                    "json",
+                    "xml",
+                    "raw"
+                ],
+                "help-text": "Pay special attention to the proper mapping of the data below."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "payload",
+            "properties": {
+                "fieldType": "textarea",
+                "help-text": "If empty, takes the raw data from the trigger event. Key, value pairs sent as data. Do not place raw JSON or form encoded values here!"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "wrap_request_in_array",
+            "properties": {
+                "fieldType": "radio",
+                "choices": [
+                    true,
+                    false
+                ],
+                "help-text": "If empty, takes the raw data from the trigger event. Key, value pairs sent as data. Do not place raw JSON or form encoded values here!"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "file",
+            "properties": {
+                "fieldType": "text",
+                "help-text": "A file object to be attached to the request. The request will automatically be converted to multipart/form-data, with the above payload type defining the sub content-type for the data being passed."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "basic_auth",
+            "properties": {
+                "fieldType": "text",
+                "help-text": "A pipe (|) separated username, password combo for standard HTTP authentication."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "headers",
+            "properties": {
+                "fieldType": "text",
+                "help-text": "Key, value pairs to be added as headers in all requests."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "response_success",
+            "properties": {
+                "fieldType": "textarea",
+                "help-text": ""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "response_error",
+            "properties": {
+                "fieldType": "textarea",
+                "help-text": ""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "GET",
+    "endpoint": "{field.url}",
+    "request": "{field.payload}",
+    "response": {
+        "success": "{field.response_success}",
+        "error": "{field.response_error}"
+    }
+}
