@@ -1,0 +1,11 @@
+{
+    "name": "IBM Watson",
+    "description": "Cognitive computing is forging a new partnership between humans and computers that scales and augments human expertise.",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.ibmwatson.userId}",
+        "password": "{settings.ibmwatson.password}",
+        "X-SyncTimeout": "{settings.ibmwatson.X-SyncTimeout}"
+    },
+    "domain": "https://gateway.watsonplatform.net/qagw/service"
+}
