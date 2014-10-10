@@ -1,0 +1,10 @@
+{
+    "name": "HelloSign",
+    "description": "Fast, Secure, and Legally Binding eSignatures for Business .",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.hellosign.apikey}",
+        "password": ""
+    },
+    "domain": "https://api.hellosign.com/v3"
+}

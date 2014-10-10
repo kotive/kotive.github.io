@@ -1,0 +1,131 @@
+{
+    "name": "Create embedded SignatureRequest based on the given template",
+    "description": "Creates a new SignatureRequest based on the given Template to be signed in an embedded iFrame.",
+    "documentation": "https://www.hellosign.com/api/reference#Objects",
+    "fields": [
+        {
+            "label": "template_Id",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "title",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "subject",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "message",
+            "properties": {
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "signer_redirect_url",
+            "properties": {
+                "fieldType": "web"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "signers[Client][name]",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "signers[Client][email_address]",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "signers[Client][pin]",
+            "properties": {
+                "fieldType": "password"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/signature_request/create_embedded_with_template",
+    "request": {
+        "template_Id": "{field.template_Id}",
+        "title": "{field.title}",
+        "subject": "{field.subject}",
+        "message": "{field.message}",
+        "signer_redirect_url": "{field.signer_redirect_url}",
+        "signers[Client][name]": "{field.signers[Client][name]}",
+        "signers[Client][email_address]": "{field.signers[Client][email_address]}",
+        "signers[Client][pin]": "{field.signers[Client][pin]"
+    },
+    "response": {
+        "success": {
+            "signature_request": {
+                "signature_request_id": "17d163069282df5eb63857d31ff4a3bffa9e46c0",
+                "title": "Purchase Order",
+                "subject": "Purchase Order",
+                "message": "Glad we could come to an agreement.",
+                "is_complete": false,
+                "has_error": false,
+                "custom_fields": [
+                    {
+                        "name": "Cost",
+                        "value": "$20,000",
+                        "type": "text"
+                    }
+                ],
+                "response_data": [],
+                "signing_url": "https://www.hellosign.com/editor/sign?guid=17d163069282df5eb63857d31ff4a3bffa9e46c0",
+                "signing_redirect_url": null,
+                "details_url": "https://www.hellosign.com/home/manage?locate=17d163069282df5eb63857d31ff4a3bffa9e46c0",
+                "requester_email_address": "me@hellosign.com",
+                "signatures": [
+                    {
+                        "signature_id": "78caf2a1d01cd39cea2bc1cbb340dac3",
+                        "signer_email_address": "george@example.com",
+                        "signer_name": "George",
+                        "order": null,
+                        "status_code": "awaiting_signature",
+                        "signed_at": null,
+                        "last_viewed_at": null,
+                        "last_reminded_at": null,
+                        "has_pin": false
+                    }
+                ],
+                "cc_email_addresses": [
+                    "accounting@hellosign.com"
+                ]
+            }
+        }
+    }
+}
