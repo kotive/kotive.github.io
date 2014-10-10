@@ -1,0 +1,24 @@
+{
+    "name": "Add a row",
+    "description": "Add a row to a spreadsheet using Google Sheets.",
+    "documentation": "https://developers.google.com/google-apps/spreadsheets/#adding_a_list_row",
+    "fields": [
+	{
+            "label": "payload",
+            "properties": {
+                "fieldType": "textarea",
+		"help-text": "{firstname: 'Joe', lastname: 'Smith', age: 26, height: 176} separate columns with commas, specify column names before ':' and values afterwards"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "list/key/{field.worksheetId}/private/full",
+    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{field.payload}</entry>",
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
