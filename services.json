@@ -62,7 +62,7 @@
         },
         {
             "name": "Mixpanel",
-            "service": "mixepanel"
+            "service": "mixpanel"
         },
         {
             "name": "PDFRaptor",
