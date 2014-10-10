@@ -1,0 +1,9 @@
+{
+    "name": "Google Drive",
+    "description": "Google Drive lets you keep all your files within reach from any smartphone, tablet, or computer.",
+    "auth": {
+        "method": "OAuth2",
+	
+    },
+    "domain": "https://hacker-news.firebaseio.com/v0"
+}
