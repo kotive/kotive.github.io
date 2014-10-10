@@ -1,0 +1,62 @@
+{
+    "name": "Schedule a campaign",
+    "description": "Schedule a campaign to be sent in the future using MailChimp.",
+    "documentation": "http://apidocs.mailchimp.com/api/2.0/campaigns/schedule.php",
+    "fields": [
+        {
+            "label": "apikey",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "cid",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "schedule_time",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "schedule_time_b",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/campaigns/schedule.json",
+    "request": {
+        "apikey": "{field.apikey}",
+        "cid": "{field.cid}",
+        "schedule_time": "{field.schedule_time}",
+        "schedule_time_b": "{field.schedule_time_b}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
