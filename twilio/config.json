@@ -1,0 +1,10 @@
+{
+    "name": "Twilio",
+    "description": "The best phone number you've ever programmed",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.twilio.AccountSid}",
+        "password": "{settings.twilio.AuthToken}"
+    },
+    "domain": "https://api.twilio.com/2010-04-01"
+}
