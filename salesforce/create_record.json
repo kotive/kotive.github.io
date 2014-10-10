@@ -24,6 +24,10 @@
             "errors": [],
             "success": true
         },
-        "error": {}
+        "error": {
+            "id": "001D000000IqhSLIAZ",
+            "errors": [],
+            "success": false
+        }
     }
 }
