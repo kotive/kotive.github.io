@@ -98,25 +98,25 @@ List of services
  - [ ] Gmail
  - [x] Hackernews
  - [ ] Harvest
- - [ ] HelloSign
- - [ ] Hipchat
+ - [x] HelloSign
+ - [x] Hipchat
  - [ ] Hubspot
  - [ ] IBM Watson
- - [ ] Intercom
+ - [x] Intercom
  - [ ] PDF*
  - [ ] Phone*
  - [ ] Lambdal
- - [ ] Mailchimp
+ - [x] Mailchimp
  - [x] Mandrill
- - [ ] Mixpanel
+ - [x] Mixpanel
  - [ ] NYTimes
  - [ ] Podio
  - [ ] Sendgrid
  - [ ] Slack
  - [ ] SMS*
- - [ ] Stripe
+ - [x] Stripe
  - [ ] Trello
- - [ ] Twilio
+ - [x] Twilio
  - [ ] Twitter
- - [ ] Webhook
+ - [x] Webhook
  - [ ] Zapier

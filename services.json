@@ -33,8 +33,44 @@
             "service": "hackernews"
         },
         {
+            "name": "HelloSign",
+            "service": "hellosign"
+        },
+        {
+            "name": "Hipchat",
+            "service": "hipchat"
+        },
+        {
+            "name": "Intercom",
+            "service": "intercom"
+        },
+        {
+            "name": "Mailchimp",
+            "service": "mailchimp"
+        },
+        {
             "name": "Mandrill",
             "service": "mandrill"
+        },
+        {
+            "name": "Mixpanel",
+            "service": "mixepanel"
+        },
+        {
+            "name": "PDFRaptor",
+            "service": "pdfraptor"
+        },
+        {
+            "name": "Stripe",
+            "service": "stripe"
+        },
+        {
+            "name": "Twilio",
+            "service": "twilio"
+        },
+        {
+            "name": "Webhook",
+            "service": "webhook"
         }
     ]
 }
