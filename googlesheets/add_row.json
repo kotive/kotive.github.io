@@ -1,0 +1,23 @@
+{
+    "name": "Add a row",
+    "description": "Add a row to a spreadsheet using Google Sheets.",
+    "documentation": "https://developers.google.com/google-apps/spreadsheets/#adding_a_list_row",
+    "fields": [
+        {
+            "label": "id",
+            "properties": {
+                "fieldType": "number"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "list/key/worksheetId/private/full",
+    "request": "",
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
