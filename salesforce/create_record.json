@@ -1,0 +1,29 @@
+{
+    "name": "Create a new record",
+    "description": "Create a new record using SalesForce.",
+    "documentation": "https://www.salesforce.com/us/developer/docs/api_rest/Content/dome_sobject_create.htm",
+    "fields": [
+        {
+            "label": "Name",
+            "properties": {
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/sobjects/Account/-H \"Authorization: {settings.salesforce.token}\" -H \"Content-Type: application/json\" -d \"@newaccount.json\"",
+    "request": {
+        "Name": "{field.name}"
+    },
+    "response": {
+        "success": {
+            "id": "001D000000IqhSLIAZ",
+            "errors": [],
+            "success": true
+        },
+        "error": {}
+    }
+}

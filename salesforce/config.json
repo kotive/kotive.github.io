@@ -2,12 +2,7 @@
     "name": "Salesforce",
     "description": "A new world, and a better way to sell.",
     "auth": {
-        "method": "OAuth2",
-	"grant_type": "password",
-	"client_id": "{settings.salesforce.ConsumerKey}",
-	"client_secret": "{settings.salesforce.ConsumerSecret}",
-	"username": "{settings.salesforce.username}",
-	"password": "{settings.salesforce.password}{settings.salesforce.SecurityToken}"
+        "method": "Token"
     },
-    "domain": "https://hacker-news.firebaseio.com/v0"
+    "domain": "https://na1.salesforce.com/services/data/v20.0"
 }
