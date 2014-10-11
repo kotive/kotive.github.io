@@ -1,0 +1,10 @@
+{
+    "name": "PDFRaptor",
+    "description": "DocRaptor makes it easy to create PDF and XLS files on the fly.",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.docraptor.apikey}",
+        "password": ""
+    },
+    "domain": "https://docraptor.com/docs"
+}
