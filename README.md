@@ -89,7 +89,7 @@ List of services
  - [x] Campaign monitor
  - [x] Clickatell
  - [x] Desk
- - [ ] Email*
+ - [x] Email
  - [ ] Fedex
  - [ ] Fogbugz
  - [x] Freshbooks
@@ -104,7 +104,7 @@ List of services
  - [ ] Hubspot
  - [x] IBM Watson
  - [x] Intercom
- - [ ] PDF*
+ - [x] PDF
  - [ ] Phone*
  - [ ] Lambdal
  - [x] Mailchimp
@@ -115,7 +115,7 @@ List of services
  - [x] Salesforce
  - [ ] Sendgrid
  - [ ] Slack
- - [ ] SMS*
+ - [x] SMS
  - [x] Stripe
  - [ ] Trello
  - [x] Twilio

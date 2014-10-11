@@ -21,6 +21,10 @@
             "service": "desk"
         },
         {
+            "name": "Email",
+            "service": "email"
+        },
+        {
             "name": "Freshbooks",
             "service": "freshbooks"
         },
@@ -65,12 +69,20 @@
             "service": "mixpanel"
         },
         {
+            "name": "PDF",
+            "service": "pdf"
+        },
+        {
             "name": "PDFRaptor",
             "service": "pdfraptor"
         },
         {
             "name": "Salesforce",
             "service": "salesforce"
+        },
+        {
+            "name": "SMS",
+            "service": "sms"
         },
         {
             "name": "Stripe",
