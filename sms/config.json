@@ -1,5 +1,5 @@
 {
-	"name": "Clickatell",
+	"name": "SMS",
 	"description": "Simple, reliable mobile messaging cloud.",
 	"auth": {
 		"method": "API key"

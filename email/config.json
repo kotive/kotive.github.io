@@ -1,6 +1,6 @@
 {
-  "name": "Mandrill",
-  "description": "Mandrill is simple, powerful transactional email from the same people that brought you Mailchimp.",
+  "name": "Email",
+  "description": "Simple, powerful transactional emails.",
   "auth": {
     "method": "API key"
   },
