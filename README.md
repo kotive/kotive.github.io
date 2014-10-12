@@ -62,7 +62,7 @@ Fields are displayed in the UI
 }
 ```
 
-Validating JSON files
+Validating JSON files & generating thumbnails
 ---
 Before committing any changes make sure you validate your JSON file changes using the repo's tests.
 
@@ -70,11 +70,11 @@ Set up the required dependencies using npm
 
 	npm install .
 
-Then run the JSON lint validator
+Then run the JSON lint validator & thumbnail generator
 	
-	npm test
+	grunt build
 
-If all tests pass the repo is clear of any JSON syntax errors.
+If all tests pass the repo is clear of any JSON syntax errors and the thumbnails have been generated.
 
 Note
 ----
