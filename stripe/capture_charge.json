@@ -4,8 +4,9 @@
     "documentation": "https://stripe.com/docs/api#charge_capture",
     "fields": [
         {
-            "label": "id",
+            "label": "Id",
             "properties": {
+                "parameter": "id",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "amount",
+            "label": "Amount",
             "properties": {
+                "parameter": "amount",
                 "fieldType": "number"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "application_fee",
+            "label": "Application fee",
             "properties": {
+                "parameter": "application_fee",
                 "fieldType": "number"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "receipt_email",
+            "label": "Receipt email",
             "properties": {
+                "parameter": "receipt_email",
                 "fieldType": "email"
             },
             "readonly": false,

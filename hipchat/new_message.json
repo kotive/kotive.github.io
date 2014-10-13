@@ -4,8 +4,9 @@
     "documentation": "https://www.hipchat.com/docs/api/method/rooms/message",
     "fields": [
         {
-            "label": "room_id",
+            "label": "Room id",
             "properties": {
+                "parameter": "room_id",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "from",
+            "label": "From",
             "properties": {
+                "parameter": "from",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "message",
+            "label": "Message",
             "properties": {
+                "parameter": "message",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "message_format",
+            "label": "Message format",
             "properties": {
+                "parameter": "message_format",
                 "fieldType": "radio",
                 "choices": [
                     "html",
@@ -45,8 +49,9 @@
             "visible": true
         },
         {
-            "label": "notify",
+            "label": "Notify",
             "properties": {
+                "parameter": "notify",
                 "fieldType": "radio",
                 "choices": [
                     {
@@ -65,8 +70,9 @@
             "visible": true
         },
         {
-            "label": "color",
+            "label": "Color",
             "properties": {
+                "parameter": "color",
                 "fieldType": "radio",
                 "choices": [
                     "yellow",

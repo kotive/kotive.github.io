@@ -4,8 +4,9 @@
     "documentation": "https://www.clickatell.com/downloads/http/Clickatell_HTTP.pdf",
     "fields": [
         {
-            "label": "to",
+            "label": "To",
             "properties": {
+                "parameter": "to",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "text",
+            "label": "Message",
             "properties": {
+                "parameter": "text",
                 "fieldType": "textarea"
             },
             "readonly": false,

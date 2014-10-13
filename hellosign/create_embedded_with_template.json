@@ -4,8 +4,9 @@
     "documentation": "https://www.hellosign.com/api/reference#Objects",
     "fields": [
         {
-            "label": "template_Id",
+            "label": "Template id",
             "properties": {
+                "parameters": "template_Id",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "title",
+            "label": "Title",
             "properties": {
+                "parameters": "title",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "subject",
+            "label": "Subject",
             "properties": {
+                "parameters": "subject",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "message",
+            "label": "Message",
             "properties": {
+                "parameters": "message",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -40,8 +44,9 @@
             "visible": true
         },
         {
-            "label": "signer_redirect_url",
+            "label": "Signer's redirect web address",
             "properties": {
+                "parameters": "signer_redirect_url",
                 "fieldType": "web"
             },
             "readonly": false,
@@ -49,8 +54,9 @@
             "visible": true
         },
         {
-            "label": "signers[Client][name]",
+            "label": "Signer's name",
             "properties": {
+                "parameters": "signers[Client][name]",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -58,8 +64,9 @@
             "visible": true
         },
         {
-            "label": "signers[Client][email_address]",
+            "label": "Signer's email address",
             "properties": {
+                "parameters": "signers[Client]email_address",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -67,8 +74,9 @@
             "visible": true
         },
         {
-            "label": "signers[Client][pin]",
+            "label": "Signer's pin",
             "properties": {
+                "parameters": "signers[Client][pin]",
                 "fieldType": "password"
             },
             "readonly": false,

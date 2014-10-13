@@ -6,7 +6,9 @@
         {
             "label": "payload",
             "properties": {
-                "fieldType": "textarea"
+                "parameter": "payload",
+                "fieldType": "textarea",
+                "helptext": "{'Name' : 'Express Logistics and Transport'}"
             },
             "readonly": false,
             "required": true,

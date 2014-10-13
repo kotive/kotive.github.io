@@ -6,6 +6,7 @@
     {
       "label": "To",
       "properties": {
+        "parameter": "to",
         "fieldType": "text"
       },
       "readonly": false,
@@ -15,6 +16,7 @@
     {
       "label": "Subject",
       "properties": {
+        "parameter": "subject",
         "fieldType": "text"
       },
       "readonly": false,
@@ -24,6 +26,7 @@
     {
       "label": "Message",
       "properties": {
+        "parameter": "message",
         "fieldType": "textarea"
       },
       "readonly": false,

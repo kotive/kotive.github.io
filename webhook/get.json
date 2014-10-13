@@ -4,8 +4,9 @@
     "documentation": "",
     "fields": [
         {
-            "label": "url",
+            "label": "URL",
             "properties": {
+                "parameter": "url",
                 "fieldType": "web",
                 "helptext": "Any URL with a querystring will be re-encoded properly."
             },
@@ -14,8 +15,9 @@
             "visible": true
         },
         {
-            "label": "payload_type",
+            "label": "Payload type",
             "properties": {
+                "parameter": "payload_type",
                 "fieldType": "radio",
                 "choices": [
                     "form",
@@ -30,8 +32,9 @@
             "visible": true
         },
         {
-            "label": "payload",
+            "label": "Payload",
             "properties": {
+                "parameter": "payload",
                 "fieldType": "textarea",
                 "helptext": "If empty, takes the raw data from the trigger event. Key, value pairs sent as data. Do not place raw JSON or form encoded values here!"
             },
@@ -40,8 +43,9 @@
             "visible": true
         },
         {
-            "label": "wrap_request_in_array",
+            "label": "Wrap request in array",
             "properties": {
+                "parameter": "wrap_request_in_array",
                 "fieldType": "radio",
                 "choices": [
                     true,
@@ -54,8 +58,9 @@
             "visible": true
         },
         {
-            "label": "file",
+            "label": "File",
             "properties": {
+                "parameter": "file",
                 "fieldType": "text",
                 "helptext": "A file object to be attached to the request. The request will automatically be converted to multipart/form-data, with the above payload type defining the sub content-type for the data being passed."
             },
@@ -64,9 +69,9 @@
             "visible": true
         },
         {
-            "label": "basic_auth",
+            "label": "Basic auth",
             "properties": {
-                "fieldType": "text",
+                "fieldType": "basic_auth",
                 "helptext": "A pipe (|) separated username, password combo for standard HTTP authentication."
             },
             "readonly": false,
@@ -74,8 +79,9 @@
             "visible": true
         },
         {
-            "label": "headers",
+            "label": "Headers",
             "properties": {
+                "parameter": "headers",
                 "fieldType": "text",
                 "helptext": "Key, value pairs to be added as headers in all requests."
             },
@@ -84,8 +90,9 @@
             "visible": true
         },
         {
-            "label": "response_success",
+            "label": "Response success",
             "properties": {
+                "parameter": "response_success",
                 "fieldType": "textarea",
                 "helptext": ""
             },
@@ -94,8 +101,9 @@
             "visible": true
         },
         {
-            "label": "response_error",
+            "label": "Response error",
             "properties": {
+                "parameter": "response_error",
                 "fieldType": "textarea",
                 "helptext": ""
             },

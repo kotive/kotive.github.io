@@ -4,8 +4,9 @@
     "documentation": "https://stripe.com/docs/api#create_charge",
     "fields": [
         {
-            "label": "amount",
+            "label": "Amount",
             "properties": {
+                "parameter": "amount",
                 "fieldType": "number"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "currency",
+            "label": "Currency",
             "properties": {
+                "parameter": "currency",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "customer",
+            "label": "Customer",
             "properties": {
+                "parameter": "customer",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "card",
+            "label": "Card",
             "properties": {
+                "parameter": "card",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -40,8 +44,9 @@
             "visible": true
         },
         {
-            "label": "description",
+            "label": "Description",
             "properties": {
+                "parameter": "description",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -49,8 +54,9 @@
             "visible": true
         },
         {
-            "label": "metadata",
+            "label": "Metadata",
             "properties": {
+                "parameter": "metadata",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -58,8 +64,9 @@
             "visible": true
         },
         {
-            "label": "capture",
+            "label": "Capture",
             "properties": {
+                "parameter": "capture",
                 "fieldType": "radio",
                 "choices": [
                     true,
@@ -72,8 +79,9 @@
             "visible": true
         },
         {
-            "label": "statement_description",
+            "label": "Statement description",
             "properties": {
+                "parameter": "statement_description",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -81,8 +89,9 @@
             "visible": true
         },
         {
-            "label": "receipt_email",
+            "label": "Receipt email",
             "properties": {
+                "parameter": "receipt_email",
                 "fieldType": "email"
             },
             "readonly": false,
@@ -90,8 +99,9 @@
             "visible": true
         },
         {
-            "label": "application_fee",
+            "label": "Application fee",
             "properties": {
+                "parameter": "application_fee",
                 "fieldType": "number"
             },
             "readonly": false,

@@ -4,8 +4,9 @@
     "documentation": "https://docraptor.com/documentation",
     "fields": [
         {
-            "label": "doc[document_type]",
+            "label": "Document type",
             "properties": {
+                "parameter": "doc[document_type]",
                 "fieldType": "radio",
                 "choices": [
                     "xls",
@@ -18,8 +19,9 @@
             "visible": true
         },
         {
-            "label": "doc[document_content]",
+            "label": "Document content",
             "properties": {
+                "parameter": "doc[document_content]",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -27,8 +29,9 @@
             "visible": true
         },
         {
-            "label": "doc[name]",
+            "label": "Name",
             "properties": {
+                "parameter": "doc[name]",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -36,8 +39,9 @@
             "visible": true
         },
         {
-            "label": "doc[test]",
+            "label": "Test",
             "properties": {
+                "parameter": "doc[test]",
                 "fieldType": "radio",
                 "choices": [
                     "true",
@@ -50,8 +54,9 @@
             "visible": true
         },
         {
-            "label": "doc[help]",
+            "label": "Help",
             "properties": {
+                "parameter": "doc[help]",
                 "fieldType": "radio",
                 "choices": [
                     "true",
@@ -64,8 +69,9 @@
             "visible": true
         },
         {
-            "label": "doc[tag]",
+            "label": "Tag",
             "properties": {
+                "parameter": "doc[tag]",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -73,8 +79,9 @@
             "visible": true
         },
         {
-            "label": "doc[strict]",
+            "label": "Strict",
             "properties": {
+                "parameter": "doc[strict]",
                 "fieldType": "radio",
                 "choices": [
                     "none",
@@ -87,8 +94,9 @@
             "visible": true
         },
         {
-            "label": "doc[javascript]",
+            "label": "Javascript",
             "properties": {
+                "parameter": "doc[javascript]",
                 "fieldType": "radio",
                 "choices": [
                     "true",
@@ -101,8 +109,9 @@
             "visible": true
         },
         {
-            "label": "doc[async]",
+            "label": "Async",
             "properties": {
+                "parameter": "doc[async]",
                 "fieldType": "radio",
                 "choices": [
                     "true",

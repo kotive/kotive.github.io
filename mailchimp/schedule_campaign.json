@@ -4,8 +4,9 @@
     "documentation": "http://apidocs.mailchimp.com/api/2.0/campaigns/schedule.php",
     "fields": [
         {
-            "label": "apikey",
+            "label": "API key",
             "properties": {
+                "parameter": "apikey",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -15,6 +16,7 @@
         {
             "label": "cid",
             "properties": {
+                "parameter": "cid",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "schedule_time",
+            "label": "Schedule time",
             "properties": {
+                "parameter": "id",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "schedule_time_b",
+            "label": "Schedule time B",
             "properties": {
+                "parameter": "schedule_time_b",
                 "fieldType": "text"
             },
             "readonly": false,

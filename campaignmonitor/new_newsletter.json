@@ -4,8 +4,9 @@
     "documentation": "https://www.campaignmonitor.com/api/campaigns/#sending_a_draft_campaign",
     "fields": [
         {
-            "label": "campaignid",
+            "label": "Campaign id",
             "properties": {
+                "parameter": "campaignid",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -13,17 +14,19 @@
             "visible": true
         },
         {
-            "label": "ConfirmationEmail",
+            "label": "Confirmation email address",
             "properties": {
-                "fieldType": "text"
+                "parameter": "ConfirmationEmail",
+                "fieldType": "email"
             },
             "readonly": false,
             "required": true,
             "visible": true
         },
         {
-            "label": "SendDate",
+            "label": "Send date",
             "properties": {
+                "parameter": "SendDate",
                 "fieldType": "date"
             },
             "readonly": false,

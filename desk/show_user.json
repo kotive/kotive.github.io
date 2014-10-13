@@ -4,8 +4,9 @@
     "documentation": "http://dev.desk.com/API/users/#show",
     "fields": [
         {
-            "label": "id",
+            "label": "User's id",
             "properties": {
+                "parameter": "id",
                 "fieldType": "text"
             },
             "readonly": false,

@@ -4,8 +4,9 @@
     "documentation": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/Question_Answer/question",
     "fields": [
         {
-            "label": "id",
+            "label": "Id",
             "properties": {
+                "parameter": "id",
                 "fieldType": "radio",
                 "choices": [
                     "healthcare",
@@ -17,8 +18,9 @@
             "visible": true
         },
         {
-            "label": "questionText",
+            "label": "Question text",
             "properties": {
+                "parameter": "questionText",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -26,8 +28,9 @@
             "visible": true
         },
         {
-            "label": "items",
+            "label": "Items",
             "properties": {
+                "parameter": "items",
                 "fieldType": "number",
                 "default": 5
             },
@@ -38,6 +41,7 @@
         {
             "label": "eItems",
             "properties": {
+                "parameter": "eItems",
                 "fieldType": "number",
                 "default": 3
             },
@@ -48,6 +52,7 @@
         {
             "label": "eProfile",
             "properties": {
+                "parameter": "eProfile",
                 "fieldType": "radio",
                 "choices": [
                     true,
@@ -60,8 +65,9 @@
             "visible": true
         },
         {
-            "label": "formattedAnswer",
+            "label": "Formatted answer",
             "properties": {
+                "parameter": "formattedAnswer",
                 "fieldType": "radio",
                 "choices": [
                     true,
@@ -76,6 +82,7 @@
         {
             "label": "X-SyncTimeout",
             "properties": {
+                "parameter": "X-SyncTimeout",
                 "fieldType": "text",
                 "default": "{settings.ibmwatson.xsynctimeout}"
             },

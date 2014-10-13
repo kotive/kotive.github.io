@@ -4,8 +4,9 @@
     "documentation": "https://github.com/basecamp/bcx-api/blob/master/sections/messages.md",
     "fields": [
         {
-            "label": "subject",
+            "label": "Subject",
             "properties": {
+                "parameter": "subject",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -13,8 +14,9 @@
             "visible": true
         },
         {
-            "label": "content",
+            "label": "Content",
             "properties": {
+                "parameter": "content",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -22,8 +24,9 @@
             "visible": true
         },
         {
-            "label": "subscribers",
+            "label": "Subscribers",
             "properties": {
+                "parameter": "subscribers",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -31,8 +34,9 @@
             "visible": true
         },
         {
-            "label": "private",
+            "label": "Private message",
             "properties": {
+                "parameter": "private",
                 "fieldType": "radio",
                 "choices": [
                     false,
