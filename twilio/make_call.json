@@ -89,8 +89,8 @@
                 "parameter": "Record",
                 "fieldType": "radio",
                 "choices": [
-                    true,
-                    false
+                    "true",
+                    "false"
                 ],
                 "default": false
             },

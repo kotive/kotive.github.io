@@ -56,11 +56,11 @@
                 "choices": [
                     {
                         "key": 0,
-                        "value": false
+                        "value": "false"
                     },
                     {
                         "key": 1,
-                        "value": true
+                        "value": "true"
                     }
                 ],
                 "default": 0

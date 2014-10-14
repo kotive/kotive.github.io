@@ -39,8 +39,8 @@
                 "parameter": "private",
                 "fieldType": "radio",
                 "choices": [
-                    false,
-                    true
+                    "false",
+                    "true"
                 ],
                 "default": false
             },

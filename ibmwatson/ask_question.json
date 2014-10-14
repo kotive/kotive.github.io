@@ -55,8 +55,8 @@
                 "parameter": "eProfile",
                 "fieldType": "radio",
                 "choices": [
-                    true,
-                    false
+                    "true",
+                    "false"
                 ],
                 "default": true
             },
@@ -70,8 +70,8 @@
                 "parameter": "formattedAnswer",
                 "fieldType": "radio",
                 "choices": [
-                    true,
-                    false
+                    "true",
+                    "false"
                 ],
                 "default": false
             },
