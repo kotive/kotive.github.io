@@ -54,16 +54,10 @@
                 "parameter": "notify",
                 "fieldType": "radio",
                 "choices": [
-                    {
-                        "key": 0,
-                        "value": "false"
-                    },
-                    {
-                        "key": 1,
-                        "value": "true"
-                    }
+                    "false",
+                    "true"
                 ],
-                "default": 0
+                "default": "false"
             },
             "readonly": false,
             "required": false,
