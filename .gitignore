@@ -1,1 +1,5 @@
 node_modules
+
+# ignore IntelliJ Idea
+.idea
+*.iml
