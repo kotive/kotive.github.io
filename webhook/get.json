@@ -48,8 +48,8 @@
                 "parameter": "wrap_request_in_array",
                 "fieldType": "radio",
                 "choices": [
-                    true,
-                    false
+                    "true",
+                    "false"
                 ],
                 "helptext": "If empty, takes the raw data from the trigger event. Key, value pairs sent as data. Do not place raw JSON or form encoded values here!"
             },

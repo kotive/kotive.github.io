@@ -69,8 +69,8 @@
                 "parameter": "capture",
                 "fieldType": "radio",
                 "choices": [
-                    true,
-                    false
+                    "true",
+                    "false"
                 ],
                 "default": true
             },
