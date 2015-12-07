@@ -81,6 +81,10 @@
             "service": "salesforce"
         },
         {
+            "name": "SendGrid",
+            "service": "sendgrid"
+        },
+        {
             "name": "SMS",
             "service": "sms"
         },
