@@ -7,7 +7,8 @@
             "label": "Client id",
             "properties": {
                 "parameter": "client_id",
-                "fieldType": "text"
+                "fieldType": "text",
+                "helptext": "The client being invoiced"
             },
             "readonly": false,
             "required": true,
@@ -17,7 +18,8 @@
             "label": "Invoice number",
             "properties": {
                 "parameter": "number",
-                "fieldType": "number"
+                "fieldType": "number",
+                "helptext": "Number, as it appears on the invoice"
             },
             "readonly": false,
             "required": false,
@@ -29,7 +31,8 @@
                 "parameter": "status",
                 "fieldType": "radio",
                 "choices": ["sent", "viewed", "draft"],
-                "default": "draft"
+                "default": "draft",
+                "helptext": "One of sent, viewed or draft"
             },
             "readonly": false,
             "required": true,
@@ -39,7 +42,8 @@
             "label": "Date",
             "properties": {
                 "parameter": "date",
-                "fieldType": "date"
+                "fieldType": "date",
+                "helptext": "If not supplied, defaults to today's date"
             },
             "readonly": false,
             "required": true,
@@ -49,7 +53,8 @@
             "label": "Purchase order number",
             "properties": {
                 "parameter": "po_number",
-                "fieldType": "number"
+                "fieldType": "number",
+                "helptext": "Purchase order number"
             },
             "readonly": false,
             "required": false,
@@ -59,7 +64,8 @@
             "label": "Discount",
             "properties": {
                 "parameter": "discount",
-                "fieldType": "number"
+                "fieldType": "number",
+                "helptext": "Percent discount"
             },
             "readonly": false,
             "required": false,
@@ -69,7 +75,8 @@
             "label": "Notes",
             "properties": {
                 "parameter": "notes",
-                "fieldType": "textarea"
+                "fieldType": "textarea",
+                "helptext": "Additional Notes"
             },
             "readonly": false,
             "required": false,
@@ -79,7 +86,8 @@
             "label": "Currency code",
             "properties": {
                 "parameter": "currency_code",
-                "fieldType": "text"
+                "fieldType": "text",
+                "helptext": "Currency Code, defaults to your base currency"
             },
             "readonly": false,
             "required": false,
@@ -89,7 +97,8 @@
             "label": "Language code",
             "properties": {
                 "parameter": "language_code",
-                "fieldType": "text"
+                "fieldType": "text",
+                "helptext": "Language code, defaults to the client's language; see language.list for codes"
             },
             "readonly": false,
             "required": false,
