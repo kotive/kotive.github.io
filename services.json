@@ -80,10 +80,6 @@
             "name": "Salesforce",
             "service": "salesforce"
         },
-	{
-            "name": "Slack",
-            "service": "slack"
-        },
         {
             "name": "SMS",
             "service": "sms"
