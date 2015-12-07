@@ -30,7 +30,11 @@
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
-                "choices": ["sent", "viewed", "draft"],
+                "choices": [
+                    "sent",
+                    "viewed",
+                    "draft"
+                ],
                 "default": "draft",
                 "helptext": "One of sent, viewed or draft"
             },

@@ -13,7 +13,7 @@
             "readonly": false,
             "required": true,
             "visible": true
-        }
+        },
         {
             "label": "Client id",
             "properties": {
@@ -41,7 +41,11 @@
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
-                "choices": ["sent", "viewed", "draft"],
+                "choices": [
+                    "sent",
+                    "viewed",
+                    "draft"
+                ],
                 "default": "draft",
                 "helptext": "One of sent, viewed or draft"
             },
@@ -249,9 +253,9 @@
     ],
     "method": "POST",
     "endpoint": "",
-    "request": "<?xml version="1.0" encoding="utf-8"?><request method="invoice.update"><invoice> invoice_id>{field.invoice_id}</invoice_id><client_id>{field.client_id}</client_id><contacts><contact><contact_id>{field.contact_id}</contact_id></contact></contacts><number>{field.number}</number><status>{field.status}</status><date>{field.date}</date><po_number>{field.po_number}</po_number><discount>{field.discount}</discount><notes>{field.notes}</notes><currency_code>{field.currency_code}</currency_code><terms>{field.terms}</terms><return_uri>{field.uri}</return_uri><first_name>{field.first_name}</first_name><last_name>{field.last_name}</last_name><organization>{field.organisation}</organization><p_street1>{field.p_street1}</p_street1><p_street2>{field.p_street2}</p_street2><p_city>{field.p_city}</p_city><p_state>{field.p_state}</p_state><p_country>{field.p_country}</p_country><p_code>{field.p_code}</p_code><vat_name>{field.vat_name}</vat_name><vat_number>{field.vat_number}</vat_number><lines><line><name>{field.name}</name><description>{field.description}</description><unit_cost>{field.unit_cost}</unit_cost><quantity>{field.quantity}</quantity><tax1_name>{field.tax1_name</tax1_name><tax2_name>{field.tax2_name</tax2_name><tax1_percent>{field.tax1_percent}</tax1_percent><tax2_percent>{field.tax2_percent}</tax2_percent><type>{field.type}</type></line></lines></invoice></request>",
+    "request": "<?xml version=\"1.0\" encoding=\"utf-8\"?><request method=\"invoice.update\"><invoice> invoice_id>{field.invoice_id}</invoice_id><client_id>{field.client_id}</client_id><contacts><contact><contact_id>{field.contact_id}</contact_id></contact></contacts><number>{field.number}</number><status>{field.status}</status><date>{field.date}</date><po_number>{field.po_number}</po_number><discount>{field.discount}</discount><notes>{field.notes}</notes><currency_code>{field.currency_code}</currency_code><terms>{field.terms}</terms><return_uri>{field.uri}</return_uri><first_name>{field.first_name}</first_name><last_name>{field.last_name}</last_name><organization>{field.organisation}</organization><p_street1>{field.p_street1}</p_street1><p_street2>{field.p_street2}</p_street2><p_city>{field.p_city}</p_city><p_state>{field.p_state}</p_state><p_country>{field.p_country}</p_country><p_code>{field.p_code}</p_code><vat_name>{field.vat_name}</vat_name><vat_number>{field.vat_number}</vat_number><lines><line><name>{field.name}</name><description>{field.description}</description><unit_cost>{field.unit_cost}</unit_cost><quantity>{field.quantity}</quantity><tax1_name>{field.tax1_name</tax1_name><tax2_name>{field.tax2_name</tax2_name><tax1_percent>{field.tax1_percent}</tax1_percent><tax2_percent>{field.tax2_percent}</tax2_percent><type>{field.type}</type></line></lines></invoice></request>",
     "response": {
-        "success": "<?xml version="1.0" encoding="utf-8"?><response status="ok"></response>",
+        "success": "<?xml version=\"1.0\" encoding=\"utf-8\"?><response status=\"ok\"></response>",
         "error": {}
     }
 }
