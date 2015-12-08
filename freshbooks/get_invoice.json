@@ -7,7 +7,7 @@
             "label": "Invoice id",
             "properties": {
                 "parameter": "invoice_id",
-                "fieldType": "text",
+                "fieldType": "number",
                 "helptext": "The ID of the invoice you want to see"
             },
             "readonly": false,
