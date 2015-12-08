@@ -1,0 +1,148 @@
+{
+    "name": "Update a card",
+    "description": "Update an existing Trello card",
+    "documentation": "https://developers.trello.com/advanced-reference/card#put-1-cards-card-id-or-shortlink",
+    "fields": [
+        {
+            "label": "Card ID",
+            "properties": {
+                "parameter": "id",
+                "fieldType": "text",
+                "helptext": "The ID of the card you wish to update"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Name",
+            "properties": {
+                "parameter": "name",
+                "fieldType": "text",
+                "helptext": "The new name to give your card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Description",
+            "properties": {
+                "parameter": "desc",
+                "fieldType": "text",
+                "helptext": "A description to go along with your card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Is the card closed?",
+            "properties": {
+                "parameter": "closed",
+                "fieldType": "radio",
+                "choices":	[
+                  {"key": "true", "value": "Yes"},
+                  {"key": "false", "value": "No"}
+                ],
+                "default": "false"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Member IDs",
+            "properties": {
+                "parameter": "idMembers",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of objectIds, 24-character hex strings"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "idList",
+                "fieldType": "text",
+                "helptext": "The ID of the list that this card will belong to"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Board ID",
+            "properties": {
+                "parameter": "idBoard",
+                "fieldType": "text",
+                "helptext": "The ID of the board this card should be moved to"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Position",
+            "properties": {
+                "parameter": "pos",
+                "fieldType": "radio",
+                "choices":	[
+                    {"key": "top", "value": "Top"},
+                    {"key": "bottom", "value": "Bottom"},
+                ],
+                "default": "bottom",
+                "helptext": "The position of your card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Due date",
+            "properties": {
+                "parameter": "date",
+                "fieldType": "date",
+                "helptext": "The due date of the card, or null"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Are you subscribed to this card?",
+            "properties": {
+                "parameter": "subscribed",
+                "fieldType": "radio",
+                "choices":	[
+                    {"key": "true", "value": "Yes"},
+                    {"key": "false", "value": "No"}
+                ],
+                "default": "true",
+                "helptext": "Do you want to be notified of activity on your board?"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/1/cards/{field.id}",
+    "request": {
+        "name": "{field.name}",
+        "desc": "{field.desc}",
+        "closed": "{field.closed}",
+        "idMembers": "{field.idMembers}",
+        "idList": "{field.idList}",
+        "idBoard": "{field.board}",
+        "pos": "{field.pos}",
+        "due": "{field.due}",
+        "subscribed": "{field.subscribed}"
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}

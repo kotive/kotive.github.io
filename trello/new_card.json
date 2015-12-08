@@ -8,16 +8,132 @@
             "properties": {
                 "parameter": "name",
                 "fieldType": "text",
-                "helptext": "The ID of the list you want to query"
+                "helptext": "The name of the new card you want to create"
             },
             "readonly": false,
             "required": true,
+            "visible": true
+        },
+        {
+            "label": "Description",
+            "properties": {
+                "parameter": "desc",
+                "fieldType": "text",
+                "helptext": "A description to go along with your new card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Position",
+            "properties": {
+                "parameter": "pos",
+                "fieldType": "radio",
+                "choices":	[
+                    {"key": "top", "value": "Top"},
+                    {"key": "bottom", "value": "Bottom"},
+                ],
+                "default": "bottom",
+                "helptext": "The position of your new card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Due date",
+            "properties": {
+                "parameter": "date",
+                "fieldType": "date",
+                "helptext": "The due date of the card, or null"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "idList",
+                "fieldType": "text",
+                "helptext": "The ID of the list that this card will belong to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Member IDs",
+            "properties": {
+                "parameter": "idMembers",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of objectIds, 24-character hex strings"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Label IDs",
+            "properties": {
+                "parameter": "idLabels",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of objectIds, 24-character hex strings"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Source URL",
+            "properties": {
+                "parameter": "urlSource",
+                "fieldType": "web",
+                "helptext": "A source URL, or null"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Card Source ID",
+            "properties": {
+                "parameter": "idCardSource",
+                "fieldType": "tex",
+                "helptext": "The ID of a card to copy into another card"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Keep from source",
+            "properties": {
+                "parameter": "keepFromSource",
+                "fieldType": "text",
+                "default": "all",
+                "helptext": "Properties of the card to copy over from the source."
+            },
+            "readonly": false,
+            "required": false,
             "visible": true
         }
     ],
     "method": "POST",
     "endpoint": "/1/cards",
-    "request": {},
+    "request": {
+        "name": "{field.name}",
+        "desc": "{field.desc}",
+        "pos": "{field.pos}",
+        "due": "{field.due}",
+        "idList": "{field.idList}",
+        "idMembers": "{field.idMembers}",
+        "idLabels": "{field.idLabels}",
+        "urlSource": "{field.urlSource}",
+        "idCardSource": "{field.idCardSource}",
+        "keepFromSource": "{field.keepFromSource}"
+    },
     "response": {
         "success": {},
         "error": {}

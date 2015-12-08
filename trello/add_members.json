@@ -1,0 +1,38 @@
+{
+    "name": "Add members to a card",
+    "description": "Add members to a card in trello",
+    "documentation": "https://developers.trello.com/advanced-reference/card#post-1-cards-card-id-or-shortlink-idmembers",
+    "fields": [
+        {
+            "label": "Card ID",
+            "properties": {
+                "parameter": "id",
+                "fieldType": "text",
+                "helptext": "The ID of the card on that you wish to add members to."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Member ID",
+            "properties": {
+                "parameter": "text",
+                "fieldType": "text",
+                "helptext": "The ID of the member you want to add"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/1/cards/{field.id}/idmembers",
+    "request": {
+        "value": "{field.text}"
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
