@@ -55,7 +55,7 @@
                 "helptext": "Login for the user that this issue should be assigned to."
             },
             "readonly": false,
-            "required": true,
+            "required": false,
             "visible": true
         },
         {
@@ -66,7 +66,7 @@
                 "helptext": "The number of the milestone to associate this issue with."
             },
             "readonly": false,
-            "required": true,
+            "required": false,
             "visible": true
         },
         {
@@ -77,7 +77,7 @@
                 "helptext": "Labels to associate with this issue. Note that these have to be in quotes and separated by commas, for example: '\"Big issue!\", \"Bug\"'"
             },
             "readonly": false,
-            "required": true,
+            "required": false,
             "visible": true
         }
     ],
