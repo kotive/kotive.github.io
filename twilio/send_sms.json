@@ -28,7 +28,7 @@
 		{
 				"label": "Messaging Service Sid",
 				"properties": {
-						"parameter": "MessagingServiceSid",
+						"parameter": "messagingServiceSid",
 						"fieldType": "text",
 						"helptext": "The unique ID of the Messaging Service you want to associate with this message."
 				},
@@ -50,7 +50,7 @@
 		{
 				"label": "Media URL",
 				"properties": {
-						"parameter": "MediaUrl",
+						"parameter": "mediaUrl",
   					"fieldType": "web",
 						"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
   			},
@@ -72,7 +72,7 @@
 		{
 				"label": "Application Sid",
 				"properties": {
-						"parameter": "ApplicationSid",
+						"parameter": "applicationSid",
 						"fieldType": "text",
 						"helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
 				},
@@ -82,15 +82,15 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "/Accounts/{settings.twilio.AccountSid}/Messages",
+	"endpoint": "/Accounts/{settings.twilio.accountSid}/Messages",
 	"request": {
 		"To": "{field.to}",
 		"From": "{field.from}",
-		"MessagingServiceSid": "{field.MessagingServiceSid}",
+		"MessagingServiceSid": "{field.messagingServiceSid}",
 		"Body": "{field.body}",
-		"MediaUrl": "{field.MediaUrl}",
-		"StatusCallback": "{field.StatusCallback}",
-		"ApplicationSid": "{field.ApplicationSid}"
+		"MediaUrl": "{field.mediaUrl}",
+		"StatusCallback": "{field.statusCallback}",
+		"ApplicationSid": "{field.applicationSid}"
 	},
 	"response": {
 		"success": {
