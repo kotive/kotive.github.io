@@ -46,7 +46,7 @@
 		"visible": true
 	}],
 	"method": "POST",
-	"endpoint": "url",
+	"endpoint": "{field.url}",
 	"request": {
 		"text": "{field.message}",
 		"username": "{field.username}",
