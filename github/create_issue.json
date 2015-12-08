@@ -1,7 +1,7 @@
 {
     "name": "Create a new issue",
     "description": "Create a new issue using Github.",
-    "documentation": "https://developer.github.com/v3/issues/#get-a-single-issue",
+    "documentation": "https://developer.github.com/v3/issues/#create-an-issue",
     "fields": [
         {
             "label": "Owner",
