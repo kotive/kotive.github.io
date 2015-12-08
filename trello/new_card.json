@@ -1,0 +1,25 @@
+{
+    "name": "Create a new card",
+    "description": "Create a new Trello card",
+    "documentation": "https://developers.trello.com/advanced-reference/card#post-1-cards",
+    "fields": [
+        {
+            "label": "Name",
+            "properties": {
+                "parameter": "name",
+                "fieldType": "text",
+                "helptext": "The ID of the list you want to query"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/1/cards",
+    "request": {},
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
