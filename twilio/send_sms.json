@@ -37,48 +37,48 @@
 				"visible": true
 		},
 		{
-			"label": "Message Body",
-			"properties": {
-				"parameter": "body",
-  			"fieldType": "text",
-				"helptext": "The text of the message you want to send, limited to 1600 characters."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
+				"label": "Message Body",
+				"properties": {
+						"parameter": "body",
+  					"fieldType": "text",
+						"helptext": "The text of the message you want to send, limited to 1600 characters."
+  			},
+				"readonly": false,
+				"required": false,
+				"visible": true
 		},
 		{
-			"label": "Media URL",
-			"properties": {
-				"parameter": "MediaUrl",
-  			"fieldType": "web",
-				"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
+				"label": "Media URL",
+				"properties": {
+						"parameter": "MediaUrl",
+  					"fieldType": "web",
+						"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
+  			},
+				"readonly": false,
+				"required": false,
+				"visible": true
 		},
 		{
-			"label": "Status Callback",
-			"properties": {
-				"parameter": "body",
-				"fieldType": "web",
-				"helptext": "The URL that Twilio will POST to each time your message status changes."
-			},
-			"readonly": false,
-			"required": false,
-			"visible": true
+				"label": "Status Callback",
+				"properties": {
+						"parameter": "body",
+						"fieldType": "web",
+						"helptext": "The URL that Twilio will POST to each time your message status changes."
+				},
+				"readonly": false,
+				"required": false,
+				"visible": true
 		},
 		{
-			"label": "Application Sid",
-			"properties": {
-				"parameter": "ApplicationSid",
-				"fieldType": "text",
-				"helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
-			},
-			"readonly": false,
-			"required": false,
-			"visible": true
+				"label": "Application Sid",
+				"properties": {
+						"parameter": "ApplicationSid",
+						"fieldType": "text",
+						"helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+				},
+				"readonly": false,
+				"required": false,
+				"visible": true
 		}
 	],
 	"method": "POST",
