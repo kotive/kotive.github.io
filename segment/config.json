@@ -1,0 +1,10 @@
+{
+	"name": "Segment",
+	"description": "Collect customer data with one API and send it to hundreds of tools for analytics, marketing, and data warehousing.",
+	"auth":{
+			"method": "Basic",
+			"username": "{settings.segment.apikey}",
+			"password": ""
+	},
+	"domain": "https://api.segment.io/v1/"
+}

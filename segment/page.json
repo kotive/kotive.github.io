@@ -1,0 +1,122 @@
+{
+	"name": "Page",
+	"description": "Page using Segment",
+	"documentation": "https://segment.com/docs/spec/page/",
+	"fields": [
+		{
+			"label": "Anonymous ID",
+			"properties": {
+				"parameter": "anonymousID",
+  			"fieldType": "text",
+				"helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Context",
+			"properties": {
+				"parameter": "context",
+  			"fieldType": "text",
+				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Integrations",
+			"properties": {
+				"parameter": "integrations",
+  			"fieldType": "text",
+				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Sent At",
+			"properties": {
+				"parameter": "sentAt",
+  			"fieldType": "date",
+				"helptext": "The timestamp when a message is sent to Segment, used for clock skew correction."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Timestamp",
+			"properties": {
+				"parameter": "timestamp",
+  			"fieldType": "date",
+				"helptext": "The timestamp when the message itself took place."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Type",
+			"properties": {
+				"parameter": "type",
+				"fieldType": "radio",
+				"choices": [
+					{"key": "identify", "value": "Identify"},
+					{"key": "group", "value": "Group"},
+					{"key": "track", "value": "Track"},
+					{"key": "page", "value": "Page"},
+					{"key": "screen", "value": "Screen"},
+					{"key": "alias", "value": "Alias"}
+				],
+				"default": "identify",
+				"helptext": "The type of message, corresponding to the API method."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "User ID",
+			"properties": {
+				"parameter": "userID",
+  			"fieldType": "text",
+				"helptext": "A unique identifier for the user in your database."
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Name",
+			"properties": {
+				"parameter": "name",
+  			"fieldType": "text",
+				"helptext": "The name of the page."
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Properties",
+			"properties": {
+				"parameter": "event",
+  			"fieldType": "text",
+				"helptext": "A free-form dictionary of properties of the event, like revenue. See https://segment.com/docs/spec/page#properties for a list of reserved property names."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}

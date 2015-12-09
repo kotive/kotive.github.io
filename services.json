@@ -81,6 +81,10 @@
             "service": "salesforce"
         },
         {
+            "name": "Segment",
+            "service": "segment"
+        },
+        {
             "name": "SMS",
             "service": "sms"
         },
