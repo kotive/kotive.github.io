@@ -1,0 +1,42 @@
+{
+    "name": "Track Revenue",
+    "description": "Track revenue using MixPanel.",
+    "documentation": "https://mixpanel.com/help/reference/http#tracking-revenue",
+    "fields": [
+        {
+            "label": "Time",
+            "properties": {
+                "parameter": "$time",
+                "fieldType": "string",
+                "helptext": "The time of the transaction"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Amount",
+            "properties": {
+                "parameter": "$amount",
+                "fieldType": "number",
+                "helptext": "The amount of the transaction"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/track/",
+    "request": {
+        "event": "{field.event}",
+        "properties": {
+            "token": "{settings.mixpanel.token}",
+            "distinct_id": "{field.distinct_id}"
+        }
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}
