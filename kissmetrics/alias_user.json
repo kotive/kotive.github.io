@@ -41,7 +41,13 @@
 	"endpoint": "",
 	"request": {},
 	"response": {
-		"success": {},
-		"error": {}
+		"success": {
+			"Code": 200,
+			"Message": "Ok"
+		},
+		"error": {
+			"Code": 200,
+			"Message": "Ok"
+		}
 	}
 }
