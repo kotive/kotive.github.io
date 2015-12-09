@@ -116,7 +116,10 @@
 	"endpoint": "",
 	"request": {},
 	"response": {
-		"success": {},
+		"success": {
+			"Code": 200,
+			"Message": "Ok"
+		},
 		"error": {}
 	}
 }
