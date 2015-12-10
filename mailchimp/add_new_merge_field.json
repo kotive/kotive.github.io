@@ -51,23 +51,7 @@
             "readonly": false,
             "required": false,
             "visible": true
-        },
-        {
-            "label": "Is this field required?",
-            "properties": {
-                "parameter": "required",
-                "fieldType": "radio",
-                "choices": [
-                    {"key": true, "value": "Yes"},
-                    {"key": false, "value": "No"}
-                ],
-                "default": false,
-                "helptext": "Is this a required merge field?"
-            },
-            "readonly": false,
-            "required": false,
-            "visible": true
-        },
+        }
         {
             "label": "Default Value",
             "properties": {
