@@ -4,6 +4,17 @@
 	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#update",
 	"fields": [
 		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "ID of the list to update"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
 			"label": "List Name",
 			"properties": {
 				"parameter": "name",
