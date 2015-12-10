@@ -1,0 +1,205 @@
+{
+    "name": "Update a list member",
+    "description": "Update an existing list memberS using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list the member to update is in"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Subscriber Hash",
+            "properties": {
+                "parameter": "subscriber_hash",
+                "fieldType": "text",
+                "helptext": "The MD5 hash of the lowercase version of the list member to update's email address."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Email Type",
+            "properties": {
+                "parameter": "email_type",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "html", "value": "HTML"},
+                    {"key": "text", "value": "Text"}
+                ],
+                "default": "text",
+                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Subsriber Status",
+            "properties": {
+                "parameter": "status",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "subscribed", "value": "Subscribed"},
+                    {"key": "unsubscribed", "value": "Unsubscribed"},
+                    {"key": "cleaned", "value": "Cleaned"},
+                    {"key": "pending", "value": "Pending"}
+                ],
+                "helptext": "The new status of the subscriber"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Merge Fields",
+            "properties": {
+                "parameter": "merge_fields",
+                "fieldType": "text",
+                "helptext": "An individual merge variable and value for a member. These are surrounded by quotes, eg \"key\": \"value\""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Interests",
+            "properties": {
+                "parameter": "interests",
+                "fieldType": "text",
+                "helptext": "The key of this object’s properties is the ID of the interest in question.  These are surrounded by quotes, eg \"key\": \"value\""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Language",
+            "properties": {
+                "parameter": "language",
+                "fieldType": "select",
+                "choices": [
+                    {"key": "ar", "value": "Arabic"},
+                    {"key": "af", "value": "Afrikaans"},
+                    {"key": "be", "value": "Belarusian"},
+                    {"key": "bg", "value": "Bulgarian"},
+                    {"key": "ca", "value": "Catalan"},
+                    {"key": "zh", "value": "Chinese"},
+                    {"key": "hr", "value": "Croatian"},
+                    {"key": "cs", "value": "Czech"},
+                    {"key": "da", "value": "Danish"},
+                    {"key": "nl", "value": "Dutch"},
+                    {"key": "en", "value": "English"},
+                    {"key": "et", "value": "Estonian"},
+                    {"key": "fa", "value": "Farsi"},
+                    {"key": "fi", "value": "Finnish"},
+                    {"key": "fr", "value": "French (France)"},
+                    {"key": "fr_CA", "value": "French (Canada)"},
+                    {"key": "de", "value": "German"},
+                    {"key": "el", "value": "Greek"},
+                    {"key": "he", "value": "Hebrew"},
+                    {"key": "hi", "value": "Hindi"},
+                    {"key": "hu", "value": "Hungarian"},
+                    {"key": "is", "value": "Icelandic"},
+                    {"key": "id", "value": "Indonesian"},
+                    {"key": "ga", "value": "Irish"},
+                    {"key": "it", "value": "Italian"},
+                    {"key": "ja", "value": "Japanese"},
+                    {"key": "km", "value": "Khmer"},
+                    {"key": "ko", "value": "Korean"},
+                    {"key": "lv", "value": "Latvian"},
+                    {"key": "lt", "value": "Lithuanian"},
+                    {"key": "mt", "value": "Maltese"},
+                    {"key": "ms", "value": "Malay"},
+                    {"key": "mk", "value": "Macedonian"},
+                    {"key": "no", "value": "Norwegian"},
+                    {"key": "pl", "value": "Polish"},
+                    {"key": "pt", "value": "Portuguese (Brazil)"},
+                    {"key": "pt_PT", "value": "Portuguese (Portugal)"},
+                    {"key": "ro", "value": "Romanian"},
+                    {"key": "ru", "value": "Russian"},
+                    {"key": "sr", "value": "Serbian"},
+                    {"key": "sk", "value": "Slovak"},
+                    {"key": "sl", "value": "Slovenian"},
+                    {"key": "es", "value": "Spanish (Mexico)"},
+                    {"key": "es_ES", "value": "Spanish (Spain)"},
+                    {"key": "sw", "value": "Swahili"},
+                    {"key": "sv", "value": "Swedish"},
+                    {"key": "ta", "value": "Tamil"},
+                    {"key": "th", "value": "Thai"},
+                    {"key": "tr", "value": "Turkish"},
+                    {"key": "uk", "value": "Ukrainian"},
+                    {"key": "vi", "value": "Vietnamese"}
+                ],
+                "default": "en",
+                "helptext": "The subscribers language"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Is the subscriber a VIP?",
+            "properties": {
+                "parameter": "vip",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": true, "value": "Yes"},
+                    {"key": false, "value": "No"}
+                ],
+                "helptext": "Is the subscriber a VIP user or not?"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Location",
+            "properties": {
+                "parameter": "location",
+                "fieldType": "text",
+                "helptext": "The subscriber's geographical location, in the format: \"latitude\": \"value\", \"longitude\": \"value\""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Email Address",
+            "properties": {
+                "parameter": "email_address",
+                "fieldType": "email",
+                "helptext": "The email address of the subscriber"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/campaigns/schedule.json",
+    "request": {
+        "apikey": "{field.apikey}",
+        "cid": "{field.cid}",
+        "schedule_time": "{field.schedule_time}",
+        "schedule_time_b": "{field.schedule_time_b}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
