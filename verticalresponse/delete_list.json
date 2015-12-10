@@ -1,0 +1,25 @@
+{
+	"name": "Delete a list",
+	"description": "Delete an existing list using VerticalResponse",
+	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#delete",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "ID of the list to delete"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
