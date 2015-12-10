@@ -4,6 +4,17 @@
     "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/",
     "fields": [
         {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list to add this member to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
             "label": "Email Type",
             "properties": {
                 "parameter": "email_type",
