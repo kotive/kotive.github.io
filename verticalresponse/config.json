@@ -1,0 +1,6 @@
+{
+	"name": "VerticalResponse",
+	"description": "Create, send, and track emails and social posts that look great on every device.",
+	"auth-method": "OAuth2",
+	"domain": "https://vrapi.verticalresponse.com/api/v1/"
+}
