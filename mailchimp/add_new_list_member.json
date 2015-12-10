@@ -41,7 +41,7 @@
                     {"key": "cleaned", "value": "Cleaned"},
                     {"key": "pending", "value": "Pending"}
                 ],
-                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+                "helptext": "The status of the subscriber"
             },
             "readonly": false,
             "required": true,
