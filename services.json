@@ -80,6 +80,10 @@
             "name": "Salesforce",
             "service": "salesforce"
         },
+	{
+            "name": "Slack",
+            "service": "slack"
+        },
         {
             "name": "SendGrid",
             "service": "sendgrid"

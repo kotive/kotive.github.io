@@ -1,0 +1,6 @@
+{
+	"name": "Slack Service",
+	"description": "Team communication for the 21st century.",
+	"auth-method": "",
+	"domain": "http://slack.com"
+}

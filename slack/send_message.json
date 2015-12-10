@@ -1,0 +1,59 @@
+{
+	"name": "Send a Slack message",
+	"description": "Send a message to either a Slack channel or a user",
+	"documentation": "https://api.slack.com/incoming-webhooks",
+	"fields": [{
+		"label": "Message",
+		"properties": {
+			"parameter": "message",
+			"fieldType": "text",
+			"helptext": "Your Slack message to send! For advanced formatting, see https://api.slack.com/docs/formatting. To insert a URL, use <http://www.example.com> or <http://www.example.com|The URL's description>"
+		},
+		"readonly": false,
+		"required": true,
+		"visible": true
+	}, {
+		"label": "Webhook URL",
+		"properties": {
+			"parameter": "url",
+			"fieldType": "web",
+			"helptext": "The URL provided by Slack that we send messages to!"
+		},
+		"readonly": false,
+		"required": true,
+		"visible": true
+	}, {
+		"label": "Username",
+		"properties": {
+			"parameter": "username",
+			"fieldType": "text",
+			"default": "Kotive",
+			"helptext": "The username to display when a message from Kotive comes through!"
+		},
+		"readonly": false,
+		"required": false,
+		"visible": true
+	}, {
+		"label": "Icon",
+		"properties": {
+			"parameter": "icon",
+			"fieldType": "web",
+			"default": "https://pbs.twimg.com/profile_images/560463259598221312/kP3H_2IW.png",
+			"helptext": "The icon to display when a message from Kotive comes through!"
+		},
+		"readonly": false,
+		"required": false,
+		"visible": true
+	}],
+	"method": "POST",
+	"endpoint": "{field.url}",
+	"request": {
+		"text": "{field.message}",
+		"username": "{field.username}",
+		"icon_url": "{field.icon}",
+		"response": {
+			"success": "ok",
+			"error": "Bad token"
+		}
+	}
+}
