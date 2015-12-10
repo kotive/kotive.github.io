@@ -1,0 +1,214 @@
+{
+    "name": "Send an Email",
+    "description": "Send an email using SendGrid",
+    "documentation": "https://sendgrid.com/docs/API_Reference/Web_API/mail.html",
+    "fields": [
+        {
+            "label": "To",
+            "properties": {
+                "parameter": "to",
+                "fieldType": "email",
+                "helptext": "The email address of the recipient of the email."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Second Recipient",
+            "properties": {
+                "parameter": "to2",
+                "fieldType": "email",
+                "helptext": "The email address of the second recipient of the email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Recipient's Name",
+            "properties": {
+                "parameter": "toname",
+                "fieldType": "text",
+                "helptext": "The real name of the recipient of the email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Second Recipient's Name",
+            "properties": {
+                "parameter": "toname2",
+                "fieldType": "text",
+                "helptext": "The real name of the second recipient of the email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Message",
+            "properties": {
+                "parameter": "text",
+                "fieldType": "text",
+                "helptext": "The message to put in your email!"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Message (HTML)",
+            "properties": {
+                "parameter": "html",
+                "fieldType": "text",
+                "helptext": "The message to put in your email, formatted as HTML"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "From",
+            "properties": {
+                "parameter": "from",
+                "fieldType": "email",
+                "helptext": "The email address that this message will be sent from"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "The Name of the Sender",
+            "properties": {
+                "parameter": "fromname",
+                "fieldType": "text",
+                "helptext": "The real name sender of the email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Carbon Copy",
+            "properties": {
+                "parameter": "cc",
+                "fieldType": "email",
+                "helptext": "An email address to send a carbon copy of this email to."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Second Carbon Copy",
+            "properties": {
+                "parameter": "cc2",
+                "fieldType": "email",
+                "helptext": "An email address to send a carbon copy of this email to."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Carbon Copy Recipient's Name",
+            "properties": {
+                "parameter": "ccname",
+                "fieldType": "text",
+                "helptext": "The real name of the person recieving the carbon copy of this email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Second Carbon Copy Recipient's Name",
+            "properties": {
+                "parameter": "ccname2",
+                "fieldType": "text",
+                "helptext": "The real name of the second person recieving a carbon copy of this email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Blind Carbon Copy",
+            "properties": {
+                "parameter": "bcc",
+                "fieldType": "email",
+                "helptext": "An email address to send a blind carbon copy of this email to."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Second Blind Carbon Copy",
+            "properties": {
+                "parameter": "bcc2",
+                "fieldType": "email",
+                "helptext": "An email address to send a blind carbon copy of this email to."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Blind Carbon Copy Recipient's Name",
+            "properties": {
+                "parameter": "bccname",
+                "fieldType": "text",
+                "helptext": "The real name of the person recieving the blind carbon copy of this email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Second Carbon Copy Recipient's Name",
+            "properties": {
+                "parameter": "bccname2",
+                "fieldType": "text",
+                "helptext": "The real name of the second person recieving a blind carbon copy of this email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Reply to address",
+            "properties": {
+                "parameter": "replyto",
+                "fieldType": "email",
+                "helptext": "An email address that the recipients can easily reply to."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Header Date",
+            "properties": {
+                "parameter": "date",
+                "fieldType": "date",
+                "helptext": "The date to go in the header of your email."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/mail.send.json",
+    "request": "to[]={field.to}&amp;toname={field.toname}&amp;to[]={field.to2}&amp;toname={field.toname2}&amp;subject={field.subject}&amp;text={field.text}&amp;html={field.html}&amp;from={field.from}&amp;cc[]={field.cc}&amp;ccname[]={field.ccname}&amp;cc[]={field.cc2}&amp;ccname[]={field.ccname2}&amp;bcc[]={field.bcc}&amp;bccname[]={field.bccname}&amp;bcc[]={field.bcc2}&amp;bccname[]={field.bccname2}&amp;fromname={field.fromname}&amp;replyto={field.replyto}&amp;date={field.date}",
+    "response": {
+        "success": {
+            "message": "success"
+        },
+        "error": {}
+    }
+}

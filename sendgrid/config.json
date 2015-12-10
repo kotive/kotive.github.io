@@ -1,0 +1,10 @@
+{
+    "name": "Sendgrid",
+    "description": "Delivering your transactional and marketing email through one reliable platform.",
+    "auth": {
+        "method": "Basic",
+        "username": "{settings.sendgrid.username}",
+        "password": "{settings.sendgrid.password}"
+    },
+    "domain": "https://api.sendgrid.com/api/"
+}
