@@ -1,0 +1,158 @@
+{
+    "name": "Get information on a member in a list",
+    "description": "Get information about members in a list using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list this member is on"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Fields to include",
+            "properties": {
+                "parameter": "fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Fields to exclude",
+            "properties": {
+                "parameter": "exclude_fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Count",
+            "properties": {
+                "parameter": "count",
+                "fieldType": "number",
+                "helptext": "The number of records to return"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Offset",
+            "properties": {
+                "parameter": "offset",
+                "fieldType": "number",
+                "helptext": "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow. "
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Email Type",
+            "properties": {
+                "parameter": "email_type",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "html", "value": "HTML"},
+                    {"key": "text", "value": "Text"}
+                ],
+                "default": "text",
+                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Subsriber Status",
+            "properties": {
+                "parameter": "status",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "subscribed", "value": "Subscribed"},
+                    {"key": "unsubscribed", "value": "Unsubscribed"},
+                    {"key": "cleaned", "value": "Cleaned"},
+                    {"key": "pending", "value": "Pending"}
+                ],
+                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Opted in after...",
+            "properties": {
+                "parameter": "since_timestamp_opt",
+                "fieldType": "text",
+                "helptext": "Restrict results to subscribers who opted-in after the set timeframe."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Opted in before...",
+            "properties": {
+                "parameter": "before_timestamp_opt",
+                "fieldType": "text",
+                "helptext": "Restrict results to subscribers who opted-in before the set timeframe."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Has changed since...",
+            "properties": {
+                "parameter": "since_last_changed",
+                "fieldType": "text",
+                "helptext": "Restrict results to subscribers whose information changed after the set timeframe."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Has changed before...",
+            "properties": {
+                "parameter": "since_last_changed",
+                "fieldType": "text",
+                "helptext": "Restrict results to subscribers whose information changed before the set timeframe."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/campaigns/schedule.json",
+    "request": {
+        "apikey": "{field.apikey}",
+        "cid": "{field.cid}",
+        "schedule_time": "{field.schedule_time}",
+        "schedule_time_b": "{field.schedule_time_b}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
