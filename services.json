@@ -93,6 +93,10 @@
             "service": "twilio"
         },
         {
+            "name": "VerticalResponse",
+            "service": "verticalresponse"
+        },
+        {
             "name": "Webhook",
             "service": "webhook"
         }
