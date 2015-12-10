@@ -1,0 +1,25 @@
+{
+	"name": "Get a contact list",
+	"description": "Get a contact list using Constant Contact",
+	"documentation": "http://developer.constantcontact.com/docs/contact-list-api/contactlist-resource.html?method=GET",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "listID",
+  			"fieldType": "text",
+				"helptext": "The ID of the contact list you wish to query"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
