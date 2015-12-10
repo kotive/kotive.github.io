@@ -1,0 +1,48 @@
+{
+    "name": "Delete a member from a list",
+    "description": "Delete a member from a list using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list this member is on"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Subscriber Hash",
+            "properties": {
+                "parameter": "subscriber_hash",
+                "fieldType": "text",
+                "helptext": "The MD5 hash of the lowercase version of the list member to update's email address."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/campaigns/schedule.json",
+    "request": {
+        "apikey": "{field.apikey}",
+        "cid": "{field.cid}",
+        "schedule_time": "{field.schedule_time}",
+        "schedule_time_b": "{field.schedule_time_b}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
