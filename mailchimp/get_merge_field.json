@@ -1,0 +1,103 @@
+{
+    "name": "Get a merge field",
+    "description": "Get specific information on Merge Fields using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/merge-fields/",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list the merge field is associated to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Fields to include",
+            "properties": {
+                "parameter": "fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Fields to exclude",
+            "properties": {
+                "parameter": "exclude_fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Count",
+            "properties": {
+                "parameter": "count",
+                "fieldType": "number",
+                "helptext": "The number of records to return"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Offset",
+            "properties": {
+                "parameter": "offset",
+                "fieldType": "number",
+                "helptext": "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow. "
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Merge Field Type",
+            "properties": {
+                "parameter": "type",
+                "fieldType": "text",
+                "helptext": "The merge field type"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Segment Type",
+            "properties": {
+                "parameter": "required",
+                "fieldType": "text",
+                "helptext": "The segment type"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/campaigns/schedule.json",
+    "request": {
+        "apikey": "{field.apikey}",
+        "cid": "{field.cid}",
+        "schedule_time": "{field.schedule_time}",
+        "schedule_time_b": "{field.schedule_time_b}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
