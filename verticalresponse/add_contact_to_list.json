@@ -1,0 +1,36 @@
+{
+	"name": "Add a contact to a list",
+	"description": "Add a contact to a list using VerticalResponse",
+	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#addcontact",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "ID of the list to add the contact to"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Email Address",
+			"properties": {
+				"parameter": "email",
+  			"fieldType": "email",
+				"helptext": "The email address of the contact to add to the list"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
