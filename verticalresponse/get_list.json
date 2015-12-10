@@ -1,0 +1,25 @@
+{
+	"name": "Get information on a list",
+	"description": "Get information on an existing list using VerticalResponse",
+	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#stats",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "The ID of the list to view information of"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
