@@ -13,6 +13,65 @@
 			"readonly": false,
 			"required": true,
 			"visible": true
+		},
+		{
+			"label": "Contact Count",
+			"properties": {
+				"parameter": "contact_count",
+  			"fieldType": "number",
+				"helptext": "The number of contacts in the list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Date Created",
+			"properties": {
+				"parameter": "created_date",
+  			"fieldType": "text",
+				"helptext": "Time stamp indicating when the contact list was created, in ISO-8601 format"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Date Modified",
+			"properties": {
+				"parameter": "modified_date",
+  			"fieldType": "text",
+				"helptext": "Time stamp indicating when the contact list was modified, in ISO-8601 format"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Name",
+			"properties": {
+				"parameter": "name",
+  			"fieldType": "text",
+				"helptext": "The contact list name"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Status",
+			"properties": {
+				"parameter": "status",
+  			"fieldType": "radio",
+				"choices": [
+						{"key": "ACTIVE", "value": "Active"},
+						{"key": "HIDDEN", "value": "Hidden"}
+				],
+				"helptext": "The contact list status"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
 		}
 	],
 	"method": "POST",
