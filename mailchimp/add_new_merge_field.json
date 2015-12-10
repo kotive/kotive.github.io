@@ -51,7 +51,7 @@
             "readonly": false,
             "required": false,
             "visible": true
-        }
+        },
         {
             "label": "Default Value",
             "properties": {
