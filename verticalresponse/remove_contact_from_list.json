@@ -1,0 +1,36 @@
+{
+	"name": "Remove a contact from a list",
+	"description": "Remove a contact from a lsit using using VerticalResponse",
+	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#addcontact",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "The ID of the list to remove the contact from"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Email Address",
+			"properties": {
+				"parameter": "email",
+  			"fieldType": "email",
+				"helptext": "The email address of the contact to remove from the list"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "",
+	"request": {},
+	"response": {
+		"success": {},
+		"error": {}
+	}
+}
