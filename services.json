@@ -53,6 +53,10 @@
             "service": "ibmwatson"
         },
         {
+            "name": "KissMetrics",
+            "service": "kissmetrics"
+        },
+        {
             "name": "Intercom",
             "service": "intercom"
         },
