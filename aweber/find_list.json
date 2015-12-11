@@ -233,7 +233,7 @@
 		}
 	],
 	"method": "GET",
-	"endpoint": "",
+	"endpoint": "accounts/{settings.aweber.id}/lists/{settings.aweber.id}/subscribers",
 	"request": {},
 	"response": {
 		"success": {
