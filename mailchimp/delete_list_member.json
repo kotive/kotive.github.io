@@ -27,16 +27,12 @@
         }
     ],
     "method": "POST",
-    "endpoint": "/campaigns/schedule.json",
-    "request": {
-        "apikey": "{field.apikey}",
-        "cid": "{field.cid}",
-        "schedule_time": "{field.schedule_time}",
-        "schedule_time_b": "{field.schedule_time_b}"
-    },
+    "endpoint": "/lists/{field.list_id}/members/{fields.subscriber_hash}",
+    "request": {},
     "response": {
         "success": {
-            "complete": true
+            "Code": 204,
+            "Message": "No Content"
         },
         "error": {
             "status": "error",

@@ -123,13 +123,17 @@
             "visible": true
         }
     ],
-    "method": "POST",
-    "endpoint": "/campaigns/schedule.json",
+    "method": "PATCH",
+    "endpoint": "/lists/{field.list_id}/merge-fields/{field.merge_id}",
     "request": {
-        "apikey": "{field.apikey}",
-        "cid": "{field.cid}",
-        "schedule_time": "{field.schedule_time}",
-        "schedule_time_b": "{field.schedule_time_b}"
+      "tag": "{field.tag}",
+      "name": "{field.name}",
+      "required": "{field.required}",
+      "default_value": "{field.default_value}",
+      "public": "{field.public}",
+      "display_order": "{field.display_order}",
+      "options": "{field.options}",
+      "help_text": "{field.help_text}"
     },
     "response": {
         "success": {
