@@ -32,8 +32,11 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
-	"request": {},
+	"endpoint": "/lists",
+	"request": {
+			"name": "{field.name}",
+			"is_public": "{field.is_public}"
+	},
 	"response": {
 		"success": {},
 		"error": {}

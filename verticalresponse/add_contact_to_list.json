@@ -27,8 +27,10 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
-	"request": {},
+	"endpoint": "/lists/{field.list_id}/contacts",
+	"request": {
+			"email": "{field.email}"
+	},
 	"response": {
 		"success": {},
 		"error": {}

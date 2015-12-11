@@ -16,10 +16,20 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "/lists/{field.id}",
 	"request": {},
 	"response": {
-		"success": {},
+		"success": {
+		    "links": {
+		        "up": {
+		            "url": "https://vrapi.verticalresponse.com/api/v1/lists"
+		        }
+		    },
+		    "success": {
+		        "code": 200,
+		        "message": "List deleted."
+		    }
+		},
 		"error": {}
 	}
 }

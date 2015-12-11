@@ -42,9 +42,12 @@
 			"visible": true
 		}
 	],
-	"method": "POST",
-	"endpoint": "",
-	"request": {},
+	"method": "PUT",
+	"endpoint": "/lists/{field.id}",
+	"request": {
+			"name": "{field.name}",
+			"is_public": "{field.is_public}"
+	},
 	"response": {
 		"success": {},
 		"error": {}
