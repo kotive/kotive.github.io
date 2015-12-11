@@ -89,6 +89,10 @@
             "service": "stripe"
         },
         {
+            "name": "Trello",
+            "service": "trello"
+        },
+        {
             "name": "Twilio",
             "service": "twilio"
         },

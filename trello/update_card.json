@@ -91,7 +91,7 @@
                 "fieldType": "radio",
                 "choices":	[
                     {"key": "top", "value": "Top"},
-                    {"key": "bottom", "value": "Bottom"},
+                    {"key": "bottom", "value": "Bottom"}
                 ],
                 "default": "bottom",
                 "helptext": "The position of your card"
