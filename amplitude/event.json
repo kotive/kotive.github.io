@@ -313,7 +313,7 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "?api_key={settings.amplitude.apikey}",
 	"request": {},
 	"response": {
 		"success": {},
