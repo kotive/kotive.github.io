@@ -114,7 +114,17 @@
 	],
 	"method": "POST",
 	"endpoint": "",
-	"request": {},
+	"request": {
+		"anonymousID": "{field.anonymousID}",
+		"context": "{field.context}",
+		"integrations": "{field.integrations}",
+		"sentAt": "{field.sentAt}",
+		"timestamp": "{field.timestamp}",
+		"type": "{field.type}",
+		"userID": "{field.userID}",
+		"event": "{field.event}",
+		"properties": "{field.properties}"
+	},
 	"response": {
 		"success": {
 			"Code": 200,
