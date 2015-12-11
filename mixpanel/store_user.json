@@ -92,7 +92,7 @@
             "readonly": false,
             "required": false,
             "visible": true
-        },
+        }
     ],
     "method": "POST",
     "endpoint": "/track/",
