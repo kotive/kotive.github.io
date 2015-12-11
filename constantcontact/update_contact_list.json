@@ -75,7 +75,7 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "/lists/{field.listID}",
 	"request": {},
 	"response": {
 		"success": {

@@ -31,7 +31,7 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "/lists",
 	"request": {},
 	"response": {
 		"success": {
