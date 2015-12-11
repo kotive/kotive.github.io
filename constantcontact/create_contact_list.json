@@ -34,7 +34,15 @@
 	"endpoint": "",
 	"request": {},
 	"response": {
-		"success": {},
-		"error": {}
+		"success": {
+			"id": "6",
+			"name": "Hot Opportunities",
+			"status": "ACTIVE",
+			"contact_count": 0
+		},
+		"error": {
+			"Code": 401,
+			"Message": "Authentication Failure"
+		}
 	}
 }

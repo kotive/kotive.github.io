@@ -19,7 +19,13 @@
 	"endpoint": "",
 	"request": {},
 	"response": {
-		"success": {},
-		"error": {}
+		"success": {
+			"Code": 204,
+			"Message":  "Success"
+		},
+		"error": {
+			"Code": 401,
+			"Message": "Authentication Failure"
+		}
 	}
 }

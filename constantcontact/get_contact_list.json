@@ -78,7 +78,17 @@
 	"endpoint": "",
 	"request": {},
 	"response": {
-		"success": {},
-		"error": {}
+		"success": {
+			"id": "1",
+			"name": "Monthly Specials",
+			"status": "ACTIVE",
+			"created_date": "2013-03-11T20:37:28.000Z",
+			"modified_date": "2013-03-11T20:41:42.000Z",
+			"contact_count": 127
+		},
+		"error": {
+			"Code": 401,
+			"Message": "Authentication Failure"
+		}
 	}
 }
