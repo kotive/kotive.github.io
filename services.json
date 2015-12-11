@@ -5,6 +5,10 @@
             "service": "asana"
         },
         {
+            "name": "AWeber",
+            "service": "aweber"
+        },
+        {
             "name": "Basecamp",
             "service": "basecamp"
         },
