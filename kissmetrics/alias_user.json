@@ -38,7 +38,7 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "/a?_k={field._k}&_p={field._p}&_n={field._n}",
 	"request": {},
 	"response": {
 		"success": {

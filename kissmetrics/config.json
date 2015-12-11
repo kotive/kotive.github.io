@@ -2,5 +2,5 @@
 	"name": "Kissmetrics",
 	"description": "Kissmetrics delivers key insights and timely interactions to turn visitors into customers.",
 	"auth-method": "Not Really Used Here",
-	"domain": "https://api.kissmetrics.com"
+	"domain": "https://trk.kissmetrics.com"
 }
