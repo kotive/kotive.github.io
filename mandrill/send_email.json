@@ -36,7 +36,7 @@
             "label": "Type",
             "properties": {
               "parameter": "to",
-              "fieldType": "select"
+              "fieldType": "select",
               "options": ["to", "cc", "bcc"],
               "value": "to"
             }
