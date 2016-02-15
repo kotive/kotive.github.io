@@ -16,32 +16,8 @@
       "label": "To",
       "properties": {
         "parameter": "to",
-        "fieldType": "list",
-        "fields": [
-          {
-            "label": "Email",
-            "properties": {
-              "parameter": "email",
-              "fieldType": "email"
-            }
-          },
-          {
-            "label": "Name",
-            "properties": {
-              "parameter": "name",
-              "fieldType": "text"
-            }
-          },
-          {
-            "label": "Type",
-            "properties": {
-              "parameter": "to",
-              "fieldType": "select",
-              "options": ["to", "cc", "bcc"],
-              "value": "to"
-            }
-          }
-        ]
+        "fieldType": "string",
+        "helptext": "Comma separated list of email addresses"
       },
       "readonly": false,
       "required": true,
@@ -77,11 +53,7 @@
       "subject":"{field.subject}",
       "from_email":"{field.fromEmail}",
       "from_name":"{group.label} (via Kotive)",
-      "to": {
-        "email": "{field.to.email}",
-        "name": "{field.to.name}",
-        "type": "{field.to.type}"
-      }
+      "to": "comma-to-array({field.to}, ['to': {value}, 'name': '','type': 'to'])"
     }
   },
   "response": {
