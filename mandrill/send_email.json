@@ -4,10 +4,44 @@
   "documentation": "https://mandrillapp.com/api/docs/messages.JSON.html",
   "fields": [
     {
+      "label": "From email",
+      "properties": {
+        "parameter": "fromEmail",
+        "fieldType": "email",
+        "value": "notifications@kotive.com",
+        "helptext": "The email address to send this notification from"
+      }
+    },
+    {
       "label": "To",
       "properties": {
         "parameter": "to",
-        "fieldType": "text"
+        "fieldType": "list",
+        "fields": [
+          {
+            "label": "Email",
+            "properties": {
+              "parameter": "email",
+              "fieldType": "email"
+            }
+          },
+          {
+            "label": "Name",
+            "properties": {
+              "parameter": "name",
+              "fieldType": "text"
+            }
+          },
+          {
+            "label": "Type",
+            "properties": {
+              "parameter": "to",
+              "fieldType": "select"
+              "options": ["to", "cc", "bcc"],
+              "value": "to"
+            }
+          }
+        ]
       },
       "readonly": false,
       "required": true,
@@ -41,9 +75,13 @@
     "message": {
       "html":"{field.message}",
       "subject":"{field.subject}",
-      "from_email":"notifications@kotive.com",
+      "from_email":"{field.fromEmail}",
       "from_name":"{group.label} (via Kotive)",
-      "to": "{field.to}"
+      "to": {
+        "email": "{field.to.email}",
+        "name": "{field.to.name}",
+        "type": "{field.to.type}"
+      }
     }
   },
   "response": {
