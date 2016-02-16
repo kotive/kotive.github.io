@@ -1,0 +1,46 @@
+{
+	"name": "Remove a contact from a list",
+	"description": "Remove a contact from a lsit using using VerticalResponse",
+	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#remove",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "id",
+  			"fieldType": "number",
+				"helptext": "The ID of the list to remove the contact from"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Contact ID",
+			"properties": {
+				"parameter": "contact_id",
+  			"fieldType": "email",
+				"helptext": "The ID of the contact to remove from the list"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "DELETE",
+	"endpoint": "/lists/{field.id}/contacts/{field.contact_id}",
+	"request": {},
+	"response": {
+		"success": {
+		    "links": {
+		        "up": {
+		            "url": "https://vrapi.verticalresponse.com/api/v1/lists/13885/contacts"
+		        }
+		    },
+		    "success": {
+		        "code": 200,
+		        "message": "Contact deleted."
+		    }
+		},
+		"error": {}
+	}
+}
