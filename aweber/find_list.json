@@ -1,0 +1,245 @@
+{
+	"name": "Find a subscriber list",
+	"description": "Find a subscriber list using AWeber",
+	"documentation": "https://labs.aweber.com/docs/reference/1.0#subscriber_collection",
+	"fields": [
+		{
+			"label": "Advertisement Tracking",
+			"properties": {
+				"parameter": "ad_tracking",
+  			"fieldType": "text",
+				"helptext": "Customer Ad Tracking ID"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Area Code",
+			"properties": {
+				"parameter": "area_code",
+  			"fieldType": "text",
+				"helptext": "The telephone area code of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "City",
+			"properties": {
+				"parameter": "city",
+  			"fieldType": "text",
+				"helptext": "The city of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Country",
+			"properties": {
+				"parameter": "country",
+  			"fieldType": "text",
+				"helptext": "The country of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Custom Fields",
+			"properties": {
+				"parameter": "custom_fields",
+  			"fieldType": "text",
+				"helptext": "Custom key value pairs, enclosed with quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Designated Market Area Code (USA & Canade only)",
+			"properties": {
+				"parameter": "dma_code",
+  			"fieldType": "number",
+				"helptext": "The designated market are code of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Email Address",
+			"properties": {
+				"parameter": "email",
+  			"fieldType": "email",
+				"helptext": "The email address of the subscriber to add"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Last followup number sent",
+			"properties": {
+				"parameter": "last_followup_message_number_sent",
+  			"fieldType": "number",
+				"helptext": "The sequence number of the last followup sent"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Last followup message sent at",
+			"properties": {
+				"parameter": "last_followup_message_sent_at",
+  			"fieldType": "text",
+				"helptext": "The last time they received a Followup message."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Latitude",
+			"properties": {
+				"parameter": "latitude",
+  			"fieldType": "text",
+				"helptext": "The geographical latitude of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Longitude",
+			"properties": {
+				"parameter": "longitude",
+  			"fieldType": "text",
+				"helptext": "The geographical longitude of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Miscellaneous Notes",
+			"properties": {
+				"parameter": "misc_notes",
+  			"fieldType": "text",
+				"helptext": "Miscellaneous notes to go along with the new list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Subscriber Name",
+			"properties": {
+				"parameter": "name",
+  			"fieldType": "text",
+				"helptext": "The name of the subscriber to add to the list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Postal Code",
+			"properties": {
+				"parameter": "postal_code",
+  			"fieldType": "text",
+				"helptext": "The Postal or ZIP code of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Region",
+			"properties": {
+				"parameter": "region",
+  			"fieldType": "text",
+				"helptext": "The state or region abbreviation of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Status",
+			"properties": {
+				"parameter": "status",
+  			"fieldType": "radio",
+				"choices": [
+						{"key": "subscribed", "value": "Subscribed"},
+						{"key": "unsubscribed", "value": "Unsubscibed"},
+						{"key": "unconfirmed", "value": "Unconfirmed"}
+				],
+				"default": "unconfirmed",
+				"helptext": "The subscription state of the subscribers"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Subscribed At",
+			"properties": {
+				"parameter": "subscribed_at",
+  			"fieldType": "text",
+				"helptext": "When the users were subscribed"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Subscription Method",
+			"properties": {
+				"parameter": "suscribe_method",
+  			"fieldType": "radio",
+				"choices": [
+						{"key": "import", "value": "Imported"},
+						{"key": "email", "value": "Email"},
+						{"key": "signup form", "value": "Signup Form"},
+						{"key": "api", "value": "API"}
+				],
+				"helptext": "How the users are subscribed"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Unsubscription Method",
+			"properties": {
+				"parameter": "unsuscribe_method",
+  			"fieldType": "radio",
+				"choices": [
+						{"key": "unsubscribe link", "value": "Unsubscribe Link"},
+						{"key": "customer cp", "value": "Customer CP"},
+						{"key": "undeliverable", "value": "Undeliverable"},
+						{"key": "api: Unsubscribe", "value": "API (Unsubscribe)"},
+						{"key": "api: move", "value": "API (Move)"}
+				],
+				"helptext": "How the users were unsubscribed"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		}
+	],
+	"method": "GET",
+	"endpoint": "accounts/{settings.aweber.id}/lists/{settings.aweber.id}/subscribers",
+	"request": {},
+	"response": {
+		"success": {
+			"Code": 200,
+			"Message": "OK"
+		},
+		"error": {}
+	}
+}
