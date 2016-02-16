@@ -8,7 +8,7 @@
       "properties": {
         "parameter": "fromEmail",
         "fieldType": "email",
-        "value": "notifications@kotive.com",
+        "default": "notifications@kotive.com",
         "helptext": "The email address to send this notification from"
       }
     },
