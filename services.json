@@ -1,6 +1,10 @@
 {
     "services": [
         {
+            "name": "Amplitude",
+            "service": "amplitude"
+        },
+        {
             "name": "Asana",
             "service": "asana"
         },
