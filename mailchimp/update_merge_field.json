@@ -1,0 +1,149 @@
+{
+    "name": "Update a merge field",
+    "description": "Update a merge field using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/merge-fields/#",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list to add this merge field to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Merge ID",
+            "properties": {
+                "parameter": "merge_id",
+                "fieldType": "text",
+                "helptext": "The ID of the merge field to update"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Tag",
+            "properties": {
+                "parameter": "tag",
+                "fieldType": "text",
+                "helptext": "The tag used in MailChimp campaigns and for the /members endpoint."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Name",
+            "properties": {
+                "parameter": "name",
+                "fieldType": "text",
+                "helptext": "The name of the merge field. "
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Is this field required?",
+            "properties": {
+                "parameter": "required",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": true, "value": "Yes"},
+                    {"key": false, "value": "No"}
+                ],
+                "default": false,
+                "helptext": "Is this a required merge field?"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Default Value",
+            "properties": {
+                "parameter": "default_value",
+                "fieldType": "text",
+                "helptext": "The default value for the merge field if null."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Is the Merge Field Public?",
+            "properties": {
+                "parameter": "public",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": true, "value": "Yes"},
+                    {"key": false, "value": "No"}
+                ],
+                "helptext": "Whether the merge field is displayed on the signup form. "
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Display Order",
+            "properties": {
+                "parameter": "display_order",
+                "fieldType": "number",
+                "helptext": "The order in which the merge field displays on the list form."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Options",
+            "properties": {
+                "parameter": "options",
+                "fieldType": "text",
+                "helptext": "Extra options for some merge field types. These must be enclosed in quotes, and separated with commas, eg: \"key1\": \"value1\", \"key2\", \"value2\""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Help Text",
+            "properties": {
+                "parameter": "helptext",
+                "fieldType": "text",
+                "helptext": "Extra text to help the subscriber fill out the form."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "PATCH",
+    "endpoint": "/lists/{field.list_id}/merge-fields/{field.merge_id}",
+    "request": {
+      "tag": "{field.tag}",
+      "name": "{field.name}",
+      "required": "{field.required}",
+      "default_value": "{field.default_value}",
+      "public": "{field.public}",
+      "display_order": "{field.display_order}",
+      "options": "{field.options}",
+      "help_text": "{field.help_text}"
+    },
+    "response": {
+        "success": {
+            "complete": true
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}

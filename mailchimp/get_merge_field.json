@@ -1,0 +1,222 @@
+{
+    "name": "Get a merge field",
+    "description": "Get specific information on Merge Fields using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/merge-fields/",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list the merge field is associated to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Merge ID",
+            "properties": {
+                "parameter": "merge_id",
+                "fieldType": "text",
+                "helptext": "The ID of the merge field to view"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Fields to include",
+            "properties": {
+                "parameter": "fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Fields to exclude",
+            "properties": {
+                "parameter": "exclude_fields",
+                "fieldType": "text",
+                "helptext": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Count",
+            "properties": {
+                "parameter": "count",
+                "fieldType": "number",
+                "helptext": "The number of records to return"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Offset",
+            "properties": {
+                "parameter": "offset",
+                "fieldType": "number",
+                "helptext": "The number of records from a collection to skip. Iterating over large collections with this parameter can be slow. "
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Merge Field Type",
+            "properties": {
+                "parameter": "type",
+                "fieldType": "text",
+                "helptext": "The merge field type"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Segment Type",
+            "properties": {
+                "parameter": "required",
+                "fieldType": "text",
+                "helptext": "The segment type"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "GET",
+    "endpoint": "/lists/{field.list_id}/merge-fields/{field.merge_id}",
+    "request": {
+        "fields": "{field.fields}",
+        "exclude_fields": "{field.exclude_fields}",
+        "count": "{field.count}",
+        "offset": "{field.offset}",
+        "type": "{field.type}",
+        "required": "{field.required}"
+    },
+    "response": {
+        "success": {
+            "merge_fields": [
+              {
+                "merge_id": 1,
+                "tag": "FNAME",
+                "name": "First Name",
+                "type": "text",
+                "required": false,
+                "default_value": "",
+                "public": true,
+                "display_order": 2,
+                "options": {
+                  "size": 25
+                },
+                "help_text": "",
+                "list_id": "57afe96172",
+                "_links": [
+                  {
+                    "rel": "self",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/1",
+                    "method": "GET",
+                    "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Instance.json"
+                  },
+                  {
+                    "rel": "parent",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields",
+                    "method": "GET",
+                    "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Collection.json",
+                    "schema": "https://api.mailchimp.com/schema/3.0/CollectionLinks/Lists/MergeFields.json"
+                  },
+                  {
+                    "rel": "update",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/1",
+                    "method": "PATCH",
+                    "schema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Instance.json"
+                  },
+                  {
+                    "rel": "delete",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/1",
+                    "method": "DELETE"
+                  }
+                ]
+              },
+              {
+                "merge_id": 2,
+                "tag": "LNAME",
+                "name": "Last Name",
+                "type": "text",
+                "required": false,
+                "default_value": "",
+                "public": true,
+                "display_order": 3,
+                "options": {
+                  "size": 25
+                },
+                "help_text": "",
+                "list_id": "57afe96172",
+                "_links": [
+                  {
+                    "rel": "self",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/2",
+                    "method": "GET",
+                    "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Instance.json"
+                  },
+                  {
+                    "rel": "parent",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields",
+                    "method": "GET",
+                    "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Collection.json",
+                    "schema": "https://api.mailchimp.com/schema/3.0/CollectionLinks/Lists/MergeFields.json"
+                  },
+                  {
+                    "rel": "update",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/2",
+                    "method": "PATCH",
+                    "schema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Instance.json"
+                  },
+                  {
+                    "rel": "delete",
+                    "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields/2",
+                    "method": "DELETE"
+                  }
+                ]
+              }
+            ],
+            "list_id": "57afe96172",
+            "_links": [
+              {
+                "rel": "self",
+                "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields",
+                "method": "GET",
+                "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Collection.json",
+                "schema": "https://api.mailchimp.com/schema/3.0/CollectionLinks/Lists/MergeFields.json"
+              },
+              {
+                "rel": "create",
+                "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172/merge-fields",
+                "method": "POST",
+                "schema": "https://api.mailchimp.com/schema/3.0/Lists/MergeFields/Instance.json"
+              },
+              {
+                "rel": "parent",
+                "href": "https://usX.api.mailchimp.com/3.0/lists/57afe96172",
+                "method": "GET",
+                "targetSchema": "https://api.mailchimp.com/schema/3.0/Lists/Members/Instance.json"
+              }
+            ],
+            "total_items": 2
+          },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}
