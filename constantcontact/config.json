@@ -1,0 +1,6 @@
+{
+	"name": "Constant Contact",
+	"description": "Create professional email newsletters that bring customers to your door.",
+	"auth-method": "OAuth 2",
+	"domain": "https://api.constantcontact.com/v2"
+}

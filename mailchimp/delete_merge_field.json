@@ -1,0 +1,44 @@
+{
+    "name": "Delete a merge field",
+    "description": "Delete a merge field from a list using MailChimp",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/merge-fields/#",
+    "fields": [
+        {
+            "label": "List ID",
+            "properties": {
+                "parameter": "list_id",
+                "fieldType": "text",
+                "helptext": "The ID of the list this merge field belongs to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Merge ID",
+            "properties": {
+                "parameter": "merge_id",
+                "fieldType": "text",
+                "helptext": "The ID of the merge field you want to delete"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/lists/{field.list_id}/merge-fields/{field.merge_id}",
+    "request": {},
+    "response": {
+        "success": {
+            "Code": 204,
+            "Message": "No content"
+        },
+        "error": {
+            "status": "error",
+            "code": -99,
+            "name": "Unknown_Exception",
+            "error": "An unknown error occurred processing your request.  Please try again later."
+        }
+    }
+}

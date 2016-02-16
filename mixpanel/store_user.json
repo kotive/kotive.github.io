@@ -1,0 +1,110 @@
+{
+    "name": "Store user information",
+    "description": "Store a user profile using MixPanel.",
+    "documentation": "https://mixpanel.com/help/reference/http#people-analytics-updates",
+    "fields": [
+        {
+            "label": "Token",
+            "properties": {
+                "parameter": "$token",
+                "fieldType": "text",
+                "helptext": "The Mixpanel token associated with your project."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Distinct ID",
+            "properties": {
+                "parameter": "$distinct_id",
+                "fieldType": "text",
+                "helptext": "This is a string that identifies the profile you would like to update."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "IP Address",
+            "properties": {
+                "parameter": "$ip",
+                "fieldType": "text",
+                "helptext": "The IP address associated with a given profile, used to guess at the geographic location of users."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Time",
+            "properties": {
+                "parameter": "$time",
+                "fieldType": "number",
+                "helptext": "Seconds since midnight, January 1st 1970, UTC."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Update 'Last Seen'?",
+            "properties": {
+                "parameter": "$ignore_time",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "true", "value": "No"},
+                    {"key": "false", "value": "Yes"}
+                ],
+                "helptext": "Should MixPanel update the 'Last Seen' property of the profile?."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Update Operation",
+            "properties": {
+                "parameter": "operation",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "$set", "value": "Set"},
+                    {"key": "$set_once", "value": "Set Once"},
+                    {"key": "$add", "value": "Add"},
+                    {"key": "$append", "value": "Append"},
+                    {"key": "$union", "value": "Union"},
+                    {"key": "$unset", "value": "Unset"},
+                    {"key": "$delete", "value": "Delete"}
+                ],
+                "helptext": "The operation to go along with the creation of this user"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Update Action",
+            "properties": {
+                "parameter": "operation_action",
+                "fieldType": "text",
+                "helptext": "Comma delimited key-value pairs, eg: \"key1\": \"value1\", \"key2\": \"value2\""
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/track/",
+    "request": {
+        "event": "{field.event}",
+        "properties": {
+            "token": "{settings.mixpanel.token}",
+            "distinct_id": "{field.distinct_id}"
+        }
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}

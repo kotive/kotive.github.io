@@ -1,0 +1,38 @@
+{
+    "name": "Write a new comment",
+    "description": "Write a new comment on a trello cards",
+    "documentation": "https://developers.trello.com/advanced-reference/card#post-1-cards-card-id-or-shortlink-actions-comments",
+    "fields": [
+        {
+            "label": "Card ID",
+            "properties": {
+                "parameter": "id",
+                "fieldType": "text",
+                "helptext": "The ID of the card on which you wish to comment"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Comment",
+            "properties": {
+                "parameter": "text",
+                "fieldType": "text",
+                "helptext": "Your comment. Keep it nice (:"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "POST",
+    "endpoint": "/1/cards/{field.id}/actions/comments",
+    "request": {
+        "text": "{field.text}"
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}

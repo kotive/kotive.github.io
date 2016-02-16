@@ -1,0 +1,94 @@
+{
+	"name": "Create a subscriber list",
+	"description": "Create a subscriber list using AWeber",
+	"documentation": "https://labs.aweber.com/docs/reference/1.0#subscriber_collection",
+	"fields": [
+		{
+			"label": "Advertisement Tracking",
+			"properties": {
+				"parameter": "ad_tracking",
+  			"fieldType": "text",
+				"helptext": "Customer Ad Tracking ID"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Custom Fields",
+			"properties": {
+				"parameter": "custom_fields",
+  			"fieldType": "text",
+				"helptext": "Custom key value pairs, enclosed with quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Email Address",
+			"properties": {
+				"parameter": "email",
+  			"fieldType": "email",
+				"helptext": "The email address of the subscriber to add"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "IP Address",
+			"properties": {
+				"parameter": "ip_address",
+  			"fieldType": "text",
+				"helptext": "The IP address of the subscriber to add"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Last followup number sent",
+			"properties": {
+				"parameter": "last_followup_message_number_sent",
+  			"fieldType": "number",
+				"helptext": "The sequence number of the last followup sent"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Miscellaneous Notes",
+			"properties": {
+				"parameter": "misc_notes",
+  			"fieldType": "text",
+				"helptext": "Miscellaneous notes to go along with the new list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Subscriber Name",
+			"properties": {
+				"parameter": "name",
+  			"fieldType": "text",
+				"helptext": "The name of the subscriber to add to the list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "accounts/{settings.aweber.id}/lists/{settings.aweber.id}/subscribers",
+	"request": {},
+	"response": {
+		"success": {
+			"Code": 201,
+			"Message": "CREATED"
+		},
+		"error": {}
+	}
+}

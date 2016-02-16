@@ -1,0 +1,31 @@
+{
+	"name": "Delete a contact list",
+	"description": "Delete a contact list using Constant Contact",
+	"documentation": "http://developer.constantcontact.com/docs/contact-list-api/contactlist-resource.html?method=DELETE",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "listID",
+  			"fieldType": "text",
+				"helptext": "The ID of the contact list you wish to delete"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "/lists/{field.listID}",
+	"request": {},
+	"response": {
+		"success": {
+			"Code": 204,
+			"Message":  "Success"
+		},
+		"error": {
+			"Code": 401,
+			"Message": "Authentication Failure"
+		}
+	}
+}

@@ -1,8 +1,16 @@
 {
     "services": [
         {
+            "name": "Amplitude",
+            "service": "amplitude"
+        },
+        {
             "name": "Asana",
             "service": "asana"
+        },
+        {
+            "name": "AWeber",
+            "service": "aweber"
         },
         {
             "name": "Basecamp",
@@ -15,6 +23,10 @@
         {
             "name": "Clickatell",
             "service": "clickatell"
+        },
+        {
+            "name": "Constant Contact",
+            "service": "constantcontact"
         },
         {
             "name": "Desk",
@@ -53,6 +65,10 @@
             "service": "ibmwatson"
         },
         {
+            "name": "KissMetrics",
+            "service": "kissmetrics"
+        },
+        {
             "name": "Intercom",
             "service": "intercom"
         },
@@ -89,6 +105,10 @@
             "service": "sendgrid"
         },
         {
+            "name": "Segment",
+            "service": "segment"
+        },
+        {
             "name": "SMS",
             "service": "sms"
         },
@@ -97,8 +117,16 @@
             "service": "stripe"
         },
         {
+            "name": "Trello",
+            "service": "trello"
+        },
+        {
             "name": "Twilio",
             "service": "twilio"
+        },
+        {
+            "name": "VerticalResponse",
+            "service": "verticalresponse"
         },
         {
             "name": "Webhook",
