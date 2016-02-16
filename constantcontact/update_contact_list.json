@@ -1,0 +1,91 @@
+{
+	"name": "Update a contact list",
+	"description": "Update a contact list using Constant Contact",
+	"documentation": "http://developer.constantcontact.com/docs/contact-list-api/contactlist-resource.html?method=PUT",
+	"fields": [
+		{
+			"label": "List ID",
+			"properties": {
+				"parameter": "listID",
+  			"fieldType": "text",
+				"helptext": "The ID of the contact list you wish to update"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Contact Count",
+			"properties": {
+				"parameter": "contact_count",
+  			"fieldType": "number",
+				"helptext": "The number of contacts in the list"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Date Created",
+			"properties": {
+				"parameter": "created_date",
+  			"fieldType": "text",
+				"helptext": "Time stamp indicating when the contact list was created, in ISO-8601 format"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Date Modified",
+			"properties": {
+				"parameter": "modified_date",
+  			"fieldType": "text",
+				"helptext": "Time stamp indicating when the contact list was modified, in ISO-8601 format"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Name",
+			"properties": {
+				"parameter": "name",
+  			"fieldType": "text",
+				"helptext": "The contact list name"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		},
+		{
+			"label": "Status",
+			"properties": {
+				"parameter": "status",
+  			"fieldType": "radio",
+				"choices": [
+						{"key": "ACTIVE", "value": "Active"},
+						{"key": "HIDDEN", "value": "Hidden"}
+				],
+				"helptext": "The contact list status"
+  		},
+			"readonly": false,
+			"required": true,
+			"visible": true
+		}
+	],
+	"method": "POST",
+	"endpoint": "/lists/{field.listID}",
+	"request": {},
+	"response": {
+		"success": {
+			"id": "4",
+			"name": "Useful Tips & Tricks!",
+			"status": "ACTIVE",
+			"created_date": "2013-04-23T15:07:40.000Z",
+			"modified_date": "2013-04-23T15:13:43.000Z",
+			"contact_count": 390
+		},
+		"error": {}
+	}
+}
