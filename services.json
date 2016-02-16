@@ -105,6 +105,10 @@
             "service": "sendgrid"
         },
         {
+            "name": "Segment",
+            "service": "segment"
+        },
+        {
             "name": "SMS",
             "service": "sms"
         },
