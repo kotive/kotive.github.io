@@ -2,7 +2,19 @@
   "name": "Mandrill",
   "description": "Mandrill is simple, powerful transactional email from the same people that brought you Mailchimp.",
   "auth": {
-    "method": "API key"
+    "method": "Custom"
+    "fields": [
+      {
+        "label": "API key",
+        "properties": {
+          "parameter": "apikey",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
   },
   "domain": "https://mandrillapp.com/api/1.0"
 }
