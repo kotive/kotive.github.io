@@ -2,7 +2,7 @@
     "name": "MailChimp",
     "description": "Send better email",
     "auth": {
-        "method": "Custom"
+        "method": "Custom",
         "fields": [
             {
                 "label": "API key",
