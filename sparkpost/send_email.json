@@ -1,0 +1,102 @@
+{
+  "name": "Send an email",
+  "description": "Send a new transactional email.",
+  "documentation": "https://developers.sparkpost.com/api/#/reference/transmissions",
+  "fields": [
+    {
+      "label": "From name",
+      "properties": {
+        "parameter": "fromName",
+        "fieldType": "text",
+        "default": "{user.firstname:{currentuser.id}}"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "From email",
+      "properties": {
+        "parameter": "fromEmail",
+        "fieldType": "email",
+        "default": "{user.email:{currentuser.id}}",
+        "helptext": "The email address to send this notification from"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "To",
+      "properties": {
+        "parameter": "to",
+        "fieldType": "string",
+        "helptext": "Comma separated list of email addresses"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Subject",
+      "properties": {
+        "parameter": "subject",
+        "fieldType": "text"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Message",
+      "properties": {
+        "parameter": "message",
+        "fieldType": "textarea",
+        "helptext": "Message can contain HTML for formatting"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "{auth.fields.apikey}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/transmissions",
+  "request": {
+    "recipients": [
+      {
+        "address": "{field.to}"
+      }
+    ],
+    "content": {
+      "from": {
+        "email": "{field.fromEmail}",
+        "name": "{field.fromName}"
+      },
+      "subject": "{field.subject}",
+      "html": "{field.message}"
+    }
+  },
+  "response": {
+    "success": {
+      "results": {
+        "total_rejected_recipients": 0,
+        "total_accepted_recipients": 1,
+        "id": "48251405395446032"
+      }
+    },
+    "error": [
+      {
+        "message": "",
+        "code": "",
+        "description": "",
+        "part": "",
+        "line": ""
+      }
+    ]
+  }
+}

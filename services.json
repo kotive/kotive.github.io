@@ -113,6 +113,10 @@
             "service": "sms"
         },
         {
+            "name": "SparkPost",
+            "service": "sparkpost"
+        },
+        {
             "name": "Stripe",
             "service": "stripe"
         },
