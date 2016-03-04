@@ -7,8 +7,7 @@
       "label": "From name",
       "properties": {
         "parameter": "fromName",
-        "fieldType": "text",
-        "default": "{user.firstname:{currentuser.id}}"
+        "fieldType": "text"
       },
       "readonly": false,
       "required": false,
@@ -19,7 +18,7 @@
       "properties": {
         "parameter": "fromEmail",
         "fieldType": "email",
-        "default": "{user.email:{currentuser.id}}",
+        "default": "notifications@kotive.com",
         "helptext": "The email address to send this notification from"
       },
       "readonly": false,
