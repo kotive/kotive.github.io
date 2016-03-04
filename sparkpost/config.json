@@ -1,0 +1,20 @@
+{
+  "name": "Sparkpost",
+  "description": "Sparkpost is an email delivery service for senders of any size.",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "API key",
+        "properties": {
+          "parameter": "apikey",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.sparkpost.com/api/v1"
+}
