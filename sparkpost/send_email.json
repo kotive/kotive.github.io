@@ -59,7 +59,7 @@
     }
   ],
   "headers": {
-    "Authorization": "{auth.fields.apikey}",
+    "Authorization": "{auth.field.apikey}",
     "Content-Type": "application/json",
     "Accept": "application/json"
   },
