@@ -66,11 +66,7 @@
   "method": "POST",
   "endpoint": "/transmissions",
   "request": {
-    "recipients": [
-      {
-        "address": "{field.to}"
-      }
-    ],
+    "recipients": "{comma_to_hash_array(field.to, address)}",
     "content": {
       "from": {
         "email": "{field.fromEmail}",
