@@ -1,0 +1,64 @@
+{
+    "name": "Send via a webhook",
+    "description": "Create a new request using webhooks.",
+    "documentation": "",
+    "fields": [
+        {
+            "label": "Webhook URL",
+            "properties": {
+                "parameter": "webhook_url",
+                "fieldType": "web",
+                "helptext": "Any URL with a querystring will be re-encoded properly."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Method",
+            "properties": {
+                "parameter": "method",
+                "fieldType": "radio",
+                "choices": [
+                    "GET",
+                    "POST",
+                    "PUT"
+                ],
+                "default": "GET"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Payload",
+            "properties": {
+                "parameter": "payload",
+                "fieldType": "textarea",
+                "helptext": "This is the body/content that will be sent to the webhook URL."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Headers",
+            "properties": {
+                "parameter": "header",
+                "fieldType": "textarea",
+                "helptext": "A collection of comma separated 'key':'value' pairs to be added to the headers. E.g. 'Authorization':'Basic dGVzSPxwMEBrbd7w6mUuaW86IoIz','Cache-Control':'no-cache'",
+                "default": "{
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "headers": "{field.headers}",
+    "method": "{field.method}",
+    "endpoint": "{field.webhook_url}",
+    "request": "{field.payload}"
+}
