@@ -47,10 +47,7 @@
                 "parameter": "header",
                 "fieldType": "textarea",
                 "helptext": "A collection of comma separated 'key':'value' pairs to be added to the headers. E.g. 'Authorization':'Basic dGVzSPxwMEBrbd7w6mUuaW86IoIz','Cache-Control':'no-cache'",
-                "default": "{
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }"
+                "default": "{'Content-Type': 'application/json','Accept': 'application/json'}"
             },
             "readonly": false,
             "required": false,
