@@ -55,7 +55,7 @@
         }
     ],
     "headers": "{field.headers}",
-    "method": "{field.method}",
+    "method": "POST",
     "endpoint": "{field.webhook_url}",
     "request": "{field.payload}"
 }
