@@ -4,10 +4,20 @@
   "documentation": "https://mandrillapp.com/api/docs/messages.JSON.html",
   "fields": [
     {
+      "label": "From email",
+      "properties": {
+        "parameter": "fromEmail",
+        "fieldType": "email",
+        "default": "notifications@kotive.com",
+        "helptext": "The email address to send this notification from"
+      }
+    },
+    {
       "label": "To",
       "properties": {
         "parameter": "to",
-        "fieldType": "text"
+        "fieldType": "string",
+        "helptext": "Comma separated list of email addresses"
       },
       "readonly": false,
       "required": true,
@@ -37,13 +47,13 @@
   "method": "POST",
   "endpoint": "/messages/send.json",
   "request": {
-    "key": "{settings.mandrill.apikey}",
+    "key": "{auth.fields.apikey}",
     "message": {
       "html":"{field.message}",
       "subject":"{field.subject}",
-      "from_email":"notifications@kotive.com",
+      "from_email":"{field.fromEmail}",
       "from_name":"{group.label} (via Kotive)",
-      "to": "{field.to}"
+      "to": "comma-to-array({field.to}, ['to': {value}, 'name': '','type': 'to'])"
     }
   },
   "response": {

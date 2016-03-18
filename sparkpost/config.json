@@ -1,6 +1,6 @@
 {
-  "name": "Mandrill",
-  "description": "Mandrill is simple, powerful transactional email from the same people that brought you Mailchimp.",
+  "name": "Sparkpost",
+  "description": "Sparkpost is an email delivery service for senders of any size.",
   "auth": {
     "method": "Custom",
     "fields": [
@@ -16,5 +16,5 @@
       }
     ]
   },
-  "domain": "https://mandrillapp.com/api/1.0"
+  "domain": "https://api.sparkpost.com/api/v1"
 }

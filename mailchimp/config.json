@@ -2,7 +2,29 @@
     "name": "MailChimp",
     "description": "Send better email",
     "auth": {
-        "method": "API key"
+        "method": "Custom",
+        "fields": [
+            {
+                "label": "API key",
+                "properties": {
+                    "parameter": "apikey",
+                    "fieldType": "text"
+                },
+                "readonly": false,
+                "required": true,
+                "visible": true
+            },
+            {
+                "label": "District/datacentre",
+                "properties": {
+                    "parameter": "district",
+                    "fieldType": "text"
+                },
+                "readonly": false,
+                "required": true,
+                "visible": true
+            }
+        ]
     },
-    "domain": "https://{settings.mailchimp.district}.api.mailchimp.com/2.0"
+    "domain": "https://{auth.fields.district}.api.mailchimp.com/2.0"
 }
