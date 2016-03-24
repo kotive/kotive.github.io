@@ -1,6 +1,6 @@
 {
-    "name": "Send via a webhook",
-    "description": "Create a new request using webhooks.",
+    "name": "Send json data",
+    "description": "Create a new JSON request using webhooks.",
     "documentation": "",
     "fields": [
         {
@@ -24,7 +24,7 @@
                     "POST",
                     "PUT"
                 ],
-                "default": "GET"
+                "default": "POST"
             },
             "readonly": false,
             "required": true,
@@ -35,7 +35,8 @@
             "properties": {
                 "parameter": "payload",
                 "fieldType": "textarea",
-                "helptext": "This is the body/content that will be sent to the webhook URL."
+                "helptext": "This is the JSON body/content string that will be sent to the webhook URL.",
+                "default": "{\n  \"your\": \"JSON data here\"\n}"
             },
             "readonly": false,
             "required": false,
@@ -47,15 +48,15 @@
                 "parameter": "header",
                 "fieldType": "textarea",
                 "helptext": "A collection of comma separated 'key':'value' pairs to be added to the headers. E.g. 'Authorization':'Basic dGVzSPxwMEBrbd7w6mUuaW86IoIz','Cache-Control':'no-cache'",
-                "default": "{\"Content-Type\": \"application/json\",\"Accept\": \"application/json\"}"
+                "default": "{\n  \"Content-Type\": \"application/json\",\n  \"Accept\": \"application/json\"\n}"
             },
             "readonly": false,
             "required": false,
             "visible": true
         }
     ],
-    "headers": "{field.headers}",
+    "headers": "{string_to_hash(field.headers)}",
     "method": "{field.method}",
-    "endpoint": "{field.webhook_url}",
-    "request": "{field.payload}"
+    "endpoint": "{encodeURI(field.webhook_url)}",
+    "request": "{string_to_hash(field.payload)}"
 }
