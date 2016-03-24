@@ -35,7 +35,7 @@
             "properties": {
                 "parameter": "payload",
                 "fieldType": "textarea",
-                "helptext": "This is the JSON body/content string that will be sent to the webhook URL.",
+                "helptext": "This is the JSON body/content string that will be sent to the webhook URL (or leave empty if not sending any data).",
                 "default": "{\n  \"your\": \"JSON data here\"\n}"
             },
             "readonly": false,
@@ -58,5 +58,5 @@
     "headers": "{string_to_hash(field.headers)}",
     "method": "{field.method}",
     "endpoint": "{encodeURI(field.webhook_url)}",
-    "request": "{string_to_hash(field.payload)}"
+    "request": "{string_to_hash_or_null(field.payload)}"
 }
