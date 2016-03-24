@@ -57,6 +57,6 @@
     ],
     "headers": "{string_to_hash(field.headers)}",
     "method": "{field.method}",
-    "endpoint": "{encodeURI(field.webhook_url)}",
+    "endpoint": "{encode_uri(field.webhook_url)}",
     "request": "{string_to_hash_or_null(field.payload)}"
 }
