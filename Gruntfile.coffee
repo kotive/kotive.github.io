@@ -15,19 +15,18 @@ module.exports = (grunt)->
   _.each services.services, (service)->
     jsonSrc.push "#{service.service}/**/*.json"
     images32x32["#{service.service}/icon32x32.png"] = "#{service.service}/icon.png"
-  
+
   grunt.initConfig
     jsonlint:
       configFiles:
         src: jsonSrc
 
     image_resize:
-      resize:
-        options:
-          width: 32
-          height: 32
-          overwrite: true
-        files: images32x32
+      options:
+        width: 32
+        height: 32
+        overwrite: true
+      files: images32x32
 
   grunt.loadNpmTasks('grunt-image-resize')
 
