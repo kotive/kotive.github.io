@@ -7,7 +7,7 @@
             "label": "Webhook URL",
             "properties": {
                 "parameter": "webhook_url",
-                "fieldType": "web",
+                "fieldType": "url",
                 "helptext": "Any URL with a querystring will be re-encoded properly."
             },
             "readonly": false,
