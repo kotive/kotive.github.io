@@ -1,0 +1,62 @@
+{
+    "name": "Send json data",
+    "description": "Create a new JSON request using webhooks.",
+    "documentation": "",
+    "fields": [
+        {
+            "label": "Webhook URL",
+            "properties": {
+                "parameter": "webhook_url",
+                "fieldType": "url",
+                "helptext": "Any URL with a querystring will be re-encoded properly."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Method",
+            "properties": {
+                "parameter": "method",
+                "fieldType": "radio",
+                "choices": [
+                    "GET",
+                    "POST",
+                    "PUT"
+                ],
+                "default": "POST"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Payload",
+            "properties": {
+                "parameter": "payload",
+                "fieldType": "textarea",
+                "helptext": "This is the JSON body/content string that will be sent to the webhook URL (or leave empty if not sending any data).",
+                "default": "{\n  \"your\": \"JSON data here\"\n}"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Headers",
+            "properties": {
+                "parameter": "headers",
+                "fieldType": "textarea",
+                "helptext": "A collection of comma separated 'key':'value' pairs to be added to the headers. E.g. 'Authorization':'Basic dGVzSPxwMEBrbd7w6mUuaW86IoIz','Cache-Control':'no-cache'",
+                "default": "{\n  \"Content-Type\": \"application/json\",\n  \"Accept\": \"application/json\"\n}"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "headers": "{string_to_hash(field.headers)}",
+    "method": "{field.method}",
+    "endpoint": "{encode_uri(field.webhook_url)}",
+    "request": "{string_to_hash_or_null(field.payload)}"
+}
