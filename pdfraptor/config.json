@@ -4,7 +4,7 @@
     "auth": {
         "method": "Custom",
         "fields": {
-            "label": "API Key"
+            "label": "API Key",
             "properties": {
                 "parameter": "apikey",
                 "fieldType": "text"
