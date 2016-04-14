@@ -2,9 +2,17 @@
     "name": "PDFRaptor",
     "description": "DocRaptor makes it easy to create PDF and XLS files on the fly.",
     "auth": {
-        "method": "Basic",
-        "username": "{settings.docraptor.apikey}",
-        "password": ""
+        "method": "Custom",
+        "fields": {
+            "label": "API Key"
+            "properties": {
+                "parameter": "apikey",
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
     },
-    "domain": "https://docraptor.com/docs"
+    "domain": "https://docraptor.com/docs?user-credentials={auth.fields.apikey}"
 }
