@@ -52,7 +52,7 @@
             "readonly": false,
             "required": true,
             "visible": true
-        }
+        },
         {
             "label": "Tag",
             "properties": {
@@ -97,13 +97,13 @@
     "method": "POST",
     "endpoint": "",
     "request": {
-        "doc[document_type]": "{field.document_type}",
-        "doc[document_content]": "{field.document_content}",
-        "doc[name]": "{field.name}",
-        "doc[test]": "{string_to_boolean(field.test)}",
-        "doc[tag]": "{field.tag}",
-        "doc[strict]": "{string_to_boolean(field.strict)}",
-        "doc[javascript]": "{string_to_boolean(field.javascript)}"
+        "document_type": "{field.document_type}",
+        "document_content": "{field.document_content}",
+        "name": "{field.name}",
+        "test": "{string_to_boolean(field.test)}",
+        "tag": "{field.tag}",
+        "strict": "{string_to_boolean(field.strict)}",
+        "javascript": "{string_to_boolean(field.javascript)}"
     },
     "response": {
         "success": {
