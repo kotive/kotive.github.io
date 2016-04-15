@@ -6,7 +6,7 @@
         {
             "label": "Document type",
             "properties": {
-                "parameter": "doc[document_type]",
+                "parameter": "document_type",
                 "fieldType": "radio",
                 "choices": [
                     "xls",
@@ -21,7 +21,7 @@
         {
             "label": "Document content",
             "properties": {
-                "parameter": "doc[document_content]",
+                "parameter": "document_content",
                 "fieldType": "textarea"
             },
             "readonly": false,
@@ -31,7 +31,7 @@
         {
             "label": "Name",
             "properties": {
-                "parameter": "doc[name]",
+                "parameter": "name",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -41,37 +41,22 @@
         {
             "label": "Test",
             "properties": {
-                "parameter": "doc[test]",
+                "parameter": "test",
                 "fieldType": "radio",
                 "choices": [
-                    "true",
-                    "false"
+                    "yes",
+                    "no"
                 ],
-                "default": "false"
+                "default": "no"
             },
             "readonly": false,
             "required": true,
             "visible": true
-        },
-        {
-            "label": "Help",
-            "properties": {
-                "parameter": "doc[help]",
-                "fieldType": "radio",
-                "choices": [
-                    "true",
-                    "false"
-                ],
-                "default": "false"
-            },
-            "readonly": false,
-            "required": true,
-            "visible": true
-        },
+        }
         {
             "label": "Tag",
             "properties": {
-                "parameter": "doc[tag]",
+                "parameter": "tag",
                 "fieldType": "text"
             },
             "readonly": false,
@@ -81,7 +66,7 @@
         {
             "label": "Strict",
             "properties": {
-                "parameter": "doc[strict]",
+                "parameter": "strict",
                 "fieldType": "radio",
                 "choices": [
                     "none",
@@ -96,28 +81,13 @@
         {
             "label": "Javascript",
             "properties": {
-                "parameter": "doc[javascript]",
+                "parameter": "javascript",
                 "fieldType": "radio",
                 "choices": [
-                    "true",
-                    "false"
+                    "yes",
+                    "no"
                 ],
-                "default": "false"
-            },
-            "readonly": false,
-            "required": true,
-            "visible": true
-        },
-        {
-            "label": "Async",
-            "properties": {
-                "parameter": "doc[async]",
-                "fieldType": "radio",
-                "choices": [
-                    "true",
-                    "false"
-                ],
-                "default": "false"
+                "default": "no"
             },
             "readonly": false,
             "required": true,
@@ -127,15 +97,13 @@
     "method": "POST",
     "endpoint": "",
     "request": {
-        "doc[document_type]": "{field.doc[document_type]}",
-        "doc[document_content]": "{field.doc[document_content]}",
-        "doc[name]": "{field.doc[name]}",
-        "doc[test]": "{field.doc[test]}",
-        "doc[help]": "{field.doc[help]}",
-        "doc[tag]": "{field.doc[tag]}",
-        "doc[strict]": "{field.doc[strict]}",
-        "doc[javascript]": "{field.doc[javascript]}",
-        "doc[async]": "{field.doc[async]}"
+        "doc[document_type]": "{field.document_type}",
+        "doc[document_content]": "{field.document_content}",
+        "doc[name]": "{field.name}",
+        "doc[test]": "{string_to_boolean(field.test)}",
+        "doc[tag]": "{field.tag}",
+        "doc[strict]": "{string_to_boolean(field.strict)}",
+        "doc[javascript]": "{string_to_boolean(field.javascript)}"
     },
     "response": {
         "success": {
