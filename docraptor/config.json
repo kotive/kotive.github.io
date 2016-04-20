@@ -1,5 +1,5 @@
 {
-    "name": "PDFRaptor",
+    "name": "DocRaptor",
     "description": "DocRaptor makes it easy to create PDF and XLS files on the fly.",
     "auth": {
         "method": "Custom",

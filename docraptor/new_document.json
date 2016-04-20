@@ -1,6 +1,6 @@
 {
     "name": "Create a new document",
-    "description": "Create a new document using PDFRaptor",
+    "description": "Create a new document using DocRaptor",
     "documentation": "https://docraptor.com/documentation",
     "fields": [
         {
