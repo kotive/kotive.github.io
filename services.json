@@ -33,6 +33,10 @@
             "service": "desk"
         },
         {
+            "name": "DocRaptor",
+            "service": "docraptor"
+        },
+        {
             "name": "Email",
             "service": "email"
         },
@@ -89,14 +93,10 @@
             "service": "pdf"
         },
         {
-            "name": "PDFRaptor",
-            "service": "pdfraptor"
-        },
-        {
             "name": "Salesforce",
             "service": "salesforce"
         },
-	{
+	      {
             "name": "Slack",
             "service": "slack"
         },
