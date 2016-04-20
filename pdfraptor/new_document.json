@@ -112,6 +112,7 @@
       }
     },
     "response": {
+        "type": "file",
         "success": {
             "Code": 200,
             "Message": "Ok"
