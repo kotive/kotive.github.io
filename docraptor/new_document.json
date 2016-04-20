@@ -12,7 +12,10 @@
                     "xls",
                     "xlsx",
                     "pdf"
-                ]
+                ],
+                "style": {
+                    "classes":"inline"
+                }
             },
             "readonly": false,
             "required": true,
@@ -29,7 +32,7 @@
             "visible": true
         },
         {
-            "label": "Name",
+            "label": "Filename",
             "properties": {
                 "parameter": "name",
                 "fieldType": "text"
@@ -47,7 +50,10 @@
                     "yes",
                     "no"
                 ],
-                "default": "no"
+                "default": "no",
+                "style": {
+                    "classes":"inline"
+                }
             },
             "readonly": false,
             "required": true,
@@ -72,7 +78,10 @@
                     "none",
                     "html"
                 ],
-                "default": "false"
+                "default": "false",
+                "style": {
+                    "classes":"inline"
+                }
             },
             "readonly": false,
             "required": true,
@@ -87,7 +96,10 @@
                     "yes",
                     "no"
                 ],
-                "default": "no"
+                "default": "no",
+                "style": {
+                    "classes":"inline"
+                }
             },
             "readonly": false,
             "required": true,
