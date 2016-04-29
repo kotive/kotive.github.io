@@ -26,5 +26,5 @@
             }
         ]
     },
-    "domain": "https://{auth.fields.district}.api.mailchimp.com/2.0"
+    "domain": "https://{auth.field.district}.api.mailchimp.com/2.0"
 }

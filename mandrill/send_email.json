@@ -60,7 +60,7 @@
   "method": "POST",
   "endpoint": "/messages/send.json",
   "request": {
-    "key": "{auth.fields.apikey}",
+    "key": "{auth.field.apikey}",
     "message": {
       "html":"{field.message}",
       "subject":"{field.subject}",
