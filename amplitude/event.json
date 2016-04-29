@@ -73,7 +73,7 @@
 			"label": "App Version",
 			"properties": {
 				"parameter": "app_version",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The version of the app that the user is on."
   		},
 			"readonly": false,
@@ -84,7 +84,7 @@
 			"label": "Platform",
 			"properties": {
 				"parameter": "platform",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which platform the user is sending the data from."
   		},
 			"readonly": false,
@@ -95,7 +95,7 @@
 			"label": "Operating System Name",
 			"properties": {
 				"parameter": "os_name",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which operating system or browser that the user is using."
   		},
 			"readonly": false,
@@ -117,7 +117,7 @@
 			"label": "Device Brand",
 			"properties": {
 				"parameter": "device_brand",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which device brand the user is using"
   		},
 			"readonly": false,
@@ -128,7 +128,7 @@
 			"label": "Device Manufacturer",
 			"properties": {
 				"parameter": "device_manufacturer",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which device brand the user is using"
   		},
 			"readonly": false,
@@ -139,7 +139,7 @@
 			"label": "Device Model",
 			"properties": {
 				"parameter": "device_model",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which device model the user is using"
   		},
 			"readonly": false,
@@ -150,7 +150,7 @@
 			"label": "Carrier",
 			"properties": {
 				"parameter": "carrier",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which carrier the user has"
   		},
 			"readonly": false,
@@ -161,7 +161,7 @@
 			"label": "Country",
 			"properties": {
 				"parameter": "country",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The country the user is currently in"
   		},
 			"readonly": false,
@@ -172,7 +172,7 @@
 			"label": "Geographical Region",
 			"properties": {
 				"parameter": "region",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The geographical region the user is in"
   		},
 			"readonly": false,
@@ -183,7 +183,7 @@
 			"label": "City",
 			"properties": {
 				"parameter": "city",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "Which city the user is in"
   		},
 			"readonly": false,
@@ -194,7 +194,7 @@
 			"label": "Designated Market Area",
 			"properties": {
 				"parameter": "dma",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The designated market area of the user"
   		},
 			"readonly": false,
@@ -205,7 +205,7 @@
 			"label": "Language",
 			"properties": {
 				"parameter": "language",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The language that the user has set"
   		},
 			"readonly": false,
@@ -249,7 +249,7 @@
 			"label": "IP Address",
 			"properties": {
 				"parameter": "ip",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The IP address that the user has"
   		},
 			"readonly": false,
@@ -260,7 +260,7 @@
 			"label": "iOS Identifier",
 			"properties": {
 				"parameter": "ifda",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The iOS identifier for the advertiser"
   		},
 			"readonly": false,
@@ -271,7 +271,7 @@
 			"label": "Android Identifier",
 			"properties": {
 				"parameter": "adid",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "The Android identifier for the advertiser"
   		},
 			"readonly": false,
@@ -304,7 +304,7 @@
 			"label": "Insert ID",
 			"properties": {
 				"parameter": "insert_id",
-  			"fieldType": "string",
+  			"fieldType": "text",
 				"helptext": "A unique identifier for the event being inserted."
   		},
 			"readonly": false,

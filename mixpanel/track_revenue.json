@@ -7,7 +7,7 @@
             "label": "Time",
             "properties": {
                 "parameter": "$time",
-                "fieldType": "string",
+                "fieldType": "text",
                 "helptext": "The time of the transaction"
             },
             "readonly": false,
