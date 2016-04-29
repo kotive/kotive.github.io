@@ -24,38 +24,14 @@
       "readonly": false,
       "required": true,
       "visible": true
-    },
-    {
-      "label": "Username",
-      "properties": {
-        "parameter": "username",
-        "fieldType": "text",
-        "default": "Kotive",
-        "helptext": "The username to display when a message from Kotive comes throug."
-      },
-      "readonly": false,
-      "required": false,
-      "visible": true
-    },
-    {
-      "label": "Icon",
-      "properties": {
-        "parameter": "icon",
-        "fieldType": "url",
-        "default": "https://pbs.twimg.com/profile_images/560463259598221312/kP3H_2IW.png",
-        "helptext": "The icon to display when a message from Kotive comes through."
-      },
-      "readonly": false,
-      "required": false,
-      "visible": true
     }
   ],
   "method": "POST",
   "endpoint": "{field.url}",
   "request": {
     "text": "{field.message}",
-    "username": "{field.username}",
-    "icon_url": "{field.icon}"
+    "username": "Kotive",
+    "icon_url": "https://pbs.twimg.com/profile_images/560463259598221312/kP3H_2IW.png"
   },
   "response": {
     "success": "ok",
