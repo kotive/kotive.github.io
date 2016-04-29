@@ -1,6 +1,6 @@
 {
 	"name": "Amplitude",
 	"description": "",
-	"auth-method": "Not Really Used Here",
+	"auth": "Not Really Used Here",
 	"domain": "https://api.amplitude.com/httpapi"
 }
