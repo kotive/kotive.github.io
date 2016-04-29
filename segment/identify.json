@@ -40,7 +40,7 @@
 			"label": "Sent At",
 			"properties": {
 				"parameter": "sentAt",
-  			"fieldType": "date",
+  			"fieldType": "text",
 				"helptext": "The timestamp when a message is sent to Segment, used for clock skew correction."
   		},
 			"readonly": false,
@@ -51,7 +51,7 @@
 			"label": "Timestamp",
 			"properties": {
 				"parameter": "timestamp",
-  			"fieldType": "date",
+  			"fieldType": "text",
 				"helptext": "The timestamp when the message itself took place."
   		},
 			"readonly": false,
