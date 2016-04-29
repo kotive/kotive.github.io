@@ -4,13 +4,25 @@
   "documentation": "https://mandrillapp.com/api/docs/messages.JSON.html",
   "fields": [
     {
+      "label": "From name",
+      "properties": {
+        "parameter": "fromName",
+        "fieldType": "text"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
       "label": "From email",
       "properties": {
         "parameter": "fromEmail",
         "fieldType": "email",
-        "default": "notifications@kotive.com",
         "helptext": "The email address to send this notification from"
-      }
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
     },
     {
       "label": "To",
@@ -37,7 +49,8 @@
       "label": "Message",
       "properties": {
         "parameter": "message",
-        "fieldType": "textarea"
+        "fieldType": "textarea",
+        "helptext": "Message can contain HTML for formatting"
       },
       "readonly": false,
       "required": true,
@@ -52,8 +65,8 @@
       "html":"{field.message}",
       "subject":"{field.subject}",
       "from_email":"{field.fromEmail}",
-      "from_name":"{group.label} (via Kotive)",
-      "to": "comma-to-array({field.to}, ['to': {value}, 'name': '','type': 'to'])"
+      "from_name":"{field.fromName} (via Kotive)",
+      "to": "{comma_to_hash_array(field.to, email)}"
     }
   },
   "response": {
