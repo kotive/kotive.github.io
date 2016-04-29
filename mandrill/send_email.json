@@ -28,7 +28,7 @@
       "label": "To",
       "properties": {
         "parameter": "to",
-        "fieldType": "string",
+        "fieldType": "text",
         "helptext": "Comma separated list of email addresses"
       },
       "readonly": false,
