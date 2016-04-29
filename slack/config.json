@@ -1,6 +1,8 @@
 {
   "name": "Slack",
   "description": "Team communication for the 21st century.",
-  "auth": "",
+  "auth": {
+    "method": "none"
+  },
   "domain": ""
 }

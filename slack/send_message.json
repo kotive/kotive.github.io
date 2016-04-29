@@ -4,11 +4,11 @@
   "documentation": "https://api.slack.com/incoming-webhooks",
   "fields": [
     {
-      "label": "Message",
+      "label": "Your message to send to Slack",
       "properties": {
         "parameter": "message",
         "fieldType": "textarea",
-        "helptext": "Your Slack message to send! For advanced formatting, see https://api.slack.com/docs/formatting. To insert a URL, use <http://www.example.com> or <http://www.example.com|The URL's description>"
+        "helptext": "For advanced formatting, see https://api.slack.com/docs/formatting. To insert a URL, use <http://www.example.com> or <http://www.example.com|The URL's description>"
       },
       "readonly": false,
       "required": true,
@@ -19,7 +19,7 @@
       "properties": {
         "parameter": "url",
         "fieldType": "url",
-        "helptext": "The URL provided by Slack that we send messages to! See https://http://kotive.github.io/slack/readme."
+        "helptext": "The URL provided by Slack that we send messages to. See https://http://kotive.github.io/slack/readme."
       },
       "readonly": false,
       "required": true,
@@ -31,7 +31,7 @@
         "parameter": "username",
         "fieldType": "text",
         "default": "Kotive",
-        "helptext": "The username to display when a message from Kotive comes through!"
+        "helptext": "The username to display when a message from Kotive comes throug."
       },
       "readonly": false,
       "required": false,
@@ -43,7 +43,7 @@
         "parameter": "icon",
         "fieldType": "url",
         "default": "https://pbs.twimg.com/profile_images/560463259598221312/kP3H_2IW.png",
-        "helptext": "The icon to display when a message from Kotive comes through!"
+        "helptext": "The icon to display when a message from Kotive comes through."
       },
       "readonly": false,
       "required": false,
