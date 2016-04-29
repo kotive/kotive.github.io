@@ -51,7 +51,7 @@
 				"label": "Media URL",
 				"properties": {
 						"parameter": "mediaUrl",
-  					"fieldType": "web",
+  					"fieldType": "url",
 						"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
   			},
 				"readonly": false,
@@ -62,7 +62,7 @@
 				"label": "Status Callback",
 				"properties": {
 						"parameter": "body",
-						"fieldType": "web",
+						"fieldType": "url",
 						"helptext": "The URL that Twilio will POST to each time your message status changes."
 				},
 				"readonly": false,

@@ -88,7 +88,7 @@
 		{
 			"label": "Web Address Input",
 			"properties": {
-				"fieldType": "web"
+				"fieldType": "url"
 			},
 			"readonly": false,
 			"required": true,
