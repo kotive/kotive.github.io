@@ -1,35 +1,35 @@
 {
-	"name": "Delete a list",
-	"description": "Delete an existing list using VerticalResponse",
-	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#delete",
-	"fields": [
-		{
-			"label": "List ID",
-			"properties": {
-				"parameter": "id",
-  			"fieldType": "number",
-				"helptext": "ID of the list to delete"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/lists/{field.id}",
-	"request": {},
-	"response": {
-		"success": {
-		    "links": {
-		        "up": {
-		            "url": "https://vrapi.verticalresponse.com/api/v1/lists"
-		        }
-		    },
-		    "success": {
-		        "code": 200,
-		        "message": "List deleted."
-		    }
-		},
-		"error": {}
-	}
+  "name": "Delete a list",
+  "description": "Delete an existing list using VerticalResponse",
+  "documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#delete",
+  "fields": [
+    {
+      "label": "List ID",
+      "properties": {
+        "parameter": "id",
+        "fieldType": "number",
+        "helptext": "ID of the list to delete"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/lists/{field.id}",
+  "request": {},
+  "response": {
+    "success": {
+        "links": {
+            "up": {
+                "url": "https://vrapi.verticalresponse.com/api/v1/lists"
+            }
+        },
+        "success": {
+            "code": 200,
+            "message": "List deleted."
+        }
+    },
+    "error": {}
+  }
 }

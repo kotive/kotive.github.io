@@ -1,55 +1,55 @@
 {
-	"name": "Update a list",
-	"description": "Update an existing list using VerticalResponse",
-	"documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#update",
-	"fields": [
-		{
-			"label": "List ID",
-			"properties": {
-				"parameter": "id",
-  			"fieldType": "number",
-				"helptext": "ID of the list to update"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "List Name",
-			"properties": {
-				"parameter": "name",
-  			"fieldType": "text",
-				"helptext": "The name of your updated list"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Is the list public?",
-			"properties": {
-				"parameter": "is_public",
-  			"fieldType": "radio",
-				"choices": [
-					{"key": true, "value": "Yes"},
-					{"key": false, "value": "No"}
-				],
-				"default": false,
-				"helptext": "Is your updated list publicly accessable?"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		}
-	],
-	"method": "PUT",
-	"endpoint": "/lists/{field.id}",
-	"request": {
-			"name": "{field.name}",
-			"is_public": "{field.is_public}"
-	},
-	"response": {
-		"success": {},
-		"error": {}
-	}
+  "name": "Update a list",
+  "description": "Update an existing list using VerticalResponse",
+  "documentation": "http://developer.verticalresponse.com/docs/read/api_reference/lists#update",
+  "fields": [
+    {
+      "label": "List ID",
+      "properties": {
+        "parameter": "id",
+        "fieldType": "number",
+        "helptext": "ID of the list to update"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "List Name",
+      "properties": {
+        "parameter": "name",
+        "fieldType": "text",
+        "helptext": "The name of your updated list"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Is the list public?",
+      "properties": {
+        "parameter": "is_public",
+        "fieldType": "radio",
+        "choices": [
+          {"key": true, "value": "Yes"},
+          {"key": false, "value": "No"}
+        ],
+        "default": false,
+        "helptext": "Is your updated list publicly accessable?"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    }
+  ],
+  "method": "PUT",
+  "endpoint": "/lists/{field.id}",
+  "request": {
+      "name": "{field.name}",
+      "is_public": "{field.is_public}"
+  },
+  "response": {
+    "success": {},
+    "error": {}
+  }
 }

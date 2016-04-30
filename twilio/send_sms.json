@@ -1,109 +1,109 @@
 {
-	"name": "Send an SMS",
-	"description": "Send an SMS using Twilio",
-	"documentation": "https://www.twilio.com/docs/api/rest/sending-messages",
-	"fields": [
-		{
-				"label": "To",
-				"properties": {
-						"parameter": "to",
-						"fieldType": "tel",
-						"helptext": "The number to which you want to send an SMS"
-				},
-				"readonly": false,
-				"required": true,
-				"visible": true
-		},
-		{
-				"label": "From",
-				"properties": {
-						"parameter": "from",
-						"fieldType": "tel",
-						"helptext": "The number from which you want to send an SMS"
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Messaging Service Sid",
-				"properties": {
-						"parameter": "messagingServiceSid",
-						"fieldType": "text",
-						"helptext": "The unique ID of the Messaging Service you want to associate with this message."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Message Body",
-				"properties": {
-						"parameter": "body",
-  					"fieldType": "text",
-						"helptext": "The text of the message you want to send, limited to 1600 characters."
-  			},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Media URL",
-				"properties": {
-						"parameter": "mediaUrl",
-  					"fieldType": "url",
-						"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
-  			},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Status Callback",
-				"properties": {
-						"parameter": "body",
-						"fieldType": "url",
-						"helptext": "The URL that Twilio will POST to each time your message status changes."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Application Sid",
-				"properties": {
-						"parameter": "applicationSid",
-						"fieldType": "text",
-						"helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/Accounts/{settings.twilio.accountSid}/Messages",
-	"request": {
-		"To": "{field.to}",
-		"From": "{field.from}",
-		"MessagingServiceSid": "{field.messagingServiceSid}",
-		"Body": "{field.body}",
-		"MediaUrl": "{field.mediaUrl}",
-		"StatusCallback": "{field.statusCallback}",
-		"ApplicationSid": "{field.applicationSid}"
-	},
-	"response": {
-		"success": {
-			"Status": "sent",
-			"ErrorCode": null,
-			"ErrorMessage": null
-		},
-		"error": [
-			{
-				"Status": "failed",
-				"ErrorCode": 30001,
-				"ErrorMessage": "Queue overflow"
-			}
-		]
-	}
+  "name": "Send an SMS",
+  "description": "Send an SMS using Twilio",
+  "documentation": "https://www.twilio.com/docs/api/rest/sending-messages",
+  "fields": [
+    {
+        "label": "To",
+        "properties": {
+            "parameter": "to",
+            "fieldType": "tel",
+            "helptext": "The number to which you want to send an SMS"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+    },
+    {
+        "label": "From",
+        "properties": {
+            "parameter": "from",
+            "fieldType": "tel",
+            "helptext": "The number from which you want to send an SMS"
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Messaging Service Sid",
+        "properties": {
+            "parameter": "messagingServiceSid",
+            "fieldType": "text",
+            "helptext": "The unique ID of the Messaging Service you want to associate with this message."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Message Body",
+        "properties": {
+            "parameter": "body",
+            "fieldType": "text",
+            "helptext": "The text of the message you want to send, limited to 1600 characters."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Media URL",
+        "properties": {
+            "parameter": "mediaUrl",
+            "fieldType": "url",
+            "helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Status Callback",
+        "properties": {
+            "parameter": "body",
+            "fieldType": "url",
+            "helptext": "The URL that Twilio will POST to each time your message status changes."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Application Sid",
+        "properties": {
+            "parameter": "applicationSid",
+            "fieldType": "text",
+            "helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/Accounts/{settings.twilio.accountSid}/Messages",
+  "request": {
+    "To": "{field.to}",
+    "From": "{field.from}",
+    "MessagingServiceSid": "{field.messagingServiceSid}",
+    "Body": "{field.body}",
+    "MediaUrl": "{field.mediaUrl}",
+    "StatusCallback": "{field.statusCallback}",
+    "ApplicationSid": "{field.applicationSid}"
+  },
+  "response": {
+    "success": {
+      "Status": "sent",
+      "ErrorCode": null,
+      "ErrorMessage": null
+    },
+    "error": [
+      {
+        "Status": "failed",
+        "ErrorCode": 30001,
+        "ErrorMessage": "Queue overflow"
+      }
+    ]
+  }
 }

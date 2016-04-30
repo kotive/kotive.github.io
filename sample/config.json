@@ -1,6 +1,6 @@
 {
-	"name": "Sample Service",
-	"description": "Example service used for testing different config options",
-	"auth": "Not Really Used Here",
-	"domain": "http://www.example.com"
+  "name": "Sample Service",
+  "description": "Example service used for testing different config options",
+  "auth": "Not Really Used Here",
+  "domain": "http://www.example.com"
 }

@@ -11,54 +11,54 @@ Adding your service as a task in Kotive
 5. Rename /awesomeapp/sample_task.json to the name of your first task. Update the json to connect with your service. _You can add many services in this folder by creating a copy of this file, renaming it and updating its properties._
 6. Add your service to services.json in the root folder. E.g.
     {
-			"name": "Our Awesome App",
-			"service": "awesomeapp"
-		}
+      "name": "Our Awesome App",
+      "service": "awesomeapp"
+    }
 7. Submit your changes as a pull-request
 
 Specifying 'fields'
 ---
 Fields are displayed in the UI
 ```
-{	
-	"fields": [
-		{
-			"label": "Firstname",
-			"properties": {
-				"fieldType": "text"
-			},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Gender",
-			"properties": {
-  			"fieldType": "radio",
-				"choices": [
-					{"key": "f", "value": "Female"},
-					{"key": "m", "value": "Male"}
-				],
-				"default": "f",
-				"optional": {
-					"classes": "inline"
-				}
-			},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Gender",
-			"properties": {
-  			"fieldType": "select",
-				"choices": ["Female", "Male"]
-			},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		}		
-	]
+{  
+  "fields": [
+    {
+      "label": "Firstname",
+      "properties": {
+        "fieldType": "text"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Gender",
+      "properties": {
+        "fieldType": "radio",
+        "choices": [
+          {"key": "f", "value": "Female"},
+          {"key": "m", "value": "Male"}
+        ],
+        "default": "f",
+        "optional": {
+          "classes": "inline"
+        }
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Gender",
+      "properties": {
+        "fieldType": "select",
+        "choices": ["Female", "Male"]
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }    
+  ]
 }
 ```
 
@@ -68,11 +68,11 @@ Before committing any changes make sure you validate your JSON file changes usin
 
 Set up the required dependencies using npm
 
-	npm install .
+  npm install .
 
 Then run the JSON lint validator & thumbnail generator
-	
-	grunt build
+  
+  grunt build
 
 If all tests pass the repo is clear of any JSON syntax errors and the thumbnails have been generated.
 

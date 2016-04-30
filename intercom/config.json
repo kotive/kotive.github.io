@@ -3,8 +3,8 @@
     "description": "An entirely new way to connect with your customers",
     "auth": {
         "method": "Basic",
-	"username": "{settings.intercom.APP_ID}",
-	"password": "[settings.intercom.API_key}"
+  "username": "{settings.intercom.APP_ID}",
+  "password": "[settings.intercom.API_key}"
     },
     "domain": "https://api.intercom.io"
 }

@@ -1,105 +1,105 @@
 {
-	"name": "Track an page view",
-	"description": "Record whenever a user sees a page of your website.",
-	"documentation": "https://segment.com/docs/libraries/http/#page",
-	"fields": [
-		{
-			"label": "User ID",
-			"properties": {
-				"parameter": "userId",
-  			"fieldType": "text",
-				"helptext": "A unique identifier for the user in your database."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Name",
-			"properties": {
-				"parameter": "name",
-  			"fieldType": "text",
-				"helptext": "The name of the page."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Properties",
-			"properties": {
-				"parameter": "properties",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A free-form dictionary of properties of the page. See https://segment.com/docs/spec/page#properties."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Anonymous ID",
-			"properties": {
-				"parameter": "anonymousId",
-  			"fieldType": "text",
-				"helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Context",
-			"properties": {
-				"parameter": "context",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Integrations",
-			"properties": {
-				"parameter": "integrations",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Timestamp",
-			"properties": {
-				"parameter": "timestamp",
-  			"fieldType": "text",
-				"helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/page",
-	"request": {
-		"userId": "{field.userId}",
-		"anonymousId": "{field.anonymousId}",
-		"context": "{field.context}",
-		"name": "{field.name}",
-		"integrations": "{field.integrations}",
-		"properties": "{field.properties}",
-		"timestamp": "{field.timestamp}",
-	},
-	"response": {
-		"success": {
-			"Code": 200,
-			"Message": "Ok"
-		},
-		"error": {}
-	}
+  "name": "Track an page view",
+  "description": "Record whenever a user sees a page of your website.",
+  "documentation": "https://segment.com/docs/libraries/http/#page",
+  "fields": [
+    {
+      "label": "User ID",
+      "properties": {
+        "parameter": "userId",
+        "fieldType": "text",
+        "helptext": "A unique identifier for the user in your database."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Name",
+      "properties": {
+        "parameter": "name",
+        "fieldType": "text",
+        "helptext": "The name of the page."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Properties",
+      "properties": {
+        "parameter": "properties",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A free-form dictionary of properties of the page. See https://segment.com/docs/spec/page#properties."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Anonymous ID",
+      "properties": {
+        "parameter": "anonymousId",
+        "fieldType": "text",
+        "helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Context",
+      "properties": {
+        "parameter": "context",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Integrations",
+      "properties": {
+        "parameter": "integrations",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Timestamp",
+      "properties": {
+        "parameter": "timestamp",
+        "fieldType": "text",
+        "helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/page",
+  "request": {
+    "userId": "{field.userId}",
+    "anonymousId": "{field.anonymousId}",
+    "context": "{field.context}",
+    "name": "{field.name}",
+    "integrations": "{field.integrations}",
+    "properties": "{field.properties}",
+    "timestamp": "{field.timestamp}",
+  },
+  "response": {
+    "success": {
+      "Code": 200,
+      "Message": "Ok"
+    },
+    "error": {}
+  }
 }

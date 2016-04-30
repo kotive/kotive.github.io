@@ -1,6 +1,6 @@
 {
-	"name": "AWeber",
-	"description": "All the tools you need to send emails the right way.",
-	"auth": "OAuth 1.0a",
-	"domain": "https://api.aweber.com/1.0/"
+  "name": "AWeber",
+  "description": "All the tools you need to send emails the right way.",
+  "auth": "OAuth 1.0a",
+  "domain": "https://api.aweber.com/1.0/"
 }

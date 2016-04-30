@@ -1,6 +1,6 @@
 {
-	"name": "Kissmetrics",
-	"description": "Kissmetrics delivers key insights and timely interactions to turn visitors into customers.",
-	"auth": "Not Really Used Here",
-	"domain": "https://trk.kissmetrics.com"
+  "name": "Kissmetrics",
+  "description": "Kissmetrics delivers key insights and timely interactions to turn visitors into customers.",
+  "auth": "Not Really Used Here",
+  "domain": "https://trk.kissmetrics.com"
 }

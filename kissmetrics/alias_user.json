@@ -1,53 +1,53 @@
 {
-	"name": "Alias a user",
-	"description": "Alias a user using kissmetrics",
-	"documentation": "http://support.kissmetrics.com/apis/specifications#aliasing-users",
-	"fields": [
-		{
-			"label": "API Key",
-			"properties": {
-				"parameter": "_k",
-  			"fieldType": "text",
-				"helptext": "Your API Key"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "First Alias",
-			"properties": {
-				"parameter": "_p",
-  			"fieldType": "text",
-				"helptext": "The user's first alias"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Another Alias",
-			"properties": {
-				"parameter": "_n",
-  			"fieldType": "text",
-				"helptext": "Anoher alias for the user"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/a?_k={field._k}&_p={field._p}&_n={field._n}",
-	"request": {},
-	"response": {
-		"success": {
-			"Code": 200,
-			"Message": "Ok"
-		},
-		"error": {
-			"Code": 200,
-			"Message": "Ok"
-		}
-	}
+  "name": "Alias a user",
+  "description": "Alias a user using kissmetrics",
+  "documentation": "http://support.kissmetrics.com/apis/specifications#aliasing-users",
+  "fields": [
+    {
+      "label": "API Key",
+      "properties": {
+        "parameter": "_k",
+        "fieldType": "text",
+        "helptext": "Your API Key"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "First Alias",
+      "properties": {
+        "parameter": "_p",
+        "fieldType": "text",
+        "helptext": "The user's first alias"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Another Alias",
+      "properties": {
+        "parameter": "_n",
+        "fieldType": "text",
+        "helptext": "Anoher alias for the user"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/a?_k={field._k}&_p={field._p}&_n={field._n}",
+  "request": {},
+  "response": {
+    "success": {
+      "Code": 200,
+      "Message": "Ok"
+    },
+    "error": {
+      "Code": 200,
+      "Message": "Ok"
+    }
+  }
 }

@@ -30,7 +30,7 @@
             "properties": {
                 "parameter": "pos",
                 "fieldType": "radio",
-                "choices":	[
+                "choices":  [
                     {"key": "top", "value": "Top"},
                     {"key": "bottom", "value": "Bottom"}
                 ],

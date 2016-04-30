@@ -1,80 +1,80 @@
 {
-	"name": "Alias: merge identities",
-	"description": "Merge two user identities, effectively connecting two sets of user data as one.",
-	"documentation": "https://segment.com/docs/libraries/http/#alias",
-	"fields": [
-		{
-			"label": "User ID",
-			"properties": {
-				"parameter": "userId",
-  			"fieldType": "text",
-				"helptext": "A unique identifier for the user in your database."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Previous ID",
-			"properties": {
-				"parameter": "previousId",
-  			"fieldType": "text",
-				"helptext": "The previous unique identifier for the user."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Context",
-			"properties": {
-				"parameter": "context",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Integrations",
-			"properties": {
-				"parameter": "integrations",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Timestamp",
-			"properties": {
-				"parameter": "timestamp",
-  			"fieldType": "text",
-				"helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/alias",
-	"request": {
-		"userId": "{field.userId}",
-		"previousId": "{field.previousId}",
-		"context": "{field.context}",
-		"integrations": "{field.integrations}",
-		"timestamp": "{field.timestamp}"
-	},
-	"response": {
-		"success": {
-			"Code": 200,
-			"Message": "Ok"
-		},
-		"error": {}
-	}
+  "name": "Alias: merge identities",
+  "description": "Merge two user identities, effectively connecting two sets of user data as one.",
+  "documentation": "https://segment.com/docs/libraries/http/#alias",
+  "fields": [
+    {
+      "label": "User ID",
+      "properties": {
+        "parameter": "userId",
+        "fieldType": "text",
+        "helptext": "A unique identifier for the user in your database."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Previous ID",
+      "properties": {
+        "parameter": "previousId",
+        "fieldType": "text",
+        "helptext": "The previous unique identifier for the user."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Context",
+      "properties": {
+        "parameter": "context",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Integrations",
+      "properties": {
+        "parameter": "integrations",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Timestamp",
+      "properties": {
+        "parameter": "timestamp",
+        "fieldType": "text",
+        "helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/alias",
+  "request": {
+    "userId": "{field.userId}",
+    "previousId": "{field.previousId}",
+    "context": "{field.context}",
+    "integrations": "{field.integrations}",
+    "timestamp": "{field.timestamp}"
+  },
+  "response": {
+    "success": {
+      "Code": 200,
+      "Message": "Ok"
+    },
+    "error": {}
+  }
 }

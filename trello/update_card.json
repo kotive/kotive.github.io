@@ -41,7 +41,7 @@
             "properties": {
                 "parameter": "closed",
                 "fieldType": "radio",
-                "choices":	[
+                "choices":  [
                   {"key": "true", "value": "Yes"},
                   {"key": "false", "value": "No"}
                 ],
@@ -89,7 +89,7 @@
             "properties": {
                 "parameter": "pos",
                 "fieldType": "radio",
-                "choices":	[
+                "choices":  [
                     {"key": "top", "value": "Top"},
                     {"key": "bottom", "value": "Bottom"}
                 ],
@@ -116,7 +116,7 @@
             "properties": {
                 "parameter": "subscribed",
                 "fieldType": "radio",
-                "choices":	[
+                "choices":  [
                     {"key": "true", "value": "Yes"},
                     {"key": "false", "value": "No"}
                 ],
