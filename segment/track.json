@@ -1,87 +1,12 @@
 {
-	"name": "Track a User",
-	"description": "Track a user using Segment",
-	"documentation": "https://segment.com/docs/spec/track/",
+	"name": "Track an action",
+	"description": "Record any actions your users perform",
+	"documentation": "https://segment.com/docs/libraries/http/#track",
 	"fields": [
-		{
-			"label": "Anonymous ID",
-			"properties": {
-				"parameter": "anonymousID",
-  			"fieldType": "text",
-				"helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Context",
-			"properties": {
-				"parameter": "context",
-  			"fieldType": "text",
-				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Integrations",
-			"properties": {
-				"parameter": "integrations",
-  			"fieldType": "text",
-				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Sent At",
-			"properties": {
-				"parameter": "sentAt",
-  			"fieldType": "date",
-				"helptext": "The timestamp when a message is sent to Segment, used for clock skew correction."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Timestamp",
-			"properties": {
-				"parameter": "timestamp",
-  			"fieldType": "date",
-				"helptext": "The timestamp when the message itself took place."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Type",
-			"properties": {
-				"parameter": "type",
-				"fieldType": "radio",
-				"choices": [
-					{"key": "identify", "value": "Identify"},
-					{"key": "group", "value": "Group"},
-					{"key": "track", "value": "Track"},
-					{"key": "page", "value": "Page"},
-					{"key": "screen", "value": "Screen"},
-					{"key": "alias", "value": "Alias"}
-				],
-				"default": "identify",
-				"helptext": "The type of message, corresponding to the API method."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
 		{
 			"label": "User ID",
 			"properties": {
-				"parameter": "userID",
+				"parameter": "userId",
   			"fieldType": "text",
 				"helptext": "A unique identifier for the user in your database."
   		},
@@ -94,7 +19,7 @@
 			"properties": {
 				"parameter": "event",
   			"fieldType": "text",
-				"helptext": "The name of the action, specified by you, that a user has performed."
+				"helptext": "The name of the action that a user has performed."
   		},
 			"readonly": false,
 			"required": true,
@@ -103,9 +28,56 @@
 		{
 			"label": "Properties",
 			"properties": {
-				"parameter": "event",
+				"parameter": "properties",
+  			"fieldType": "textarea",
+  			"default": "{}",
+				"helptext": "A free-form dictionary of properties of the event. See https://segment.com/docs/spec/track#properties."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Anonymous ID",
+			"properties": {
+				"parameter": "anonymousId",
   			"fieldType": "text",
-				"helptext": "A free-form dictionary of properties of the event, like revenue. See https://segment.com/docs/spec/track#properties for a list of reserved property names."
+				"helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Context",
+			"properties": {
+				"parameter": "context",
+  			"fieldType": "textarea",
+  			"default": "{}",
+				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Integrations",
+			"properties": {
+				"parameter": "integrations",
+  			"fieldType": "textarea",
+  			"default": "{}",
+				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
+  		},
+			"readonly": false,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Timestamp",
+			"properties": {
+				"parameter": "timestamp",
+  			"fieldType": "text",
+				"helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
   		},
 			"readonly": false,
 			"required": false,
@@ -113,17 +85,15 @@
 		}
 	],
 	"method": "POST",
-	"endpoint": "",
+	"endpoint": "/track",
 	"request": {
-		"anonymousID": "{field.anonymousID}",
+		"userId": "{field.userId}",
+		"anonymousId": "{field.anonymousId}",
 		"context": "{field.context}",
-		"integrations": "{field.integrations}",
-		"sentAt": "{field.sentAt}",
-		"timestamp": "{field.timestamp}",
-		"type": "{field.type}",
-		"userID": "{field.userID}",
 		"event": "{field.event}",
-		"properties": "{field.properties}"
+		"integrations": "{field.integrations}",
+		"properties": "{field.properties}",
+		"timestamp": "{field.timestamp}",
 	},
 	"response": {
 		"success": {

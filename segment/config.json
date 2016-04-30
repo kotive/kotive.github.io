@@ -26,5 +26,5 @@
       }
     ]
   },
-  "domain": "https://api.segment.io/v1/"
+  "domain": "https://api.segment.io/v1"
 }

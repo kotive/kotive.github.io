@@ -1,7 +1,7 @@
 {
-	"name": "Group a user",
-	"description": "Associate a user with a group",
-	"documentation": "https://segment.com/docs/libraries/http/#group",
+	"name": "Track an screen view",
+	"description": "Record whenever a user sees a screen of your mobile app.",
+	"documentation": "https://segment.com/docs/libraries/http/#screen",
 	"fields": [
 		{
 			"label": "User ID",
@@ -15,14 +15,26 @@
 			"visible": true
 		},
 		{
-			"label": "Group ID",
+			"label": "Name",
 			"properties": {
-				"parameter": "groupID",
+				"parameter": "name",
   			"fieldType": "text",
-				"helptext": "A unique identifier for the group in your database."
+				"helptext": "The name of the screen."
   		},
 			"readonly": false,
-			"required": true,
+			"required": false,
+			"visible": true
+		},
+		{
+			"label": "Properties",
+			"properties": {
+				"parameter": "properties",
+  			"fieldType": "textarea",
+  			"default": "{}",
+				"helptext": "A free-form dictionary of properties of screen. See https://segment.com/docs/spec/screen#properties."
+  		},
+			"readonly": false,
+			"required": false,
 			"visible": true
 		},
 		{
@@ -70,30 +82,18 @@
 			"readonly": false,
 			"required": false,
 			"visible": true
-		},
-		{
-			"label": "Traits",
-			"properties": {
-				"parameter": "traits",
-  			"fieldType": "textarea",
-  			"default": "{}",
-				"helptext": "A free-form dictionary of traits of the group, like email or name. See https://segment.com/docs/spec/group#traits for a list of reserved trait names."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
 		}
 	],
 	"method": "POST",
-	"endpoint": "/group",
+	"endpoint": "/screen",
 	"request": {
 		"userId": "{field.userId}",
-		"groupId": "{field.groupdID}",
 		"anonymousId": "{field.anonymousId}",
 		"context": "{field.context}",
+		"name": "{field.name}",
 		"integrations": "{field.integrations}",
+		"properties": "{field.properties}",
 		"timestamp": "{field.timestamp}",
-		"traits": "{field.traits}"
 	},
 	"response": {
 		"success": {
