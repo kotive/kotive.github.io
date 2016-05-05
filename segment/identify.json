@@ -73,6 +73,10 @@
       "visible": true
     }
   ],
+  "headers": {
+    "Authorization": "Basic {base64_encode(auth.field.writekey:)}",
+    "Content-Type": "application/json"
+  },
   "method": "POST",
   "endpoint": "/identify",
   "request": {
