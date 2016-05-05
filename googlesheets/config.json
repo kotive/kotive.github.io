@@ -3,7 +3,8 @@
     "description": "Quickly create new spreadsheets and open existing ones. .",
     "auth": {
         "method": "OAuth2",
-        "target_service": "Google"
+        "target_service": "Google",
+        "required_scope": "https://spreadsheets.google.com/feeds/"
     },
     "domain": "https://spreadsheets.google.com/feeds"
 }
