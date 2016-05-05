@@ -2,27 +2,17 @@
   "name": "Segment",
   "description": "Collect customer data with one API and send it to hundreds of tools for analytics, marketing, and data warehousing.",
   "auth":{
-    "method": "Basic",
+    "method": "Custom",
     "fields": [
       {
         "label": "Write Key",
         "properties": {
-          "parameter": "username",
+          "parameter": "writekey",
           "fieldType": "text"
         },
         "readonly": false,
         "required": true,
         "visible": true
-      },
-      {
-        "label": "",
-        "properties": {
-          "parameter": "password",
-          "fieldType": "text"
-        },
-        "readonly": false,
-        "required": false,
-        "visible": false
       }
     ]
   },
