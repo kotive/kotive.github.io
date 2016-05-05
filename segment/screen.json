@@ -93,7 +93,7 @@
     "name": "{field.name}",
     "integrations": "{field.integrations}",
     "properties": "{field.properties}",
-    "timestamp": "{field.timestamp}",
+    "timestamp": "{field.timestamp}"
   },
   "response": {
     "success": {
