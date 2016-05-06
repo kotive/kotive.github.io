@@ -71,8 +71,8 @@
     "type": "alias",
     "userId": "{field.userId}",
     "previousId": "{field.previousId}",
-    "context": "{field.context}",
-    "integrations": "{field.integrations}",
+    "context": "{string_to_hash(field.context)}",
+    "integrations": "{string_to_hash(field.integrations)}",
     "timestamp": "{field.timestamp}"
   },
   "response": {

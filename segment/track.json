@@ -94,10 +94,10 @@
     "type": "track",
     "userId": "{field.userId}",
     "anonymousId": "{field.anonymousId}",
-    "context": "{field.context}",
+    "context": "{string_to_hash(field.context)}",
     "event": "{field.event}",
-    "integrations": "{field.integrations}",
-    "properties": "{field.properties}",
+    "integrations": "{string_to_hash(field.integrations)}",
+    "properties": "{string_to_hash(field.properties)}",
     "timestamp": "{field.timestamp}"
   },
   "response": {
