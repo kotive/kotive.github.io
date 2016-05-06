@@ -1,5 +1,5 @@
 {
-  "name": "Track an page view",
+  "name": "Track a page view",
   "description": "Record whenever a user sees a page of your website.",
   "documentation": "https://segment.com/docs/libraries/http/#page",
   "fields": [

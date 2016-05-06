@@ -1,5 +1,5 @@
 {
-  "name": "Track an action",
+  "name": "Track an event",
   "description": "Record any actions your users perform",
   "documentation": "https://segment.com/docs/libraries/http/#track",
   "fields": [

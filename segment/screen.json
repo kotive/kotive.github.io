@@ -1,5 +1,5 @@
 {
-  "name": "Track an screen view",
+  "name": "Track a screen view",
   "description": "Record whenever a user sees a screen of your mobile app.",
   "documentation": "https://segment.com/docs/libraries/http/#screen",
   "fields": [
