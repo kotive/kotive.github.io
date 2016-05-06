@@ -91,6 +91,7 @@
   "method": "POST",
   "endpoint": "/group",
   "request": {
+    "type": "group",
     "userId": "{field.userId}",
     "groupId": "{field.groupdID}",
     "anonymousId": "{field.anonymousId}",

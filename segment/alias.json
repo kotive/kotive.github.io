@@ -68,6 +68,7 @@
   "method": "POST",
   "endpoint": "/alias",
   "request": {
+    "type": "alias",
     "userId": "{field.userId}",
     "previousId": "{field.previousId}",
     "context": "{field.context}",

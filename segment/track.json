@@ -91,6 +91,7 @@
   "method": "POST",
   "endpoint": "/track",
   "request": {
+    "type": "track",
     "userId": "{field.userId}",
     "anonymousId": "{field.anonymousId}",
     "context": "{field.context}",

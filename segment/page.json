@@ -91,6 +91,7 @@
   "method": "POST",
   "endpoint": "/page",
   "request": {
+    "type": "page",
     "userId": "{field.userId}",
     "anonymousId": "{field.anonymousId}",
     "context": "{field.context}",
