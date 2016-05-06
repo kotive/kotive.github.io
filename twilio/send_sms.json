@@ -99,8 +99,8 @@
   "method": "POST",
   "endpoint": "/Accounts/{auth.field.sid}/Messages.json",
   "request": {
-    "To": "%2B{field.to}",
-    "From": "%2B{field.from}",
+    "To": "{field.to}",
+    "From": "{field.from}",
     "MessagingServiceSid": "{field.messagingServiceSid}",
     "Body": "{field.body}",
     "MediaUrl": "{field.mediaUrl}",
