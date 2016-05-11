@@ -15,7 +15,7 @@
             "visible": true
         },
         {
-            "label": "Email Type",
+            "label": "Email type",
             "properties": {
                 "parameter": "email_type",
                 "fieldType": "radio",
@@ -24,6 +24,7 @@
                     {"key": "text", "value": "text"}
                 ],
                 "default": "html",
+                "classes": "inline",
                 "helptext": "The type of email the user will receive, be it in HTML format, or plain text"
             },
             "readonly": false,
@@ -144,6 +145,7 @@
                     {"key": "true", "value": "Yes"},
                     {"key": "false", "value": "No"}
                 ],
+                "classes": "inline",
                 "helptext": "Is the subscriber a VIP user or not?"
             },
             "readonly": false,

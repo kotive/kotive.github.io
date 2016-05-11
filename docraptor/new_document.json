@@ -74,7 +74,7 @@
                     "none",
                     "html"
                 ],
-                "default": "false",
+                "default": "none",
                 "classes":"inline"
             },
             "readonly": false,
