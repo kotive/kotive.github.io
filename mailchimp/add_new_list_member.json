@@ -6,7 +6,7 @@
         {
             "label": "List ID",
             "properties": {
-                "parameter": "list_id",
+                "parameter": "listId",
                 "fieldType": "text",
                 "helptext": "The unique Id of the list to add this member to"
             },
@@ -17,7 +17,7 @@
         {
             "label": "Email type",
             "properties": {
-                "parameter": "email_type",
+                "parameter": "emailType",
                 "fieldType": "radio",
                 "choices": [
                     {"key": "html", "value": "html"},
@@ -52,7 +52,7 @@
         {
             "label": "Merge Fields",
             "properties": {
-                "parameter": "merge_fields",
+                "parameter": "mergeFields",
                 "fieldType": "text",
                 "helptext": "An individual merge variable and value for a member. These are surrounded by quotes, eg \"key\": \"value\""
             },
@@ -177,7 +177,7 @@
         {
             "label": "Email Address",
             "properties": {
-                "parameter": "email_address",
+                "parameter": "emailAddress",
                 "fieldType": "email",
                 "helptext": "The email address of the subscriber"
             },
@@ -191,11 +191,11 @@
       "Content-Type": "application/json"
     },
     "method": "POST",
-    "endpoint": "/lists/{field.list_id}/members",
+    "endpoint": "/lists/{field.listId}/members",
     "request": {
-        "email_type": "{field.email_type}",
+        "email_type": "{field.emailType}",
         "status": "{field.status}",
-        "merge_fields": "{field.merge_fields}",
+        "merge_fields": "{field.mergeFields}",
         "interests": "{field.interests}",
         "language": "{field.language}",
         "vip": "{field.vip}",
@@ -203,7 +203,7 @@
           "longitude": "{field.longitude}",
           "latitude": "{field.latitude}"
         },
-        "email_address": "{field.email_address}"
+        "email_address": "{field.emailAddress}"
     },
     "response": {
         "success": {
