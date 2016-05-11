@@ -62,7 +62,7 @@
     }
   ],
   "headers": {
-    "Authorization": "Basic {base64_encode(auth.field.writekey:'')}",
+    "Authorization": "Basic {base64_encode_username_password(auth.field.writekey:'')}",
     "Content-Type": "application/json"
   },
   "method": "POST",
