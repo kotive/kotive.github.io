@@ -1,14 +1,14 @@
 {
     "name": "Add a new list member",
     "description": "Add a new member to a list using MailChimp",
-    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#create-post_lists_list_id_members",
     "fields": [
         {
             "label": "List ID",
             "properties": {
                 "parameter": "list_id",
                 "fieldType": "text",
-                "helptext": "The ID of the list to add this member to"
+                "helptext": "The unique Id of the list to add this member to"
             },
             "readonly": false,
             "required": true,
@@ -20,27 +20,28 @@
                 "parameter": "email_type",
                 "fieldType": "radio",
                 "choices": [
-                    {"key": "html", "value": "HTML"},
-                    {"key": "text", "value": "Text"}
+                    {"key": "html", "value": "html"},
+                    {"key": "text", "value": "text"}
                 ],
-                "default": "text",
-                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+                "default": "html",
+                "helptext": "The type of email the user will receive, be it in HTML format, or plain text"
             },
             "readonly": false,
             "required": false,
             "visible": true
         },
         {
-            "label": "Subsriber Status",
+            "label": "Subscriber current status",
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
                 "choices": [
-                    {"key": "subscribed", "value": "Subscribed"},
-                    {"key": "unsubscribed", "value": "Unsubscribed"},
-                    {"key": "cleaned", "value": "Cleaned"},
-                    {"key": "pending", "value": "Pending"}
+                    {"key": "subscribed", "value": "subscribed"},
+                    {"key": "unsubscribed", "value": "unsubscribed"},
+                    {"key": "cleaned", "value": "cleaned"},
+                    {"key": "pending", "value": "pending"}
                 ],
+                "default": "subscribed",
                 "helptext": "The status of the subscriber"
             },
             "readonly": false,
@@ -150,7 +151,7 @@
             "visible": true
         },
         {
-            "label": "Longitude",
+            "label": "Location longitude",
             "properties": {
                 "parameter": "latitude",
                 "fieldType": "text",
@@ -161,9 +162,9 @@
             "visible": true
         },
         {
-            "label": "Latitude",
+            "label": "Location latitude",
             "properties": {
-                "parameter": "location",
+                "parameter": "latitude",
                 "fieldType": "text",
                 "helptext": "The subscriber's geographical latitude"
             },
@@ -183,6 +184,10 @@
             "visible": true
         }
     ],
+    "headers": {
+      "Authorization": "Basic {base64_encode_username_password(anystring:auth.field.apikey)}",
+      "Content-Type": "application/json"
+    },
     "method": "POST",
     "endpoint": "/lists/{field.list_id}/members",
     "request": {
