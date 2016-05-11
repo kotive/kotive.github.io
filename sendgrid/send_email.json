@@ -209,6 +209,11 @@
         "success": {
             "message": "success"
         },
-        "error": {}
+        "error": {
+          "message": "error",
+          "errors": [
+            "...error messages..."
+          ]
+        }
     }
 }
