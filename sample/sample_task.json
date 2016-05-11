@@ -128,9 +128,7 @@
           "Other"
         ],
         "default": "Other",
-        "optional": {
-          "classes": "inline"
-        }
+        "classes": "inline"
       },
       "readonly": false,
       "required": true,

@@ -40,9 +40,7 @@ Fields are displayed in the UI
           {"key": "m", "value": "Male"}
         ],
         "default": "f",
-        "optional": {
-          "classes": "inline"
-        }
+        "classes": "inline"
       },
       "readonly": false,
       "required": true,
