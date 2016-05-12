@@ -28,7 +28,7 @@
             "properties": {
                 "parameters": "xmlpayload",
                 "fieldType": "textarea",
-                "default": "{\n  "\gsx:fruit\": \"Orange\",\n  \"gsx:color\": \"Orange\",\n  \"gsx:size\": \"Medium\"\n}",
+                "default": "{\n  \"gsx:fruit\": \"Orange\",\n  \"gsx:color\": \"Orange\",\n  \"gsx:size\": \"Medium\"\n}",
                 "helptext": "List of your columns with values (in XML)"
             },
             "readonly": false,
