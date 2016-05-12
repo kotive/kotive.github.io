@@ -1,8 +1,20 @@
 {
-    "name": "Mixpanel",
-    "description": "Actions speak louder than page views.",
-    "auth": {
-        "method": ""
-    },
-    "domain": "http://api.mixpanel.com"
+  "name": "Mixpanel",
+  "description": "Actions speak louder than page views.",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Token",
+        "properties": {
+          "parameter": "token",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "http://api.mixpanel.com"
 }

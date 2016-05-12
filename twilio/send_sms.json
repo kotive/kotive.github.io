@@ -1,109 +1,125 @@
 {
-	"name": "Send an SMS",
-	"description": "Send an SMS using Twilio",
-	"documentation": "https://www.twilio.com/docs/api/rest/sending-messages",
-	"fields": [
-		{
-				"label": "To",
-				"properties": {
-						"parameter": "to",
-						"fieldType": "tel",
-						"helptext": "The number to which you want to send an SMS"
-				},
-				"readonly": false,
-				"required": true,
-				"visible": true
-		},
-		{
-				"label": "From",
-				"properties": {
-						"parameter": "from",
-						"fieldType": "tel",
-						"helptext": "The number from which you want to send an SMS"
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Messaging Service Sid",
-				"properties": {
-						"parameter": "messagingServiceSid",
-						"fieldType": "text",
-						"helptext": "The unique ID of the Messaging Service you want to associate with this message."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Message Body",
-				"properties": {
-						"parameter": "body",
-  					"fieldType": "text",
-						"helptext": "The text of the message you want to send, limited to 1600 characters."
-  			},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Media URL",
-				"properties": {
-						"parameter": "mediaUrl",
-  					"fieldType": "web",
-						"helptext": "The URL of the media you wish to send out with the message. Up to ten files are supported, with a limit of 5MB each."
-  			},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Status Callback",
-				"properties": {
-						"parameter": "body",
-						"fieldType": "web",
-						"helptext": "The URL that Twilio will POST to each time your message status changes."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		},
-		{
-				"label": "Application Sid",
-				"properties": {
-						"parameter": "applicationSid",
-						"fieldType": "text",
-						"helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
-				},
-				"readonly": false,
-				"required": false,
-				"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/Accounts/{settings.twilio.accountSid}/Messages",
-	"request": {
-		"To": "{field.to}",
-		"From": "{field.from}",
-		"MessagingServiceSid": "{field.messagingServiceSid}",
-		"Body": "{field.body}",
-		"MediaUrl": "{field.mediaUrl}",
-		"StatusCallback": "{field.statusCallback}",
-		"ApplicationSid": "{field.applicationSid}"
-	},
-	"response": {
-		"success": {
-			"Status": "sent",
-			"ErrorCode": null,
-			"ErrorMessage": null
-		},
-		"error": [
-			{
-				"Status": "failed",
-				"ErrorCode": 30001,
-				"ErrorMessage": "Queue overflow"
-			}
-		]
-	}
+  "name": "Send an SMS",
+  "description": "Send an SMS using Twilio",
+  "documentation": "https://www.twilio.com/docs/api/rest/sending-messages",
+  "fields": [
+    {
+        "label": "To",
+        "properties": {
+            "parameter": "to",
+            "fieldType": "text",
+            "helptext": "The destination phone number. Format with a '+' and country code e.g., +16175551212 (E.164 format)."
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+    },
+    {
+        "label": "From",
+        "properties": {
+            "parameter": "from",
+            "fieldType": "text",
+            "helptext": "A Twilio phone number (in E.164 format) or alphanumeric sender ID enabled for the type of message you wish to send."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Messaging Service Sid",
+        "properties": {
+            "parameter": "messagingServiceSid",
+            "fieldType": "text",
+            "helptext": "The 34 character unique id of the Messaging Service you want to associate with this message."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Message",
+        "properties": {
+            "parameter": "body",
+            "fieldType": "textarea",
+            "helptext": "The text of the message you want to send, limited to 1600 characters."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Media URL",
+        "properties": {
+            "parameter": "mediaUrl",
+            "fieldType": "url",
+            "helptext": "The URL of the media you wish to send out with the message. <strong>gif ,png and jpeg</strong> files are supported, with a limit of 5MB."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Status Callback",
+        "properties": {
+            "parameter": "statusCallback",
+            "fieldType": "url",
+            "helptext": "A URL that Twilio will POST to each time your message status changes to one of the following: <strong>queued, failed, sent, delivered, or undelivered.</strong>"
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Application Sid",
+        "properties": {
+            "parameter": "applicationSid",
+            "fieldType": "text",
+            "helptext": "Twilio will POST MessageSid as well as MessageStatus=sent or MessageStatus=failed to the URL in the MessageStatusCallback property of this Application."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    },
+    {
+        "label": "Max price",
+        "properties": {
+            "parameter": "maxPrice",
+            "fieldType": "text",
+            "helptext": "The total maximum price up to the fourth decimal (0.0001) in US dollars acceptable for the message to be delivered."
+        },
+        "readonly": false,
+        "required": false,
+        "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode(auth.field.sid:auth.field.secret)}",
+    "Content-Type": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/Accounts/{auth.field.sid}/Messages.json",
+  "request": {
+    "To": "{field.to}",
+    "From": "{field.from}",
+    "MessagingServiceSid": "{field.messagingServiceSid}",
+    "Body": "{field.body}",
+    "MediaUrl": "{field.mediaUrl}",
+    "StatusCallback": "{field.statusCallback}",
+    "ApplicationSid": "{field.applicationSid}",
+    "MaxPrice": "{field.maxPrice}"
+  },
+  "response": {
+    "success": {
+      "Status": "sent",
+      "ErrorCode": null,
+      "ErrorMessage": null
+    },
+    "error": [
+      {
+        "Status": "failed",
+        "ErrorCode": 30001,
+        "ErrorMessage": "Queue overflow"
+      }
+    ]
+  }
 }

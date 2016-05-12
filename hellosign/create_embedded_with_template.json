@@ -47,7 +47,7 @@
             "label": "Signer's redirect web address",
             "properties": {
                 "parameters": "signer_redirect_url",
-                "fieldType": "web"
+                "fieldType": "url"
             },
             "readonly": false,
             "required": false,

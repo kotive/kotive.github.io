@@ -13,8 +13,8 @@
             "service": "aweber"
         },
         {
-            "name": "Basecamp",
-            "service": "basecamp"
+            "name": "Basecamp 2",
+            "service": "basecamp2"
         },
         {
             "name": "Campaign Monitor",
@@ -96,7 +96,7 @@
             "name": "Salesforce",
             "service": "salesforce"
         },
-	      {
+        {
             "name": "Slack",
             "service": "slack"
         },

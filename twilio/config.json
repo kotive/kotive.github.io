@@ -1,10 +1,30 @@
 {
-    "name": "Twilio",
-    "description": "The best phone number you've ever programmed",
-    "auth": {
-        "method": "Basic",
-        "username": "{settings.twilio.AccountSid}",
-        "password": "{settings.twilio.AuthToken}"
-    },
-    "domain": "https://api.twilio.com/2010-04-01"
+  "name": "Twilio",
+  "description": "The best phone number you've ever programmed",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "AccountSid or API Key's Sid",
+        "properties": {
+          "parameter": "sid",
+          "fieldType": "text",
+          "helptext": "All requests require authentication. Twilio supports <a href='https://www.twilio.com/docs/api/rest/request' target='_blank'>two forms of authentication</a>. <em>We suggest using your API Key's Sid and Secret.</em>"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      },{
+        "label": "AuthToken or API Key's Secret",
+        "properties": {
+          "parameter": "secret",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.twilio.com/2010-04-01"
 }

@@ -27,7 +27,7 @@
             "label": "Url",
             "properties": {
                 "parameter": "Url",
-                "fieldType": "web"
+                "fieldType": "url"
             },
             "readonly": false,
             "required": true,
@@ -47,7 +47,7 @@
             "label": "FallbackUrl",
             "properties": {
                 "parameter": "FallbackUrl",
-                "fieldType": "web"
+                "fieldType": "url"
             },
             "readonly": false,
             "required": false,
@@ -57,7 +57,7 @@
             "label": "StatusCallback",
             "properties": {
                 "parameter": "StatusCallback",
-                "fieldType": "web"
+                "fieldType": "url"
             },
             "readonly": false,
             "required": false,

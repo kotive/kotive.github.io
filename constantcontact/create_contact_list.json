@@ -1,48 +1,48 @@
 {
-	"name": "Create a contact list",
-	"description": "Create a contact list using Constant Contact",
-	"documentation": "http://developer.constantcontact.com/docs/contact-list-api/contactlist-collection.html?method=POST",
-	"fields": [
-		{
-			"label": "Name",
-			"properties": {
-				"parameter": "name",
-  			"fieldType": "text",
-				"helptext": "The new contact list name"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Status",
-			"properties": {
-				"parameter": "status",
-  			"fieldType": "radio",
-				"choices": [
-						{"key": "ACTIVE", "value": "Active"},
-						{"key": "HIDDEN", "value": "Hidden"}
-				],
-				"helptext": "The new contact list status"
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "/lists",
-	"request": {},
-	"response": {
-		"success": {
-			"id": "6",
-			"name": "Hot Opportunities",
-			"status": "ACTIVE",
-			"contact_count": 0
-		},
-		"error": {
-			"Code": 401,
-			"Message": "Authentication Failure"
-		}
-	}
+  "name": "Create a contact list",
+  "description": "Create a contact list using Constant Contact",
+  "documentation": "http://developer.constantcontact.com/docs/contact-list-api/contactlist-collection.html?method=POST",
+  "fields": [
+    {
+      "label": "Name",
+      "properties": {
+        "parameter": "name",
+        "fieldType": "text",
+        "helptext": "The new contact list name"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Status",
+      "properties": {
+        "parameter": "status",
+        "fieldType": "radio",
+        "choices": [
+            {"key": "ACTIVE", "value": "Active"},
+            {"key": "HIDDEN", "value": "Hidden"}
+        ],
+        "helptext": "The new contact list status"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "/lists",
+  "request": {},
+  "response": {
+    "success": {
+      "id": "6",
+      "name": "Hot Opportunities",
+      "status": "ACTIVE",
+      "contact_count": 0
+    },
+    "error": {
+      "Code": 401,
+      "Message": "Authentication Failure"
+    }
+  }
 }

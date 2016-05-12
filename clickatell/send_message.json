@@ -1,13 +1,14 @@
 {
-    "name": "Send a bulk SMS",
-    "description": "Reach any customer on any mobile phone, anywhere, using Clickatell.",
-    "documentation": "https://www.clickatell.com/downloads/http/Clickatell_HTTP.pdf",
+    "name": "Send a SMS",
+    "description": "Reach any customer on any mobile phone, anywhere.",
+    "documentation": "https://www.clickatell.com/developers/api-docs/send-message-rest/",
     "fields": [
         {
-            "label": "To",
+            "label": "Send to these mobile numbers",
             "properties": {
                 "parameter": "to",
-                "fieldType": "textarea"
+                "fieldType": "text",
+                "helptext": "Start with the country code (not zero), no spaces or other non-numeric characters. Add more than one mobile number and separate it with a comma, e.g. 44777777777,80555555555"
             },
             "readonly": false,
             "required": true,
@@ -16,17 +17,27 @@
         {
             "label": "Message",
             "properties": {
-                "parameter": "text",
-                "fieldType": "textarea"
+                "parameter": "message",
+                "fieldType": "textarea",
+                "helptext": "Limit your number of characters to less than 160 if you want to restrict it to a single message."
             },
             "readonly": false,
             "required": true,
             "visible": true
         }
     ],
+    "headers": {
+        "Authorization": "Bearer {auth.field.authtoken}",
+        "X-Version": "1",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
     "method": "POST",
-    "endpoint": "/sendmsg?api_id={settings.clickatell.api_id}&user={settings.clickatell.user}&password={settings.clickatell.password}&to={field.to}&text={field.text}",
-    "request": "",
+    "endpoint": "/message",
+    "request": {
+        "text":"{field.message}",
+        "to": "{comma_to_array(field.to)}"
+    },
     "response": {
         "success": {},
         "error": {}

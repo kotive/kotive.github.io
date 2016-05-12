@@ -1,10 +1,20 @@
 {
-	"name": "Segment",
-	"description": "Collect customer data with one API and send it to hundreds of tools for analytics, marketing, and data warehousing.",
-	"auth":{
-			"method": "Basic",
-			"username": "{settings.segment.apikey}",
-			"password": ""
-	},
-	"domain": "https://api.segment.io/v1/"
+  "name": "Segment",
+  "description": "Collect customer data with one API and send it to hundreds of tools for analytics, marketing, and data warehousing.",
+  "auth":{
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Write Key",
+        "properties": {
+          "parameter": "writekey",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.segment.io/v1"
 }

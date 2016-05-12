@@ -30,7 +30,7 @@
             "properties": {
                 "parameter": "pos",
                 "fieldType": "radio",
-                "choices":	[
+                "choices":  [
                     {"key": "top", "value": "Top"},
                     {"key": "bottom", "value": "Bottom"}
                 ],
@@ -89,7 +89,7 @@
             "label": "Source URL",
             "properties": {
                 "parameter": "urlSource",
-                "fieldType": "web",
+                "fieldType": "url",
                 "helptext": "A source URL, or null"
             },
             "readonly": false,

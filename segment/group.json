@@ -1,135 +1,110 @@
 {
-	"name": "Group a user",
-	"description": "Group a user using Segment",
-	"documentation": "https://segment.com/docs/spec/group/",
-	"fields": [
-		{
-			"label": "Anonymous ID",
-			"properties": {
-				"parameter": "anonymousID",
-  			"fieldType": "text",
-				"helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Context",
-			"properties": {
-				"parameter": "context",
-  			"fieldType": "text",
-				"helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Integrations",
-			"properties": {
-				"parameter": "integrations",
-  			"fieldType": "text",
-				"helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Sent At",
-			"properties": {
-				"parameter": "sentAt",
-  			"fieldType": "date",
-				"helptext": "The timestamp when a message is sent to Segment, used for clock skew correction."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Timestamp",
-			"properties": {
-				"parameter": "timestamp",
-  			"fieldType": "date",
-				"helptext": "The timestamp when the message itself took place."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Type",
-			"properties": {
-				"parameter": "type",
-				"fieldType": "radio",
-				"choices": [
-					{"key": "identify", "value": "Identify"},
-					{"key": "group", "value": "Group"},
-					{"key": "track", "value": "Track"},
-					{"key": "page", "value": "Page"},
-					{"key": "screen", "value": "Screen"},
-					{"key": "alias", "value": "Alias"}
-				],
-				"default": "identify",
-				"helptext": "The type of message, corresponding to the API method."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "User ID",
-			"properties": {
-				"parameter": "userID",
-  			"fieldType": "text",
-				"helptext": "A unique identifier for the user in your database."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Group ID",
-			"properties": {
-				"parameter": "groupID",
-  			"fieldType": "text",
-				"helptext": "A unique identifier for the group in your database."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Traits",
-			"properties": {
-				"parameter": "traits",
-  			"fieldType": "text",
-				"helptext": "A free-form dictionary of traits of the user, like email or name. See https://segment.com/docs/spec/group#traits for a list of reserved trait names."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "",
-	"request": {
-		"anonymousID": "{field.anonymousID}",
-		"context": "{field.context}",
-		"integrations": "{field.integrations}",
-		"sentAt": "{field.sentAt}",
-		"timestamp": "{field.timestamp}",
-		"type": "{field.type}",
-		"userID": "{field.userID}",
-		"groupID": "{field.groupID}",
-		"traits": "{field.traits}"
-	},
-	"response": {
-		"success": {
-			"Code": 200,
-			"Message": "Ok"
-		},
-		"error": {}
-	}
+  "name": "Group a user",
+  "description": "Associate a user with a group",
+  "documentation": "https://segment.com/docs/libraries/http/#group",
+  "fields": [
+    {
+      "label": "User ID",
+      "properties": {
+        "parameter": "userId",
+        "fieldType": "text",
+        "helptext": "A unique identifier for the user in your database."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Group ID",
+      "properties": {
+        "parameter": "groupID",
+        "fieldType": "text",
+        "helptext": "A unique identifier for the group in your database."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Anonymous ID",
+      "properties": {
+        "parameter": "anonymousId",
+        "fieldType": "text",
+        "helptext": "A pseudo-unique substitute for a User ID, for cases when you don’t have an absolutely unique identifier."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Context",
+      "properties": {
+        "parameter": "context",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of extra information that provides useful context about a message. See https://segment.com/docs/spec/common#context"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Integrations",
+      "properties": {
+        "parameter": "integrations",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A dictionary of integrations to either enable or disable. See https://segment.com/docs/spec/common#integrations"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Timestamp",
+      "properties": {
+        "parameter": "timestamp",
+        "fieldType": "text",
+        "helptext": "The timestamp when the message itself took place. See https://segment.com/docs/spec/common#timestamps"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Traits",
+      "properties": {
+        "parameter": "traits",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A free-form dictionary of traits of the group, like email or name. See https://segment.com/docs/spec/group#traits for a list of reserved trait names."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.writekey:'')}",
+    "Content-Type": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/group",
+  "request": {
+    "type": "group",
+    "userId": "{field.userId}",
+    "groupId": "{field.groupdID}",
+    "anonymousId": "{field.anonymousId}",
+    "context": "{string_to_hash(field.context)}",
+    "integrations": "{string_to_hash(field.integrations)}",
+    "timestamp": "{field.timestamp}",
+    "traits": "{string_to_hash(field.traits)}"
+  },
+  "response": {
+    "success": {
+      "Code": 200,
+      "Message": "Ok"
+    },
+    "error": {}
+  }
 }

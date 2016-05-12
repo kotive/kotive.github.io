@@ -1,322 +1,322 @@
 {
-	"name": "Submit a request",
-	"description": "Submit a new request using Amplitude",
-	"documentation": "https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API",
-	"fields": [
-		{
-			"label": "User ID",
-			"properties": {
-				"parameter": "user_id",
-  			"fieldType": "text",
-				"helptext": "Either User ID or Device ID is required. This is a readable ID specified by you."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Device ID",
-			"properties": {
-				"parameter": "device_id",
-  			"fieldType": "text",
-				"helptext": "Either User ID or Device ID is required. This is a device specific identifier, such as identifierForVendor on iOS."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Event Type",
-			"properties": {
-				"parameter": "event_type",
-  			"fieldType": "text",
-				"helptext": "A unique identifier for your event."
-  		},
-			"readonly": false,
-			"required": true,
-			"visible": true
-		},
-		{
-			"label": "Time",
-			"properties": {
-				"parameter": "time",
-  			"fieldType": "number",
-				"helptext": "The timestamp of the event in milliseconds since epoch."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Event Properties",
-			"properties": {
-				"parameter": "event_properties",
-  			"fieldType": "text",
-				"helptext": "A dictionary of key-value pairs that represent additional data to be sent along with the event. These must be surrounded by quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "User Properties",
-			"properties": {
-				"parameter": "user_properties",
-  			"fieldType": "text",
-				"helptext": "A dictionary of key-value pairs that represent additional data tied to the user. Each distinct value will show up as a user segment on the Amplitude dashboard. These must be surrounded by quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "App Version",
-			"properties": {
-				"parameter": "app_version",
-  			"fieldType": "string",
-				"helptext": "The version of the app that the user is on."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Platform",
-			"properties": {
-				"parameter": "platform",
-  			"fieldType": "string",
-				"helptext": "Which platform the user is sending the data from."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Operating System Name",
-			"properties": {
-				"parameter": "os_name",
-  			"fieldType": "string",
-				"helptext": "Which operating system or browser that the user is using."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Operating System Version",
-			"properties": {
-				"parameter": "os_version",
-  			"fieldType": "text",
-				"helptext": "Which version of the browser or operating system the user is running"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Device Brand",
-			"properties": {
-				"parameter": "device_brand",
-  			"fieldType": "string",
-				"helptext": "Which device brand the user is using"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Device Manufacturer",
-			"properties": {
-				"parameter": "device_manufacturer",
-  			"fieldType": "string",
-				"helptext": "Which device brand the user is using"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Device Model",
-			"properties": {
-				"parameter": "device_model",
-  			"fieldType": "string",
-				"helptext": "Which device model the user is using"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Carrier",
-			"properties": {
-				"parameter": "carrier",
-  			"fieldType": "string",
-				"helptext": "Which carrier the user has"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Country",
-			"properties": {
-				"parameter": "country",
-  			"fieldType": "string",
-				"helptext": "The country the user is currently in"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Geographical Region",
-			"properties": {
-				"parameter": "region",
-  			"fieldType": "string",
-				"helptext": "The geographical region the user is in"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "City",
-			"properties": {
-				"parameter": "city",
-  			"fieldType": "string",
-				"helptext": "Which city the user is in"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Designated Market Area",
-			"properties": {
-				"parameter": "dma",
-  			"fieldType": "string",
-				"helptext": "The designated market area of the user"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Language",
-			"properties": {
-				"parameter": "language",
-  			"fieldType": "string",
-				"helptext": "The language that the user has set"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Revenue",
-			"properties": {
-				"parameter": "revenue",
-  			"fieldType": "number",
-				"helptext": "The amount of revenuue generated by the event"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Latitude",
-			"properties": {
-				"parameter": "location_lat",
-  			"fieldType": "number",
-				"helptext": "The latitude of the user"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Longitude",
-			"properties": {
-				"parameter": "location_long",
-  			"fieldType": "number",
-				"helptext": "The longitude of the user"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "IP Address",
-			"properties": {
-				"parameter": "ip",
-  			"fieldType": "string",
-				"helptext": "The IP address that the user has"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "iOS Identifier",
-			"properties": {
-				"parameter": "ifda",
-  			"fieldType": "string",
-				"helptext": "The iOS identifier for the advertiser"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Android Identifier",
-			"properties": {
-				"parameter": "adid",
-  			"fieldType": "string",
-				"helptext": "The Android identifier for the advertiser"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Event ID",
-			"properties": {
-				"parameter": "event_id",
-  			"fieldType": "number",
-				"helptext": "An incrementing counter to distinguish events with the same user_id and timestamp from each other, required if you are using sessions"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Session ID",
-			"properties": {
-				"parameter": "session_id",
-  			"fieldType": "number",
-				"helptext": "The start time of the session in milliseconds since epoch, necessary if you want to associate events with a particular session"
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		},
-		{
-			"label": "Insert ID",
-			"properties": {
-				"parameter": "insert_id",
-  			"fieldType": "string",
-				"helptext": "A unique identifier for the event being inserted."
-  		},
-			"readonly": false,
-			"required": false,
-			"visible": true
-		}
-	],
-	"method": "POST",
-	"endpoint": "?api_key={settings.amplitude.apikey}",
-	"request": {},
-	"response": {
-		"success": {},
-		"error": {}
-	}
+  "name": "Submit a request",
+  "description": "Submit a new request using Amplitude",
+  "documentation": "https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API",
+  "fields": [
+    {
+      "label": "User ID",
+      "properties": {
+        "parameter": "user_id",
+        "fieldType": "text",
+        "helptext": "Either User ID or Device ID is required. This is a readable ID specified by you."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Device ID",
+      "properties": {
+        "parameter": "device_id",
+        "fieldType": "text",
+        "helptext": "Either User ID or Device ID is required. This is a device specific identifier, such as identifierForVendor on iOS."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Event Type",
+      "properties": {
+        "parameter": "event_type",
+        "fieldType": "text",
+        "helptext": "A unique identifier for your event."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Time",
+      "properties": {
+        "parameter": "time",
+        "fieldType": "number",
+        "helptext": "The timestamp of the event in milliseconds since epoch."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Event Properties",
+      "properties": {
+        "parameter": "event_properties",
+        "fieldType": "text",
+        "helptext": "A dictionary of key-value pairs that represent additional data to be sent along with the event. These must be surrounded by quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "User Properties",
+      "properties": {
+        "parameter": "user_properties",
+        "fieldType": "text",
+        "helptext": "A dictionary of key-value pairs that represent additional data tied to the user. Each distinct value will show up as a user segment on the Amplitude dashboard. These must be surrounded by quotes and separated by commas, eg: \"key1\": \"value1\", \"key2\": \"value2\""
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "App Version",
+      "properties": {
+        "parameter": "app_version",
+        "fieldType": "text",
+        "helptext": "The version of the app that the user is on."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Platform",
+      "properties": {
+        "parameter": "platform",
+        "fieldType": "text",
+        "helptext": "Which platform the user is sending the data from."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Operating System Name",
+      "properties": {
+        "parameter": "os_name",
+        "fieldType": "text",
+        "helptext": "Which operating system or browser that the user is using."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Operating System Version",
+      "properties": {
+        "parameter": "os_version",
+        "fieldType": "text",
+        "helptext": "Which version of the browser or operating system the user is running"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Device Brand",
+      "properties": {
+        "parameter": "device_brand",
+        "fieldType": "text",
+        "helptext": "Which device brand the user is using"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Device Manufacturer",
+      "properties": {
+        "parameter": "device_manufacturer",
+        "fieldType": "text",
+        "helptext": "Which device brand the user is using"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Device Model",
+      "properties": {
+        "parameter": "device_model",
+        "fieldType": "text",
+        "helptext": "Which device model the user is using"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Carrier",
+      "properties": {
+        "parameter": "carrier",
+        "fieldType": "text",
+        "helptext": "Which carrier the user has"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Country",
+      "properties": {
+        "parameter": "country",
+        "fieldType": "text",
+        "helptext": "The country the user is currently in"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Geographical Region",
+      "properties": {
+        "parameter": "region",
+        "fieldType": "text",
+        "helptext": "The geographical region the user is in"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "City",
+      "properties": {
+        "parameter": "city",
+        "fieldType": "text",
+        "helptext": "Which city the user is in"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Designated Market Area",
+      "properties": {
+        "parameter": "dma",
+        "fieldType": "text",
+        "helptext": "The designated market area of the user"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Language",
+      "properties": {
+        "parameter": "language",
+        "fieldType": "text",
+        "helptext": "The language that the user has set"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Revenue",
+      "properties": {
+        "parameter": "revenue",
+        "fieldType": "number",
+        "helptext": "The amount of revenuue generated by the event"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Latitude",
+      "properties": {
+        "parameter": "location_lat",
+        "fieldType": "number",
+        "helptext": "The latitude of the user"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Longitude",
+      "properties": {
+        "parameter": "location_long",
+        "fieldType": "number",
+        "helptext": "The longitude of the user"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "IP Address",
+      "properties": {
+        "parameter": "ip",
+        "fieldType": "text",
+        "helptext": "The IP address that the user has"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "iOS Identifier",
+      "properties": {
+        "parameter": "ifda",
+        "fieldType": "text",
+        "helptext": "The iOS identifier for the advertiser"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Android Identifier",
+      "properties": {
+        "parameter": "adid",
+        "fieldType": "text",
+        "helptext": "The Android identifier for the advertiser"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Event ID",
+      "properties": {
+        "parameter": "event_id",
+        "fieldType": "number",
+        "helptext": "An incrementing counter to distinguish events with the same user_id and timestamp from each other, required if you are using sessions"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Session ID",
+      "properties": {
+        "parameter": "session_id",
+        "fieldType": "number",
+        "helptext": "The start time of the session in milliseconds since epoch, necessary if you want to associate events with a particular session"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Insert ID",
+      "properties": {
+        "parameter": "insert_id",
+        "fieldType": "text",
+        "helptext": "A unique identifier for the event being inserted."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "endpoint": "?api_key={settings.amplitude.apikey}",
+  "request": {},
+  "response": {
+    "success": {},
+    "error": {}
+  }
 }

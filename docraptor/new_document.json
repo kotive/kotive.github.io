@@ -13,9 +13,7 @@
                     "xlsx",
                     "pdf"
                 ],
-                "style": {
-                    "classes":"inline"
-                }
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -52,9 +50,7 @@
                     "no"
                 ],
                 "default": "no",
-                "style": {
-                    "classes":"inline"
-                }
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -79,10 +75,8 @@
                     "none",
                     "html"
                 ],
-                "default": "false",
-                "style": {
-                    "classes":"inline"
-                }
+                "default": "none",
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -98,9 +92,7 @@
                     "no"
                 ],
                 "default": "no",
-                "style": {
-                    "classes":"inline"
-                }
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
