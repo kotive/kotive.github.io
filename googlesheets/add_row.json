@@ -4,12 +4,32 @@
     "documentation": "https://developers.google.com/google-apps/spreadsheets/#adding_a_list_row",
     "fields": [
         {
+            "label": "Spreadsheet Id",
+            "properties": {
+                "parameters": "spreadsheetId",
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Worksheet Id",
+            "properties": {
+                "parameters": "worksheetId",
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
             "label": "Payload",
             "properties": {
-                "parameters": "payload",
+                "parameters": "xmlpayload",
                 "fieldType": "textarea",
-                "default": "{firstname: 'Joe', lastname: 'Smith', age: 26, height: 176}",
-                "helptext": "Separate columns with commas, specify column names before ':' and values afterwards"
+                "default": "{\n  \"gsx:fruit\": \"Orange\",\n  \"gsx:color\": \"Orange\",\n  \"gsx:size\": \"Medium\"\n}",
+                "helptext": "List of your columns with values (in XML)"
             },
             "readonly": false,
             "required": true,
@@ -17,8 +37,8 @@
         }
     ],
     "method": "POST",
-    "endpoint": "list/key/{field.worksheetId}/private/full",
-    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{field.payload}</entry>",
+    "endpoint": "/list/{field.spreadsheetId}/{field.worksheetId}/private/full",
+    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{field.xmlpayload}</entry>",
     "response": {
         "success": {},
         "error": {}
