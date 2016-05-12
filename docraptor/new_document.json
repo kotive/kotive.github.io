@@ -13,9 +13,8 @@
                     "xlsx",
                     "pdf"
                 ],
-                "style": {
-                    "classes":"inline"
-                }
+                "default": "pdf",
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -25,7 +24,8 @@
             "label": "Document content",
             "properties": {
                 "parameter": "document_content",
-                "fieldType": "textarea"
+                "fieldType": "textarea",
+                "sanitize": false
             },
             "readonly": false,
             "required": true,
@@ -51,9 +51,7 @@
                     "no"
                 ],
                 "default": "no",
-                "style": {
-                    "classes":"inline"
-                }
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -78,10 +76,8 @@
                     "none",
                     "html"
                 ],
-                "default": "false",
-                "style": {
-                    "classes":"inline"
-                }
+                "default": "none",
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
@@ -97,9 +93,7 @@
                     "no"
                 ],
                 "default": "no",
-                "style": {
-                    "classes":"inline"
-                }
+                "classes":"inline"
             },
             "readonly": false,
             "required": true,
