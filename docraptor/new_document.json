@@ -25,7 +25,8 @@
             "label": "Document content",
             "properties": {
                 "parameter": "document_content",
-                "fieldType": "textarea"
+                "fieldType": "textarea",
+                "sanitize": false
             },
             "readonly": false,
             "required": true,
