@@ -22,17 +22,21 @@
             "readonly": false,
             "required": false,
             "visible": true
+        },
+        {
+            "label": "Distinct id",
+            "properties": {
+                "parameter": "distinct_id",
+                "fieldType": "textarea"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
         }
     ],
     "method": "POST",
-    "endpoint": "/track/",
-    "request": {
-        "event": "{field.event}",
-        "properties": {
-            "token": "{settings.mixpanel.token}",
-            "distinct_id": "{field.distinct_id}"
-        }
-    },
+    "endpoint": "/track/?data={base64_encode_string({'event': '{field.event}', 'properties': {'token': '{auth.field.token}','distinct_id': '{field.distinct_id}'}})}",
+    "request": "",
     "response": {
         "success": {},
         "error": {}
