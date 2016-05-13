@@ -190,8 +190,8 @@
       "Authorization": "Basic {base64_encode_username_password(anystring:auth.field.apikey)}",
       "Content-Type": "application/json"
     },
-    "method": "POST",
-    "endpoint": "/lists/{field.listId}/members",
+    "method": "PUT",
+    "endpoint": "/lists/{field.listId}/members/{string_to_md5(field.emailAddress)}",
     "request": {
         "email_type": "{field.emailType}",
         "status": "{field.status}",
