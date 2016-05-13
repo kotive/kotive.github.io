@@ -41,7 +41,7 @@
     "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{json_to_xml(field.xmlpayload)}</entry>",
     "headers": {
       "Content-Type": "application/atom+xml",
-      "Authorization": "GoogleLogin auth={auth.oauth2Token}"
+      "Authorization": "Bearer {auth.oauth2Token}"
     },
     "response": {
         "success": {},
