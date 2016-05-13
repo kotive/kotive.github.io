@@ -195,10 +195,10 @@
     "request": {
         "email_type": "{field.emailType}",
         "status": "{field.status}",
-        "merge_fields": "{field.mergeFields}",
-        "interests": "{field.interests}",
+        "merge_fields": "{string_to_hash(field.mergeFields)}",
+        "interests": "{string_to_hash(field.interests)}",
         "language": "{field.language}",
-        "vip": "{field.vip}",
+        "vip": "{string_to_boolean(field.vip)}",
         "location": {
           "longitude": "{field.longitude}",
           "latitude": "{field.latitude}"
