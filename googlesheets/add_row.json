@@ -32,7 +32,7 @@
                 "parameter": "xmlpayload",
                 "fieldType": "textarea",
                 "default": "{\n  \"gsx:firstname\": {\"$t\": \"John\"},\n  \"gsx:lastname\": {\"$t\": \"Smith\"},\n  \"gsx:email\": {\"$t\": \"jsmith@gmail.com\"}\n}",
-                "helptext": "List of your columns with values. The text after 'gsx:' is the label of your column. Note that your spreadsheet needs headings to this integration to work."
+                "helptext": "List of your columns with values. The text after 'gsx:' is the label of your column in your spreadsheet. Note that your spreadsheet needs headings for this integration to work."
             },
             "readonly": false,
             "required": true,
