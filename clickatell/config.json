@@ -1,8 +1,20 @@
 {
-	"name": "Clickatell",
-	"description": "Simple, reliable mobile messaging cloud.",
-	"auth": {
-		"method": "API key"
-		},
-	"domain": "http://api.clickatell.com/http"
+  "name": "Clickatell",
+  "description": "Fast, simple one-way SMS messaging anywhere in the world.",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Authentication token",
+        "properties": {
+          "parameter": "authtoken",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.clickatell.com/rest"
 }

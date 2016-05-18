@@ -1,46 +1,48 @@
 {
     "name": "Add a new list member",
     "description": "Add a new member to a list using MailChimp",
-    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#create-post_lists_list_id_members",
     "fields": [
         {
             "label": "List ID",
             "properties": {
-                "parameter": "list_id",
+                "parameter": "listId",
                 "fieldType": "text",
-                "helptext": "The ID of the list to add this member to"
+                "helptext": "The unique Id of the list to add this member to"
             },
             "readonly": false,
             "required": true,
             "visible": true
         },
         {
-            "label": "Email Type",
+            "label": "Email type",
             "properties": {
-                "parameter": "email_type",
+                "parameter": "emailType",
                 "fieldType": "radio",
                 "choices": [
-                    {"key": "html", "value": "HTML"},
-                    {"key": "text", "value": "Text"}
+                    {"key": "html", "value": "html"},
+                    {"key": "text", "value": "text"}
                 ],
-                "default": "text",
-                "helptext": "The type of email the user will receive, be it in HTML format, or text"
+                "default": "html",
+                "classes": "inline",
+                "helptext": "The type of email the user will receive, be it in HTML format, or plain text"
             },
             "readonly": false,
             "required": false,
             "visible": true
         },
         {
-            "label": "Subsriber Status",
+            "label": "Subscriber current status",
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
                 "choices": [
-                    {"key": "subscribed", "value": "Subscribed"},
-                    {"key": "unsubscribed", "value": "Unsubscribed"},
-                    {"key": "cleaned", "value": "Cleaned"},
-                    {"key": "pending", "value": "Pending"}
+                    {"key": "subscribed", "value": "subscribed"},
+                    {"key": "unsubscribed", "value": "unsubscribed"},
+                    {"key": "cleaned", "value": "cleaned"},
+                    {"key": "pending", "value": "pending"}
                 ],
+                "default": "subscribed",
                 "helptext": "The status of the subscriber"
             },
             "readonly": false,
@@ -50,7 +52,7 @@
         {
             "label": "Merge Fields",
             "properties": {
-                "parameter": "merge_fields",
+                "parameter": "mergeFields",
                 "fieldType": "text",
                 "helptext": "An individual merge variable and value for a member. These are surrounded by quotes, eg \"key\": \"value\""
             },
@@ -140,9 +142,10 @@
                 "parameter": "vip",
                 "fieldType": "radio",
                 "choices": [
-                    {"key": true, "value": "Yes"},
-                    {"key": false, "value": "No"}
+                    {"key": "true", "value": "Yes"},
+                    {"key": "false", "value": "No"}
                 ],
+                "classes": "inline",
                 "helptext": "Is the subscriber a VIP user or not?"
             },
             "readonly": false,
@@ -150,9 +153,9 @@
             "visible": true
         },
         {
-            "label": "Longitude",
+            "label": "Location longitude",
             "properties": {
-                "parameter": "latitude",
+                "parameter": "longitude",
                 "fieldType": "text",
                 "helptext": "The subscriber's geographical longitude"
             },
@@ -161,9 +164,9 @@
             "visible": true
         },
         {
-            "label": "Latitude",
+            "label": "Location latitude",
             "properties": {
-                "parameter": "location",
+                "parameter": "latitude",
                 "fieldType": "text",
                 "helptext": "The subscriber's geographical latitude"
             },
@@ -174,7 +177,7 @@
         {
             "label": "Email Address",
             "properties": {
-                "parameter": "email_address",
+                "parameter": "emailAddress",
                 "fieldType": "email",
                 "helptext": "The email address of the subscriber"
             },
@@ -183,12 +186,16 @@
             "visible": true
         }
     ],
+    "headers": {
+      "Authorization": "Basic {base64_encode_username_password(anystring:auth.field.apikey)}",
+      "Content-Type": "application/json"
+    },
     "method": "POST",
-    "endpoint": "/lists/{field.list_id}/members",
+    "endpoint": "/lists/{field.listId}/members",
     "request": {
-        "email_type": "{field.email_type}",
+        "email_type": "{field.emailType}",
         "status": "{field.status}",
-        "merge_fields": "{field.merge_fields}",
+        "merge_fields": "{field.mergeFields}",
         "interests": "{field.interests}",
         "language": "{field.language}",
         "vip": "{field.vip}",
@@ -196,7 +203,7 @@
           "longitude": "{field.longitude}",
           "latitude": "{field.latitude}"
         },
-        "email_address": "{field.email_address}"
+        "email_address": "{field.emailAddress}"
     },
     "response": {
         "success": {

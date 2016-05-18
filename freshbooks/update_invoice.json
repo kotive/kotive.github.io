@@ -133,7 +133,7 @@
             "label": "Return URI",
             "properties": {
                 "parameter": "return_uri",
-                "fieldType": "web"
+                "fieldType": "url"
             },
             "readonly": false,
             "required": false,

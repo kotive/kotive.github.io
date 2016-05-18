@@ -6,5 +6,5 @@
         "username": "{settings.sendgrid.username}",
         "password": "{settings.sendgrid.password}"
     },
-    "domain": "https://api.sendgrid.com/api/"
+    "domain": "https://api.sendgrid.com/api"
 }

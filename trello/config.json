@@ -1,6 +1,6 @@
 {
-	"name": "Trello",
-	"description": "The free, flexible, and visual way to organize anything with anyone.",
-	"auth-method": "Not Really Used Here",
-	"domain": "http://api.trello.com"
+  "name": "Trello",
+  "description": "The free, flexible, and visual way to organize anything with anyone.",
+  "auth": "Not Really Used Here",
+  "domain": "http://api.trello.com"
 }

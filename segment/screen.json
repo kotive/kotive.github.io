@@ -1,7 +1,7 @@
 {
-  "name": "Identify a user",
-  "description": "Tie a customer to a recognisable ID using Segment",
-  "documentation": "https://segment.com/docs/libraries/http/#identify",
+  "name": "Track a screen view",
+  "description": "Record whenever a user sees a screen of your mobile app.",
+  "documentation": "https://segment.com/docs/libraries/http/#screen",
   "fields": [
     {
       "label": "User ID",
@@ -12,6 +12,29 @@
       },
       "readonly": false,
       "required": true,
+      "visible": true
+    },
+    {
+      "label": "Name",
+      "properties": {
+        "parameter": "name",
+        "fieldType": "text",
+        "helptext": "The name of the screen."
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Properties",
+      "properties": {
+        "parameter": "properties",
+        "fieldType": "textarea",
+        "default": "{}",
+        "helptext": "A free-form dictionary of properties of screen. See https://segment.com/docs/spec/screen#properties."
+      },
+      "readonly": false,
+      "required": false,
       "visible": true
     },
     {
@@ -59,18 +82,6 @@
       "readonly": false,
       "required": false,
       "visible": true
-    },
-    {
-      "label": "Traits",
-      "properties": {
-        "parameter": "traits",
-        "fieldType": "textarea",
-        "default": "{}",
-        "helptext": "A free-form dictionary of traits of the user, like email or name. See https://segment.com/docs/spec/identify#traits for a list of reserved trait names."
-      },
-      "readonly": false,
-      "required": false,
-      "visible": true
     }
   ],
   "headers": {
@@ -78,15 +89,16 @@
     "Content-Type": "application/json"
   },
   "method": "POST",
-  "endpoint": "/identify",
+  "endpoint": "/screen",
   "request": {
-    "type": "identify",
+    "type": "screen",
     "userId": "{field.userId}",
     "anonymousId": "{field.anonymousId}",
     "context": "{string_to_hash(field.context)}",
+    "name": "{field.name}",
     "integrations": "{string_to_hash(field.integrations)}",
-    "timestamp": "{field.timestamp}",
-    "traits": "{string_to_hash(field.traits)}"
+    "properties": "{string_to_hash(field.properties)}",
+    "timestamp": "{field.timestamp}"
   },
   "response": {
     "success": {

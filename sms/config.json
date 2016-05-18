@@ -1,8 +1,8 @@
 {
-	"name": "SMS",
-	"description": "Simple, reliable mobile messaging cloud.",
-	"auth": {
-		"method": "API key"
-		},
-	"domain": "http://api.clickatell.com/http"
+  "name": "SMS",
+  "description": "Simple, reliable mobile messaging cloud.",
+  "auth": {
+    "method": "API key"
+    },
+  "domain": "http://api.clickatell.com/http"
 }
