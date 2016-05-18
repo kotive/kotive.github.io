@@ -8,7 +8,7 @@
             "properties": {
                 "parameter": "spreadsheetId",
                 "fieldType": "text",
-                "helptext": "E.g. if your spreadsheet's web address is 'https://docs.google.com/spreadsheets/d/<strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>/edit#gid=0' then your Spreadsheet Id you need to enter here is <strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>."
+                "helptext": "E.g. if your spreadsheet's web address is https://docs.google.com/spreadsheets/d/<strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>/edit#gid=0 then your Spreadsheet Id is <strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>"
             },
             "readonly": false,
             "required": true,
@@ -20,7 +20,7 @@
                 "parameter": "worksheetId",
                 "fieldType": "text",
                 "default": "1",
-                "helptext": "The number of your worksheet as it appears in your spreadsheet. '1' is the first one on the left."
+                "helptext": "The number of your worksheet as it appears in your spreadsheet. '1' is the first one on the left. '2' would be the second, etc."
             },
             "readonly": false,
             "required": true,
@@ -32,7 +32,7 @@
                 "parameter": "xmlpayload",
                 "fieldType": "textarea",
                 "default": "{\n  \"gsx:firstname\": {\"$t\": \"John\"},\n  \"gsx:lastname\": {\"$t\": \"Smith\"},\n  \"gsx:email\": {\"$t\": \"jsmith@gmail.com\"}\n}",
-                "helptext": "List of your columns with values. The text after 'gsx:' is the label of your column in your spreadsheet. Note that your spreadsheet needs headings for this integration to work."
+                "helptext": "A list of your columns with values (in JSON). The text after 'gsx:' is the label of a column in your spreadsheet. Note that your spreadsheet needs headings for this integration to work."
             },
             "readonly": false,
             "required": true,
