@@ -6,8 +6,9 @@
         {
             "label": "Spreadsheet Id",
             "properties": {
-                "parameters": "spreadsheetId",
-                "fieldType": "text"
+                "parameter": "spreadsheetId",
+                "fieldType": "text",
+                "helptext": "E.g. if your spreadsheet's web address is https://docs.google.com/spreadsheets/d/<strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>/edit#gid=0 then your Spreadsheet Id is <strong>1j3fc9BNW1yQIJ758izRH3fOyLgFndLjoIEUD-rjPsxwe</strong>"
             },
             "readonly": false,
             "required": true,
@@ -16,8 +17,10 @@
         {
             "label": "Worksheet Id",
             "properties": {
-                "parameters": "worksheetId",
-                "fieldType": "text"
+                "parameter": "worksheetId",
+                "fieldType": "text",
+                "default": "1",
+                "helptext": "The number of your worksheet as it appears in your spreadsheet. '1' is the first one on the left. '2' would be the second, etc."
             },
             "readonly": false,
             "required": true,
@@ -26,10 +29,10 @@
         {
             "label": "Payload",
             "properties": {
-                "parameters": "xmlpayload",
+                "parameter": "xmlpayload",
                 "fieldType": "textarea",
-                "default": "{\n  \"gsx:fruit\": \"Orange\",\n  \"gsx:color\": \"Orange\",\n  \"gsx:size\": \"Medium\"\n}",
-                "helptext": "List of your columns with values (in XML)"
+                "default": "{\n  \"gsx:firstname\": {\"$t\": \"John\"},\n  \"gsx:lastname\": {\"$t\": \"Smith\"},\n  \"gsx:email\": {\"$t\": \"jsmith@gmail.com\"}\n}",
+                "helptext": "A list of your columns with values (in JSON). The text after 'gsx:' is the label of a column in your spreadsheet. Note that your spreadsheet needs headings for this integration to work."
             },
             "readonly": false,
             "required": true,
@@ -38,7 +41,11 @@
     ],
     "method": "POST",
     "endpoint": "/list/{field.spreadsheetId}/{field.worksheetId}/private/full",
-    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{field.xmlpayload}</entry>",
+    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{json_to_xml(field.xmlpayload)}</entry>",
+    "headers": {
+      "Content-Type": "application/atom+xml",
+      "Authorization": "Bearer {auth.oauth2Token}"
+    },
     "response": {
         "success": {},
         "error": {}

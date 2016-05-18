@@ -13,6 +13,7 @@
                     "xlsx",
                     "pdf"
                 ],
+                "default": "pdf",
                 "classes":"inline"
             },
             "readonly": false,
