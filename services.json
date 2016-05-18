@@ -69,12 +69,12 @@
             "service": "ibmwatson"
         },
         {
-            "name": "KissMetrics",
-            "service": "kissmetrics"
-        },
-        {
             "name": "Intercom",
             "service": "intercom"
+        },
+        {
+            "name": "KissMetrics",
+            "service": "kissmetrics"
         },
         {
             "name": "Mailchimp",
@@ -97,16 +97,16 @@
             "service": "salesforce"
         },
         {
-            "name": "Slack",
-            "service": "slack"
+            "name": "Segment",
+            "service": "segment"
         },
         {
             "name": "SendGrid",
             "service": "sendgrid"
         },
         {
-            "name": "Segment",
-            "service": "segment"
+            "name": "Slack",
+            "service": "slack"
         },
         {
             "name": "SMS",
