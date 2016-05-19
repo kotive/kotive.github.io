@@ -8,7 +8,7 @@
       "properties": {
         "parameter": "message",
         "fieldType": "textarea",
-        "helptext": "For advanced formatting, see https://api.slack.com/docs/formatting. To insert a URL, use <http://www.example.com> or <http://www.example.com|The URL's description>"
+        "helptext": "For advanced formatting, see <a href='https://api.slack.com/docs/formatting' target='_blank'>https://api.slack.com/docs/formatting</a>."
       },
       "readonly": false,
       "required": true,
@@ -19,7 +19,7 @@
       "properties": {
         "parameter": "url",
         "fieldType": "url",
-        "helptext": "The URL provided by Slack that we send messages to. See https://http://kotive.github.io/slack/readme."
+        "helptext": "The URL provided by Slack that we send messages to. Go to <a href='https://my.slack.com/services/new/incoming-webhook/' target='_blank'>https://my.slack.com/services/new/incoming-webhook/</a> and add an incoming webhook integration."
       },
       "readonly": false,
       "required": true,
