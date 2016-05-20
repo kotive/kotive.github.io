@@ -1,7 +1,7 @@
 {
-    "name": "Add a new list member",
-    "description": "Add a new member to a list using MailChimp",
-    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#create-post_lists_list_id_members",
+    "name": "Add or update a list member",
+    "description": "Add a new member to a list if they do not exist, otherwise update existing member.",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#edit-put_lists_list_id_members_subscriber_hash",
     "fields": [
         {
             "label": "List ID",
@@ -9,6 +9,17 @@
                 "parameter": "listId",
                 "fieldType": "text",
                 "helptext": "The unique Id of the list to add this member to"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Email Address",
+            "properties": {
+                "parameter": "emailAddress",
+                "fieldType": "email",
+                "helptext": "The email address of the subscriber"
             },
             "readonly": false,
             "required": true,
@@ -32,7 +43,7 @@
             "visible": true
         },
         {
-            "label": "Subscriber current status",
+            "label": "Current status of subscriber",
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
@@ -43,6 +54,7 @@
                     {"key": "pending", "value": "pending"}
                 ],
                 "default": "subscribed",
+                "classes": "inline",
                 "helptext": "The status of the subscriber"
             },
             "readonly": false,
@@ -50,11 +62,31 @@
             "visible": true
         },
         {
+            "label": "Status of subscriber (if new)",
+            "properties": {
+                "parameter": "statusIfNew",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "subscribed", "value": "subscribed"},
+                    {"key": "unsubscribed", "value": "unsubscribed"},
+                    {"key": "cleaned", "value": "cleaned"},
+                    {"key": "pending", "value": "pending"}
+                ],
+                "default": "subscribed",
+                "classes": "inline",
+                "helptext": "The status of the subscriber if not already on the list"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
             "label": "Merge Fields",
             "properties": {
                 "parameter": "mergeFields",
                 "fieldType": "text",
-                "helptext": "An individual merge variable and value for a member. These are surrounded by quotes, eg \"key\": \"value\""
+                "default": "{}",
+                "helptext": "A list of merge fields containing \"merge variable\":\"value\" pairs for a member (in JSON format), e.g. {{\"FNAME\": \"John\"}, {\"LNAME\": \"Smith\"}}"
             },
             "readonly": false,
             "required": false,
@@ -65,7 +97,8 @@
             "properties": {
                 "parameter": "interests",
                 "fieldType": "text",
-                "helptext": "The key of this object’s properties is the ID of the interest in question.  These are surrounded by quotes, eg \"key\": \"value\""
+                "default": "{}",
+                "helptext": "A list of interests containing \"key\":\"value\" pairs (in JSON format). The key of this object’s properties is the ID of the interest in question, e.g. {{\"9143cf3bd1\": \"false\"},{\"3a2a927344\": \"false\"}}"
             },
             "readonly": false,
             "required": false,
@@ -153,36 +186,15 @@
             "visible": true
         },
         {
-            "label": "Location longitude",
+            "label": "Location",
             "properties": {
-                "parameter": "longitude",
+                "parameter": "location",
                 "fieldType": "text",
-                "helptext": "The subscriber's geographical longitude"
+                "default": "{}",
+                "helptext": "A list containing location information as \"key\":\"value\" pairs (in JSON format), e.g. {{\"latitude\": 37.331687},{\"longitude\": -122.030519}}"
             },
             "readonly": false,
             "required": false,
-            "visible": true
-        },
-        {
-            "label": "Location latitude",
-            "properties": {
-                "parameter": "latitude",
-                "fieldType": "text",
-                "helptext": "The subscriber's geographical latitude"
-            },
-            "readonly": false,
-            "required": false,
-            "visible": true
-        },
-        {
-            "label": "Email Address",
-            "properties": {
-                "parameter": "emailAddress",
-                "fieldType": "email",
-                "helptext": "The email address of the subscriber"
-            },
-            "readonly": false,
-            "required": true,
             "visible": true
         }
     ],
@@ -190,19 +202,17 @@
       "Authorization": "Basic {base64_encode_username_password(anystring:auth.field.apikey)}",
       "Content-Type": "application/json"
     },
-    "method": "POST",
-    "endpoint": "/lists/{field.listId}/members",
+    "method": "PUT",
+    "endpoint": "/lists/{field.listId}/members/{string_to_md5(field.emailAddress)}",
     "request": {
         "email_type": "{field.emailType}",
         "status": "{field.status}",
-        "merge_fields": "{field.mergeFields}",
-        "interests": "{field.interests}",
+        "status_if_new": "{field.statusIfNew}",
+        "merge_fields": "{string_to_hash(field.mergeFields)}",
+        "interests": "{string_to_hash(field.interests)}",
         "language": "{field.language}",
-        "vip": "{field.vip}",
-        "location": {
-          "longitude": "{field.longitude}",
-          "latitude": "{field.latitude}"
-        },
+        "vip": "{string_to_boolean(field.vip)}",
+        "location": "{string_to_hash(field.location)}",
         "email_address": "{field.emailAddress}"
     },
     "response": {

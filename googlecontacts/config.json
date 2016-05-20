@@ -1,0 +1,10 @@
+{
+    "name": "Google Contacts",
+    "description": "All your Google contacts in one place.",
+    "auth": {
+        "method": "OAuth2",
+        "target_service": "Google",
+        "required_scope": "https://www.google.com/m8/feeds/"
+    },
+    "domain": "https://www.google.com"
+}

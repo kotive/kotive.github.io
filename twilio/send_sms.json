@@ -93,7 +93,7 @@
     }
   ],
   "headers": {
-    "Authorization": "Basic {base64_encode(auth.field.sid:auth.field.secret)}",
+    "Authorization": "Basic {base64_encode_username_password(auth.field.sid:auth.field.secret)}",
     "Content-Type": "application/json"
   },
   "method": "POST",
