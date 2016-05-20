@@ -189,7 +189,7 @@
             "label": "Location",
             "properties": {
                 "parameter": "location",
-                "fieldType": "textarea",
+                "fieldType": "text",
                 "default": "{}",
                 "helptext": "A list containing location information as \"key\":\"value\" pairs (in JSON format), e.g. {{\"latitude\": 37.331687},{\"longitude\": -122.030519}}"
             },
