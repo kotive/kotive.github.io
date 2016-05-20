@@ -1,5 +1,5 @@
 {
-  "name": "Alias: merge identities",
+  "name": "Alias - merge identities",
   "description": "Merge two user identities, effectively connecting two sets of user data as one.",
   "documentation": "https://segment.com/docs/libraries/http/#alias",
   "fields": [
