@@ -223,8 +223,8 @@
         "language": "{field.language}",
         "vip": "{string_to_boolean(field.vip)}",
         "location": {
-          "longitude": "{field.longitude}",
-          "latitude": "{field.latitude}"
+          "longitude": "{string_to_float(field.longitude)}",
+          "latitude": "{string_to_float(field.latitude)}"
         },
         "email_address": "{field.emailAddress}"
     },
