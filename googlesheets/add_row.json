@@ -39,13 +39,13 @@
             "visible": true
         }
     ],
-    "method": "POST",
-    "endpoint": "/list/{field.spreadsheetId}/{field.worksheetId}/private/full",
-    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{json_to_xml(field.xmlpayload)}</entry>",
     "headers": {
       "Content-Type": "application/atom+xml",
       "Authorization": "Bearer {auth.oauth2Token}"
     },
+    "method": "POST",
+    "endpoint": "/list/{field.spreadsheetId}/{field.worksheetId}/private/full",
+    "request": "<entry xmlns=\"http://www.w3.org/2005/Atom\" xmlns:gsx=\"http://schemas.google.com/spreadsheets/2006/extended\">{json_to_xml(field.xmlpayload)}</entry>",
     "response": {
         "success": {},
         "error": {}
