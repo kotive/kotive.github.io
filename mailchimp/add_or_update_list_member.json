@@ -64,7 +64,7 @@
         {
             "label": "Status of subscriber (if new)",
             "properties": {
-                "parameter": "status",
+                "parameter": "statusIfNew",
                 "fieldType": "radio",
                 "choices": [
                     {"key": "subscribed", "value": "subscribed"},
@@ -217,7 +217,7 @@
     "request": {
         "email_type": "{field.emailType}",
         "status": "{field.status}",
-        "status_if_new": "{field.status_if_new}",
+        "status_if_new": "{field.statusIfNew}",
         "merge_fields": "{string_to_hash(field.mergeFields)}",
         "interests": "{string_to_hash(field.interests)}",
         "language": "{field.language}",
