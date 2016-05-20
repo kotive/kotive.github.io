@@ -1,7 +1,7 @@
 {
-    "name": "Add a new list member",
-    "description": "Add a new member to a list using MailChimp",
-    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#create-post_lists_list_id_members",
+    "name": "Add or update a list member",
+    "description": "Add a new member to a list if they do not exist, otherwise update existing member.",
+    "documentation": "http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#edit-put_lists_list_id_members_subscriber_hash",
     "fields": [
         {
             "label": "List ID",
@@ -43,10 +43,30 @@
                     {"key": "pending", "value": "pending"}
                 ],
                 "default": "subscribed",
+                "classes": "inline",
                 "helptext": "The status of the subscriber"
             },
             "readonly": false,
             "required": true,
+            "visible": true
+        },
+        {
+            "label": "Subscriber status (if new)",
+            "properties": {
+                "parameter": "status",
+                "fieldType": "radio",
+                "choices": [
+                    {"key": "subscribed", "value": "subscribed"},
+                    {"key": "unsubscribed", "value": "unsubscribed"},
+                    {"key": "cleaned", "value": "cleaned"},
+                    {"key": "pending", "value": "pending"}
+                ],
+                "default": "subscribed",
+                "classes": "inline",
+                "helptext": "The status of the subscriber if not already on the list"
+            },
+            "readonly": false,
+            "required": false,
             "visible": true
         },
         {
@@ -65,7 +85,7 @@
             "properties": {
                 "parameter": "interests",
                 "fieldType": "text",
-                "helptext": "The key of this object’s properties is the ID of the interest in question.  These are surrounded by quotes, eg \"key\": \"value\""
+                "helptext": "A list containing key:value pairs (in JSON format). The key of this object’s properties is the ID of the interest in question.  These are surrounded by quotes, eg \"key\": \"value\""
             },
             "readonly": false,
             "required": false,
@@ -190,11 +210,12 @@
       "Authorization": "Basic {base64_encode_username_password(anystring:auth.field.apikey)}",
       "Content-Type": "application/json"
     },
-    "method": "PATCH",
+    "method": "PUT",
     "endpoint": "/lists/{field.listId}/members/{string_to_md5(field.emailAddress)}",
     "request": {
         "email_type": "{field.emailType}",
         "status": "{field.status}",
+        "status_if_new": "{field.status_if_new}",
         "merge_fields": "{string_to_hash(field.mergeFields)}",
         "interests": "{string_to_hash(field.interests)}",
         "language": "{field.language}",
