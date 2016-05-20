@@ -49,7 +49,11 @@
             "service": "github"
         },
         {
-            "name": "Google sheets",
+            "name": "Google Contacts",
+            "service": "googlecontacts"
+        },
+        {
+            "name": "Google Sheets",
             "service": "googlesheets"
         },
         {
