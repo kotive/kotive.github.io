@@ -15,6 +15,17 @@
             "visible": true
         },
         {
+            "label": "Email Address",
+            "properties": {
+                "parameter": "emailAddress",
+                "fieldType": "email",
+                "helptext": "The email address of the subscriber"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
             "label": "Email type",
             "properties": {
                 "parameter": "emailType",
@@ -32,7 +43,7 @@
             "visible": true
         },
         {
-            "label": "Subscriber current status",
+            "label": "Current status of subscriber",
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
@@ -51,7 +62,7 @@
             "visible": true
         },
         {
-            "label": "Subscriber status (if new)",
+            "label": "Status of subscriber (if new)",
             "properties": {
                 "parameter": "status",
                 "fieldType": "radio",
@@ -74,7 +85,8 @@
             "properties": {
                 "parameter": "mergeFields",
                 "fieldType": "text",
-                "helptext": "An individual merge variable and value for a member. These are surrounded by quotes, eg \"key\": \"value\""
+                "default": "{}",
+                "helptext": "A list of merge fields containing \"merge variable\":\"value\" pairs for a member (in JSON format), e.g. {{\"FNAME\": \"John\"}, {\"LNAME\": \"Smith\"}}"
             },
             "readonly": false,
             "required": false,
@@ -85,7 +97,8 @@
             "properties": {
                 "parameter": "interests",
                 "fieldType": "text",
-                "helptext": "A list containing key:value pairs (in JSON format). The key of this object’s properties is the ID of the interest in question.  These are surrounded by quotes, eg \"key\": \"value\""
+                "default": "{}",
+                "helptext": "A list of interests containing \"key\":\"value\" pairs (in JSON format). The key of this object’s properties is the ID of the interest in question, e.g. {{\"9143cf3bd1\": \"false\"},{\"3a2a927344\": \"false\"}}"
             },
             "readonly": false,
             "required": false,
@@ -192,17 +205,6 @@
             },
             "readonly": false,
             "required": false,
-            "visible": true
-        },
-        {
-            "label": "Email Address",
-            "properties": {
-                "parameter": "emailAddress",
-                "fieldType": "email",
-                "helptext": "The email address of the subscriber"
-            },
-            "readonly": false,
-            "required": true,
             "visible": true
         }
     ],
