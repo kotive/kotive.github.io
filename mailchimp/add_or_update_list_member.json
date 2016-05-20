@@ -186,22 +186,12 @@
             "visible": true
         },
         {
-            "label": "Location longitude",
+            "label": "Location",
             "properties": {
-                "parameter": "longitude",
-                "fieldType": "text",
-                "helptext": "The subscriber's geographical longitude"
-            },
-            "readonly": false,
-            "required": false,
-            "visible": true
-        },
-        {
-            "label": "Location latitude",
-            "properties": {
-                "parameter": "latitude",
-                "fieldType": "text",
-                "helptext": "The subscriber's geographical latitude"
+                "parameter": "location",
+                "fieldType": "textarea",
+                "default": "{}",
+                "helptext": "A list containing location information as \"key\":\"value\" pairs (in JSON format), e.g. {{\"latitude\": 37.331687},{\"longitude\": -122.030519}}"
             },
             "readonly": false,
             "required": false,
@@ -222,10 +212,7 @@
         "interests": "{string_to_hash(field.interests)}",
         "language": "{field.language}",
         "vip": "{string_to_boolean(field.vip)}",
-        "location": {
-          "longitude": "{string_to_float(field.longitude)}",
-          "latitude": "{string_to_float(field.latitude)}"
-        },
+        "location": "{string_to_hash(field.location)}",
         "email_address": "{field.emailAddress}"
     },
     "response": {
