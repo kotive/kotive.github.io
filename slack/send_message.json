@@ -31,7 +31,7 @@
   "request": {
     "text": "{field.message}",
     "username": "Kotive",
-    "icon_url": "https://pbs.twimg.com/profile_images/560463259598221312/kP3H_2IW.png"
+    "icon_url": "http://www.kotive.com/img/kotive-01-250x250.png"
   },
   "response": {
     "success": "ok",
