@@ -1,0 +1,94 @@
+{
+    "name": "Add a new contact",
+    "description": "Add a contact to Google Contacts.",
+    "documentation": "https://developers.google.com/google-apps/contacts/v3/#creating_contacts",
+    "fields": [
+        {
+            "label": "Firstname",
+            "properties": {
+                "parameter": "givenName",
+                "fieldType": "text",
+                "helptext": "Called 'Given name' in Google Contacts"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Lastname",
+            "properties": {
+                "parameter": "familyName",
+                "fieldType": "text",
+                "helptext": "Called 'Family name' in Google Contacts"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Email address",
+            "properties": {
+                "parameter": "email",
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Phone number",
+            "properties": {
+                "parameter": "phoneNumber",
+                "fieldType": "text"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "IM",
+            "properties": {
+                "parameter": "im",
+                "fieldType": "text",
+                "helptext": "The Contact's Google Instant Messenger address. Usually the sames as the Contact's email address."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Postal address",
+            "properties": {
+                "parameter": "formattedAddress",
+                "fieldType": "text",
+                "helptext": "The Contact's postal address in the format 'street, city, region, postcode, country', e.g. 1600 Amphitheatre parkway, Mountain View, CA, 94043, United States"
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        },
+        {
+            "label": "Notes",
+            "properties": {
+                "parameter": "notes",
+                "fieldType": "textarea",
+                "helptext": "Extra text notes on the Contact."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "headers": {
+      "Content-Type": "application/atom+xml",
+      "Authorization": "Bearer {auth.oauth2Token}",
+      "GData-Version": "3.0"
+    },
+    "method": "POST",
+    "endpoint": "/m8/feeds/contacts/default/full",
+    "request": "<atom:entry xmlns:atom='http://www.w3.org/2005/Atom' xmlns:gd='http://schemas.google.com/g/2005'><atom:category scheme='http://schemas.google.com/g/2005#kind' term='http://schemas.google.com/contact/2008#contact'/><gd:name><gd:givenName>{field.givenName}</gd:givenName><gd:familyName>{field.familyName}</gd:familyName></gd:name><gd:email rel='http://schemas.google.com/g/2005#work' primary='true' address='{field.email}' displayName='{field.givenName} {field.familyName}'/><gd:phoneNumber rel='http://schemas.google.com/g/2005#work' primary='true'>{field.phoneNumber}</gd:phoneNumber><gd:im address='{field.im}' protocol='http://schemas.google.com/g/2005#GOOGLE_TALK' primary='true' rel='http://schemas.google.com/g/2005#work'/><gd:structuredPostalAddress rel='http://schemas.google.com/g/2005#work' primary='true'><gd:formattedAddress>{field.formattedAddress}</gd:formattedAddress></gd:structuredPostalAddress><atom:content type='text'>{field.notes}</atom:content></atom:entry>",
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}

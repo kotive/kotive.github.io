@@ -25,6 +25,7 @@
             "properties": {
                 "parameter": "document_content",
                 "fieldType": "textarea",
+                "helptext": "Get info on <a href='https://docraptor.com/documentation/style' target='_blank'>how to style</a> your document.",
                 "sanitize": false
             },
             "readonly": false,

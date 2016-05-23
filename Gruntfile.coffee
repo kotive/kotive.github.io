@@ -22,11 +22,12 @@ module.exports = (grunt)->
         src: jsonSrc
 
     image_resize:
-      options:
-        width: 32
-        height: 32
-        overwrite: true
-      files: images32x32
+      resize:
+        options:
+          width: 32
+          height: 32
+          overwrite: true
+        files: images32x32
 
   grunt.loadNpmTasks('grunt-image-resize')
 

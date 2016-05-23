@@ -29,7 +29,7 @@
       "properties": {
         "parameter": "to",
         "fieldType": "text",
-        "helptext": "Comma separated list of email addresses"
+        "helptext": "A comma separated list of email addresses"
       },
       "readonly": false,
       "required": true,

@@ -1,6 +1,6 @@
 {
     "name": "Google Sheets",
-    "description": "Quickly create new spreadsheets and open existing ones. .",
+    "description": "Quickly create new spreadsheets and open existing ones.",
     "auth": {
         "method": "OAuth2",
         "target_service": "Google",
