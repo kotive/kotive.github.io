@@ -13,21 +13,10 @@
       "readonly": false,
       "required": true,
       "visible": true
-    },
-    {
-      "label": "Webhook URL",
-      "properties": {
-        "parameter": "url",
-        "fieldType": "url",
-        "helptext": "The URL provided by Slack that we send messages to. Go to <a href='https://my.slack.com/services/new/incoming-webhook/' target='_blank'>https://my.slack.com/services/new/incoming-webhook/</a> and add an incoming webhook integration."
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
     }
   ],
   "method": "POST",
-  "endpoint": "{field.url}",
+  "endpoint": "{auth.field.url}",
   "request": {
     "text": "{field.message}",
     "username": "Kotive",

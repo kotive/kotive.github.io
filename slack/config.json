@@ -2,7 +2,20 @@
   "name": "Slack",
   "description": "Team communication for the 21st century.",
   "auth": {
-    "method": "none"
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Webhook URL",
+        "properties": {
+          "parameter": "url",
+          "fieldType": "url",
+          "helptext": "The URL provided by Slack that we'll send the message to. Go to <a href='https://my.slack.com/services/new/incoming-webhook/' target='_blank'>https://my.slack.com/services/new/incoming-webhook/</a> and add an incoming webhook integration."
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
   },
   "domain": ""
 }
