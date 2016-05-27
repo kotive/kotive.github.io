@@ -26,6 +26,7 @@ module.exports = (grunt)->
         options:
           width: 32
           height: 32
+          quality: 1
           overwrite: true
         files: images32x32
 
