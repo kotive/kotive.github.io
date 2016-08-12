@@ -1,122 +1,86 @@
-Kotive Services
-===============
+Kotive Services (integrations)
+==============================
 
-Adding your service as a task in Kotive
----
+Thanks for your interest in adding your application to Kotive.
 
-1. Fork this repo
-2. Duplicate the /sample/ folder and rename it to the name of your service, e.g. /awesomeapp/
-3. Update /awesomeapp/config.json
-4. Save your logo as /awesomeapp/icon.png (128 pixels by 128 pixels). __The name of the PNG has to be icon.png otherwise it won't be displayed.__
-5. Rename /awesomeapp/sample_task.json to the name of your first task. Update the json to connect with your service. _You can add many services in this folder by creating a copy of this file, renaming it and updating its properties._
-6. Add your service to services.json in the root folder. E.g.
+How to add your application/tool/service to Kotive
+--------------------------------------------------
+
+1. Fork this repository
+
+2. Create a new folder with the name of your service, e.g. `/awesomeapp/`
+
+3. Choose an applicable config sample (see below) and save it in `/awesomeapp/config.json`. Configs are based on the type of authentication your service uses. Samples:
+
+- [OAuth2](/googlesheets/config.json)
+- [API key/write key/token](/mandrill/config.json)
+- [Basic auth](/campaignmonitor/config.json)
+
+Update `/awesomeapp/config.json` with your service's authentication details.
+
+4. Save your logo as `/awesomeapp/icon.png` (Max 200px x 200px. Min 128 px x 128 px). __The name of the PNG has to be `icon.png` otherwise it will be ignored.__
+
+5. Add your service to `services.json` in the root folder. E.g.
+
+```json
     {
-      "name": "Our Awesome App",
+      "name": "My Awesome App",
       "service": "awesomeapp"
     }
-7. Submit your changes as a pull-request
-
-Specifying 'fields'
----
-Fields are displayed in the UI
-```
-{  
-  "fields": [
-    {
-      "label": "Firstname",
-      "properties": {
-        "fieldType": "text"
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
-    },
-    {
-      "label": "Gender",
-      "properties": {
-        "fieldType": "radio",
-        "choices": [
-          {"key": "f", "value": "Female"},
-          {"key": "m", "value": "Male"}
-        ],
-        "default": "f",
-        "classes": "inline"
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
-    },
-    {
-      "label": "Gender",
-      "properties": {
-        "fieldType": "select",
-        "choices": ["Female", "Male"]
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
-    }    
-  ]
-}
 ```
 
-Validating JSON files & generating thumbnails
----
-Before committing any changes make sure you validate your JSON file changes using the repo's tests.
+How to add your application/tool/service as a task in taskflows
+---------------------------------------------------------
+
+Copy the task configuration of any active integration to your `/awesomeapp/` and rename to the name of your first task. (lowercase, words separated by `_`)
+
+Working examples you can copy: 
+- [Send a message to Slack](/slack/send_message.json)
+- [Send an email with Mandrill](/mandrill/send_email.json)
+- [Track an event in Segment](/segment/track.json)
+- [Add a new row to a Google Sheet](/googlesheets/add_row.json)
+- [Create a new document in DocRaptor](/docraptor/new_document.json)
+
+**`"fields": []`** contain the user interface elements that are displayed in Kotive and that a Designer will see and use when adding your service to a taskflow.
+
+*Be nice and helpful.* Use the `helptext` to provide clear, concise instructions (and `<a href='#' target='_blank'>external links</a>` to supporting documentation) to make it as easy as possible for your (and our) customers to use the integration.
+
+The **`"method": ""`**, **`"headers": {}`**, **`"endpoint": ""`**, **`"request": {}`** and **`"response": {}`** contain the technical properties of your integration. _You also need to provide a `success` and an `error` sample in the `response`._
+
+Tags for pulling in dynamic data (fields) when executing your task (using [Mandrill](/mandrill/send_email.json) as example):
+
+- **`{field.fromEmail}`** pulls in the value of one of the `fields` in your task's condig where the `parameter` is set to `fromEmail`.
+- **`{auth.field.apikey}`** pulls in the value of one of the `fields` in the `config.json` where the `parameter` is set to `apikey`.
+
+Helper tags for when you need to transform data or prep auth details:
+
+- **`{auth.oauth2Token}`**  [(example)](/googlecontacts/add_contact.json#L84)
+- **`{base64_encode_username_password(auth.field.username:auth.field.password)}`**  [(example)](/segment/track.json#L88)
+- **`{encode_uri(field.webhook_url)}`**  [(example)](/webhook/json.json#L63)
+- **`{string_to_boolean(field.javascript)}`**  [(example)](/docraptor/new_document.json#L118)
+- **`{string_to_hash(field.mergeFields)}`**  [(example)](/mailchimp/add_or_update_list_member.json#L154)
+- **`{string_to_hash_or_null(field.payload)}`**  [(example)](/webhook/json.json#L64)
+- **`{string_to_md5(field.emailAddress)}`**  [(example)](/mailchimp/add_or_update_list_member.json#L149)
+- **`{comma_to_array(field.to)}`**  [(example)](/clickatell/send_message.json#L39)
+- **`{comma_to_hash_array(field.to, email)}`** [(example)](/mandrill/send_email.json#L69)
+- **`{json_to_xml(field.xmlpayload)}`**  [(example)](/googlesheets/add_row.json#L48)
+
+_You can add many tasks in your `/awesomeapp/` folder by creating a copy of this task config, renaming it and updating its properties._
+
+
+Submit for testing
+------------------
 
 Set up the required dependencies using npm
 
-  npm install .
+```npm install .```
 
-Then run the JSON lint validator & thumbnail generator
-  
-  grunt build
+Then run the JSON lint validator & thumbnail generator. _More thorough tests to be added in future._
 
-If all tests pass the repo is clear of any JSON syntax errors and the thumbnails have been generated.
+```grunt build```
 
-Note
-----
-Testing should be improved to maybe do some logical checks on the configurations being uploaded.
+Submit a **pull request** to the `staging` branch if the grunt tasks passed successfully. The JSON should be 'syntax error-free' and the thumbnails should have been generated.
 
-List of services
----
- - [x] Asana
- - [x] Basecamp
- - [ ] Braintree
- - [ ] Camfind
- - [x] Campaign monitor
- - [x] Clickatell
- - [x] Desk
- - [x] Email
- - [ ] Fedex
- - [ ] Fogbugz
- - [x] Freshbooks
- - [x] Github
- - [x] Google sheets
- - [x] Salesforce
- - [ ] Gmail
- - [x] Hackernews
- - [ ] Harvest
- - [x] HelloSign
- - [x] Hipchat
- - [ ] Hubspot
- - [x] IBM Watson
- - [x] Intercom
- - [x] PDF
- - [ ] Phone*
- - [ ] Lambdal
- - [x] Mailchimp
- - [x] Mandrill
- - [x] Mixpanel
- - [ ] NYTimes
- - [ ] Podio
- - [x] Salesforce
- - [ ] Sendgrid
- - [ ] Slack
- - [x] SMS
- - [x] Stripe
- - [ ] Trello
- - [x] Twilio
- - [ ] Twitter
- - [x] Webhook
- - [ ] Zapier
+Another collaborator will review your json configs, language used, helptext, etc. When happy they will accept your pull request and it will be deployment to our staging environment. You'll test it in there. When testing has been completed, issue a pull request to master - for review and deployment to our production environment.
+
+Thanks for contributing!
