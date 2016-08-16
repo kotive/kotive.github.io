@@ -6,11 +6,11 @@ Thanks for your interest in adding your application to Kotive.
 How to add your application/tool/service to Kotive
 --------------------------------------------------
 
-1. Fork this repository
+Fork this repository
 
-2. Create a new folder with the name of your service, e.g. `/awesomeapp/`
+Create a new folder in the root folder. Give it the name of your service, e.g. `/awesomeapp/`
 
-3. Choose an applicable config sample (see below) and save it in `/awesomeapp/config.json`. Configs are based on the type of authentication your service uses. Samples:
+Choose an applicable config sample (see below) and save it in `/awesomeapp/config.json`. Configs are based on the type of authentication your service uses. Samples:
 
 - [OAuth2](/googlesheets/config.json)
 - [API key/write key/token](/mandrill/config.json)
@@ -18,9 +18,9 @@ How to add your application/tool/service to Kotive
 
 Update `/awesomeapp/config.json` with your service's authentication details.
 
-4. Save your logo as `/awesomeapp/icon.png` (Max 200px x 200px. Min 128 px x 128 px). __The name of the PNG has to be `icon.png` otherwise it will be ignored.__
+Save your logo as `/awesomeapp/icon.png` (Max 200px x 200px. Min 128 px x 128 px). __The name of the PNG has to be `icon.png` otherwise it will be ignored.__
 
-5. Add your service to `services.json` in the root folder. E.g.
+Add your service to `services.json` in the root folder. E.g.
 
 ```json
     {
