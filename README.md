@@ -6,7 +6,7 @@ Thanks for your interest in adding your application to Kotive.
 How to add your application/tool/service to Kotive
 --------------------------------------------------
 
-Fork this repository
+Fork this repository.
 
 Create a new folder in the root folder. Give it the name of your service, e.g. `/awesomeapp/`
 
@@ -49,7 +49,7 @@ The **`"method": ""`**, **`"headers": {}`**, **`"endpoint": ""`**, **`"request":
 
 Tags for pulling in dynamic data (fields) when executing your task (using [Mandrill](/mandrill/send_email.json) as example):
 
-- **`{field.fromEmail}`** pulls in the value of one of the `fields` in your task's condig where the `parameter` is set to `fromEmail`.
+- **`{field.fromEmail}`** pulls in the value of one of the `fields` in your task's config where the `parameter` is set to `fromEmail`.
 - **`{auth.field.apikey}`** pulls in the value of one of the `fields` in the `config.json` where the `parameter` is set to `apikey`.
 
 Helper tags for when you need to transform data or prep auth details:
