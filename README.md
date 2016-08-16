@@ -3,6 +3,10 @@ Kotive Services (integrations)
 
 Thanks for your interest in adding your application to Kotive.
 
+Your application will become available displayed within the Kotive Designer. Your customers will get more value from your application by having it integrated with their daily taskflows/workflows/business processes.
+
+![Applications in the Kotive Designer](http://www.kotive.com/img/how-to/create-a-basic-taskflow-in-kotive/5b_SelectTask.png)
+
 How to add your application/tool/service to Kotive
 --------------------------------------------------
 
