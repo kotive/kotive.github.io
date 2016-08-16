@@ -71,7 +71,9 @@ _You can add many tasks in your `/awesomeapp/` folder by creating a copy of this
 Submit for testing
 ------------------
 
-Set up the required dependencies using npm
+You'll need to [install npm](https://docs.npmjs.com/getting-started/installing-node) and [install grunt](http://gruntjs.com/installing-grunt).
+
+Set up the required dependencies using npm.
 
 ```npm install .```
 
