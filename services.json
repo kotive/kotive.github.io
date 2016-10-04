@@ -121,6 +121,10 @@
             "service": "sendgrid"
         },
         {
+            "name": "Shippo",
+            "service": "shippo"
+        },
+        {
             "name": "Slack",
             "service": "slack"
         },

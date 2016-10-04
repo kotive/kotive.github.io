@@ -1,0 +1,21 @@
+{
+  "name": "Shippo",
+  "description": "Connect with multiple carriers, get discounted shipping labels, track parcels and more.",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Private Auth Token",
+        "properties": {
+          "parameter": "authtoken",
+          "fieldType": "text",
+          "helptext": "Get your private auth token from your <a href='https://goshippo.com/user/apikeys/' target='_blank'>Shippo API page</a>." 
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.goshippo.com/v1"
+}
