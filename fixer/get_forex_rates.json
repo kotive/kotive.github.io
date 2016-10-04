@@ -4,9 +4,10 @@
     "documentation": "http://fixer.io/",
     "fields": [
         {
-            "label": "This task will automatically get the latest foreign exchange reference rates",
+            "label": "",
             "properties": {
-                "fieldType": "paragraph"
+                "fieldType": "paragraph",
+                "default": "This task will automatically get the latest foreign exchange reference rates"
             },
             "readonly": false,
             "required": false,
