@@ -7,7 +7,7 @@
             "label": "",
             "properties": {
                 "fieldType": "paragraph",
-                "default": "This task will automatically get the latest foreign exchange reference rates"
+                "default": "This task will automatically get the latest foreign exchange reference rates."
             },
             "readonly": false,
             "required": false,
