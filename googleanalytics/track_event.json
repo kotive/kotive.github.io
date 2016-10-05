@@ -4,20 +4,11 @@
   "documentation": "https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide#event",
   "fields": [
     {
-      "label": "For examples of events and more about their 'Catagories', 'Actions', 'Labels' and 'Values' please read <a href='https://support.google.com/analytics/answer/1033068'>'About events'</a> ",
-      "properties": {
-          "fieldType": "paragraph"
-      },
-      "readonly": false,
-      "required": false,
-      "visible": true
-    },
-    {
       "label": "Category",
       "properties": {
         "parameter": "eventCategory",
         "fieldType": "text",
-        "helptext": "Name the category you want to group objects in that you want to track. E.g. 'videos'"
+        "helptext": "Name the category you want to group objects in that you want to track. E.g. 'videos' For more info on 'Categories', 'Actions', 'Labels' and 'Values' please read <a href='https://support.google.com/analytics/answer/1033068'>'About events'</a>"
       },
       "readonly": false,
       "required": true,
@@ -39,7 +30,7 @@
       "properties": {
         "parameter": "eventLabel",
         "fieldType": "text",
-        "helptext": "Name additional information for events that you want to track. E.g. movie title for the 'video' catagory."
+        "helptext": "Name additional information for events that you want to track. E.g. movie title for the 'video' category."
       },
       "readonly": false,
       "required": false,
