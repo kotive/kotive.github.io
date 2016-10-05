@@ -1,0 +1,24 @@
+{
+    "name": "Get foreign exchange rates",
+    "description": "Get the latest foreign exchange reference rates",
+    "documentation": "http://fixer.io/",
+    "fields": [
+        {
+            "label": "",
+            "properties": {
+                "fieldType": "paragraph",
+                "default": "This task will automatically get the latest foreign exchange reference rates."
+            },
+            "readonly": false,
+            "required": false,
+            "visible": true
+        }
+    ],
+    "method": "GET",
+    "endpoint": "/latest",
+    "request": {},
+    "response": {
+        "success": "",
+        "error": ""
+    }
+}

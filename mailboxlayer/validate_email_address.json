@@ -1,0 +1,59 @@
+{
+    "name": "Validate email address",
+    "description": "Thoroughly check and verify email addresses",
+    "documentation": "https://mailboxlayer.com/documentation",
+    "fields": [
+        {
+            "label": "Email address",
+            "properties": {
+                "parameter": "email",
+                "fieldType": "email",
+                "helptext": "Enter the email address that needs to be verified"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Perform SMTP check?",
+            "properties": {
+                "parameter": "smtp",
+                "fieldType": "radio",
+                "choices": [
+                  {"key": "1", "value": "Yes"},
+                  {"key": "0", "value": "No"}
+                ],
+                "default": "1",
+                "classes":"inline",
+                "helptext": "The mailboxlayer SMTP Check feature takes up around 75% of the entire response time. If you would like to skip SMTP (Simple Mail Tranfer Protocol) and speed up the API response, you may turn it off."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Detect if email address is a catch-all?",
+            "properties": {
+                "parameter": "catchAll",
+                "fieldType": "radio",
+                "choices": [
+                  {"key": "1", "value": "Yes"},
+                  {"key": "0", "value": "No"}
+                ],
+                "default": "0",
+                "classes":"inline",
+                "helptext": "Due to its heavy impact on the API response time, this functionality is inactive by default. However, you may choose to turn on catch-all detection."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "method": "GET",
+    "endpoint": "/check?access_key={auth.field.apiAccessKey}&email={field.email}&smtp={field.smtp}&catch_all={field.catchAll}",
+    "request": {},
+    "response": {
+        "success": "",
+        "error": ""
+    }
+}

@@ -65,7 +65,7 @@
                 "fieldType": "text"
             },
             "readonly": false,
-            "required": true,
+            "required": false,
             "visible": true
         },
         {

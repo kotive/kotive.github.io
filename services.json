@@ -41,12 +41,20 @@
             "service": "email"
         },
         {
+            "name": "Fixer",
+            "service": "fixer"
+        },
+        {
             "name": "Freshbooks",
             "service": "freshbooks"
         },
         {
             "name": "Github",
             "service": "github"
+        },
+        {
+            "name": "Google Analytics",
+            "service": "googleanalytics"
         },
         {
             "name": "Google Contacts",
@@ -81,6 +89,10 @@
             "service": "kissmetrics"
         },
         {
+            "name": "Mailboxlayer",
+            "service": "mailboxlayer"
+        },
+        {
             "name": "Mailchimp",
             "service": "mailchimp"
         },
@@ -107,6 +119,10 @@
         {
             "name": "SendGrid",
             "service": "sendgrid"
+        },
+        {
+            "name": "Shippo",
+            "service": "shippo"
         },
         {
             "name": "Slack",
