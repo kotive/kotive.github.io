@@ -7,7 +7,8 @@
       "label": "Category",
       "properties": {
         "parameter": "eventCategory",
-        "fieldType": "text"
+        "fieldType": "text",
+        "helptext": "Name the catagory you want to group objects in that you want to track."
       },
       "readonly": false,
       "required": true,
@@ -17,7 +18,8 @@
       "label": "Action",
       "properties": {
         "parameter": "eventAction",
-        "fieldType": "text"
+        "fieldType": "text",
+        "helptext": "Name the action which is the type of event or interaction you want to track for a particular web object. For example, with a single 'Videos' category, you can track a number of specific events with this parameter, such as: 'Play' button clicks, 'Stop' button clicks, 'Pause' button clicks etc."
       },
       "readonly": false,
       "required": true,
@@ -27,7 +29,8 @@
       "label": "Label",
       "properties": {
         "parameter": "eventLabel",
-        "fieldType": "text"
+        "fieldType": "text",
+        "helptext": "Name the label which can be additional information for events that you want to track. E.g. movie title for the 'video' catagory."
       },
       "readonly": false,
       "required": false,
@@ -37,7 +40,8 @@
       "label": "Value",
       "properties": {
         "parameter": "eventValue",
-        "fieldType": "text"
+        "fieldType": "text",
+        "helptext": "This will assign a numerical value to a tracked page object. For example, you could use it to provide the time in seconds for a player to load."
       },
       "readonly": false,
       "required": false,
