@@ -77,6 +77,10 @@
             "service": "hipchat"
         },
         {
+            "name": "Hunter",
+            "service": "hunter"
+        },
+        {
             "name": "IBM Watson",
             "service": "ibmwatson"
         },

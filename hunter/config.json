@@ -1,0 +1,20 @@
+{
+    "name": "Hunter",
+    "description": "Find email addresses in seconds and connect with people that matter for your business.",
+    "auth": {
+        "method": "Custom",
+        "fields": [
+            {
+                "label": "API Key",
+                "properties": {
+                    "parameter": "apikey",
+                    "fieldType": "text"
+                },
+                "readonly": false,
+                "required": true,
+                "visible": true
+            }
+        ]
+    },
+    "domain": "https://api.hunter.io/v2"
+}
