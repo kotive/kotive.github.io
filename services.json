@@ -109,6 +109,10 @@
             "service": "mixpanel"
         },
         {
+            "name": "Numverify",
+            "service": "numverify"
+        },
+        {
             "name": "PDF",
             "service": "pdf"
         },
