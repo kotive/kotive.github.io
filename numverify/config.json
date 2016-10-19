@@ -13,8 +13,20 @@
                 "readonly": false,
                 "required": true,
                 "visible": true
+            },
+            {
+                "label": "http or https",
+                "properties": {
+                    "parameter": "protocol",
+                    "fieldType": "text",
+                    "default": "https",
+                    "helptext": "Numverify offers 256-bit HTTPS Encryption for all their paid plans. Enter `https` if you use a paid plan, otherwise `http`"
+                },
+                "readonly": false,
+                "required": true,
+                "visible": true
             }
         ]
     },
-  "domain": "https://apilayer.net/api"
+  "domain": "{auth.field.protocol}://apilayer.net/api"
 }
