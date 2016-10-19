@@ -15,12 +15,12 @@
                 "visible": true
             },
             {
-                "label": "http or https",
+                "label": "Use `http` or `https`?",
                 "properties": {
                     "parameter": "protocol",
                     "fieldType": "text",
                     "default": "https",
-                    "helptext": "Numverify offers 256-bit HTTPS Encryption for all their paid plans. Enter `https` if you use a paid plan, otherwise `http`"
+                    "helptext": "256-bit HTTPS Encryption is available for all Numveriy's paid plans. Enter `https` if you use a paid plan. Enter `http` if you use their free plan."
                 },
                 "readonly": false,
                 "required": true,
