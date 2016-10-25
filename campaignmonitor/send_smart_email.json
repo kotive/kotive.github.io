@@ -1,0 +1,95 @@
+{
+  "name": "Send a smart email",
+  "description": "To send a smart email.",
+  "documentation": "https://www.campaignmonitor.com/api/transactional/#send_a_smart_email",
+  "fields": [
+    {
+      "label": "Smart email ID",
+      "properties": {
+        "parameter": "smartEmailID",
+        "fieldType": "text",
+        "helptext": "The unique ID of the smart email to send. Click on your transactional email, then on 'Developer Instructions' on the right. The ID is the unique code in the url, e.g. https://api.createsend.com/api/v3.1/transactional/smartemail/<strong>6cbwb92b-8e48-17a1-ak5c-a95928s8eGa1</strong>/send."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "To",
+      "properties": {
+        "parameter": "to",
+        "fieldType": "text",
+        "helptext": "Enter the email address of the recipient of the smart email. Multiple emails adresses can be entered and must be separated by a comma. For example: joesmith@example.com,jamesmith@example.com"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "CC",
+      "properties": {
+        "parameter": "cc",
+        "fieldType": "text",
+        "helptext": "Enter the email address of the CC recipient of the smart email. Multiple emails adresses can be entered and must be separated by a comma. For example: joesmith@example.com,jamesmith@example.com"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "BCC",
+      "properties": {
+        "parameter": "bcc",
+        "fieldType": "text",
+        "helptext": "Enter the email address of the BCC recipient of the smart email. Multiple emails adresses can be entered and must be separated by a comma. For example: joesmith@example.com,jamesmith@example.com"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Data",
+      "properties": {
+        "parameter": "data",
+        "fieldType": "textarea",
+        "helptext": "Properties are available in your email as variables which can be referenced using the <a href='https://www.campaignmonitor.com/create/' target='_blank'>Template Language</a>. E.g. `{{\"firstname\": \"John\"},{\"purchaseAmount\": \"101\"}}`. Read more about smart transactional email variables and how to use them in your email in the <a href='https://help.campaignmonitor.com/topic.aspx?t=1291' target='_blank'>transactional support documentation</a>.",
+        "default": "{}"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Add recipients to list",
+      "properties": {
+        "parameter": "addRecipientsToList",
+        "fieldType": "radio",
+        "choices": [
+          {"key": "true", "value": "Yes"},
+          {"key": "false", "value": "No"}
+        ],
+        "default": "true",
+        "classes":"inline"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Bearer {auth.oauth2Token}"
+  },
+  "method": "POST",
+  "endpoint": "/transactional/smartEmail/{field.smartEmailID}/send",
+  "request": {
+    "To": "{comma_to_array_or_null(field.to)}",
+    "CC": "{comma_to_array_or_null(field:cc)}",
+    "BCC": "{comma_to_array_or_null(field:bcc)}",
+    "Data": "{string_to_hash(field.data)}",
+    "AddRecipientsToList": "{string_to_boolean(field.addRecipientsToList)}"
+  },
+  "response": {
+    "success": "",
+    "error": ""
+  }
+}
