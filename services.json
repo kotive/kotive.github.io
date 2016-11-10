@@ -29,6 +29,10 @@
             "service": "constantcontact"
         },
         {
+            "name": "Currency layer",
+            "service": "currencylayer"
+        },
+        {
             "name": "Desk",
             "service": "desk"
         },
