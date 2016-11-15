@@ -36,7 +36,7 @@
       "properties": {
         "parameter": "email",
         "fieldType": "email",
-        "helptext": "Email address of the prospect you want to add the the campaign."
+        "helptext": "Email address of the prospect you want to add to the campaign."
       },
       "readonly": false,
       "required": false,
@@ -47,7 +47,7 @@
       "properties": {
         "parameter": "firstname",
         "fieldType": "text",
-        "helptext": "Firstname of the prospect you want to add the the campaign."
+        "helptext": "Firstname of the prospect you want to add to the campaign."
       },
       "readonly": false,
       "required": false,
@@ -58,7 +58,7 @@
       "properties": {
         "parameter": "lastname",
         "fieldType": "text",
-        "helptext": "Firstname of the prospect you want to add the the campaign."
+        "helptext": "Firstname of the prospect you want to add to the campaign."
       },
       "readonly": false,
       "required": false,
