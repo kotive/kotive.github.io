@@ -29,6 +29,10 @@
             "service": "constantcontact"
         },
         {
+            "name": "Currency layer",
+            "service": "currencylayer"
+        },
+        {
             "name": "Desk",
             "service": "desk"
         },
@@ -77,6 +81,10 @@
             "service": "hipchat"
         },
         {
+            "name": "Hunter",
+            "service": "hunter"
+        },
+        {
             "name": "IBM Watson",
             "service": "ibmwatson"
         },
@@ -105,8 +113,16 @@
             "service": "mixpanel"
         },
         {
+            "name": "Numverify",
+            "service": "numverify"
+        },
+        {
             "name": "PDF",
             "service": "pdf"
+        },
+        {
+            "name": "Reply",
+            "service": "reply"
         },
         {
             "name": "Salesforce",
@@ -155,6 +171,10 @@
         {
             "name": "Webhook",
             "service": "webhook"
+        },
+        {
+            "name": "Woodpecker",
+            "service": "woodpecker"
         }
     ]
 }

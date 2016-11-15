@@ -1,0 +1,28 @@
+{
+  "name": "Get statistics for lists",
+  "description": "Get comprehensive summary statistics for each list in your account including subscriber counts across active, unsubscribed, deleted and bounced as well as time-based data like new subscribers.",
+  "documentation": "https://www.campaignmonitor.com/api/lists/#list_stats",
+  "fields": [
+    {
+      "label": "List ID",
+      "properties": {
+        "parameter": "listId",
+        "fieldType": "text",
+        "helptext": "The unique ID of the list you want the stats for. Go into the list in your account and click the 'change name/type' link below your list name. The 'API Subscriber List ID' is the ID you're looking for."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Bearer {auth.oauth2Token}"
+  },
+  "method": "GET",
+  "endpoint": "/lists/{field.listId}/stats.json",
+  "request": {},
+  "response": {
+    "success": "",
+    "error": ""
+  }
+}

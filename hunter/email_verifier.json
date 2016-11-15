@@ -1,0 +1,25 @@
+{
+  "name": "Verify an email",
+  "description": "Verify the deliverability of an email address",
+  "documentation": "https://hunter.io/api/docs#email-verifier",
+  "fields": [
+    {
+      "label": "Email address",
+      "properties": {
+        "parameter": "email",
+        "fieldType": "email",
+        "helptext": "Provide the email address that needs to be verified"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "method": "GET",
+    "endpoint": "/email-verifier?email={field.email}&api_key={auth.field.apikey}",
+    "request": {},
+    "response": {
+        "success": "",
+        "error": ""
+    }
+}
