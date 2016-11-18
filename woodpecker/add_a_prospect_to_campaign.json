@@ -1,8 +1,19 @@
 {
-  "name": "Edit prospect data",
-  "description": "Edit prospect data.",
+  "name": "Add a prospect to a campaign",
+  "description": "Add a prospect to a campaign",
   "documentation": "http://help.woodpecker.co/article/16-api-docs",
   "fields": [
+    {
+      "label": "Campaign id",
+      "properties": {
+        "parameter": "campaignId",
+        "fieldType": "text",
+        "helptext": "Provide the campaign id of the campaign you want to add the prospect to."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
     {
       "label": "Update",
       "properties": {
@@ -21,17 +32,6 @@
       "visible": true
     },
     {
-      "label": "Prospect id",
-      "properties": {
-        "parameter": "prospectId",
-        "fieldType": "text",
-        "helptext": "Provide the id of the prospect's data you want to edit."
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
-    },
-    {
       "label": "Email",
       "properties": {
         "parameter": "email",
@@ -39,7 +39,7 @@
         "helptext": "Email address of the prospect you want to add to the campaign."
       },
       "readonly": false,
-      "required": false,
+      "required": true,
       "visible": true
     },
     {
@@ -80,7 +80,7 @@
       "properties": {
         "parameter": "industry",
         "fieldType": "text",
-        "helptext": "Which industry are they in?"
+        "helptext": "Title of the person, e.g. 'VP of Marketing'."
       },
       "readonly": false,
       "required": false,
@@ -91,7 +91,7 @@
       "properties": {
         "parameter": "title",
         "fieldType": "text",
-        "helptext": "Title of the prospect, e.g. 'VP of Marketing'."
+        "helptext": "Title of the prospect."
       },
       "readonly": false,
       "required": false,
@@ -237,12 +237,14 @@
     "Content-Type": "application/json"
   },
   "method": "POST",
-  "endpoint": "/rest/v1/add_prospects_list",
+  "endpoint": "/rest/v1/add_prospects_campaign",
   "request": {
+    "campaign": {
+      "campaign_id":"{field.campaignId}"
+      },
     "update": "{string_to_boolean(field.update)}",
     "prospects": [
       {
-        "id":"{field.prospectId}",
         "email":"{field.email}",
         "title":"{field.title}",
         "first_name":"{field.firstname}",
