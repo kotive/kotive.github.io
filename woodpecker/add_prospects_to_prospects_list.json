@@ -25,7 +25,7 @@
       "properties": {
         "parameter": "email",
         "fieldType": "email",
-        "helptext": "Email address of the prospect you want to add the the prospects list."
+        "helptext": "Email address of the prospect you want to add to the prospects list."
       },
       "readonly": false,
       "required": true,
@@ -36,7 +36,7 @@
       "properties": {
         "parameter": "firstname",
         "fieldType": "text",
-        "helptext": "Firstname of the prospect you want to add the the prospects list."
+        "helptext": "Firstname of the prospect you want to add to the prospects list."
       },
       "readonly": false,
       "required": false,
@@ -47,7 +47,7 @@
       "properties": {
         "parameter": "lastname",
         "fieldType": "text",
-        "helptext": "Firstname of the prospect you want to add the the prospects list."
+        "helptext": "Firstname of the prospect you want to add to the prospects list."
       },
       "readonly": false,
       "required": false,
