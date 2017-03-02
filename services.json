@@ -17,6 +17,10 @@
             "service": "basecamp2"
         },
         {
+            "name": "Calculator",
+            "service": "calculator"
+        },
+        {
             "name": "Campaign Monitor",
             "service": "campaignmonitor"
         },
@@ -107,10 +111,6 @@
         {
             "name": "Mandrill",
             "service": "mandrill"
-        },
-        {
-            "name": "Maths",
-            "service": "maths"
         },
         {
             "name": "Mixpanel",
