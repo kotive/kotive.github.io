@@ -31,7 +31,7 @@
       "properties": {
         "parameter": "template",
         "fieldType": "textarea",
-        "helptext": "<strong>Very important:</strong> the character <strong>${i}</strong> will be searched for and replaced with each item in the list.<br/>E.g. If the first item in the list is the number <strong>7</strong> then the template text `It has been ${i} days since...` will become `It has been 7 days since...`<br/>If you want to make use of <a href='http://www.kotive.com/how-to/design-taskflows/add-dynamic-field-tags/' target='_blank'>dynamic field tags</a> then use double <strong>{{</strong> brackets. E.g. `{field.value:${i}}` should be `{{field.value:${{i}}}}`",
+        "helptext": "<strong>Very important:</strong> the character <strong>${i}</strong> will be searched for and replaced with each item in the list.<br/>E.g. If the first item in the list is the number <strong>7</strong> then the template text `It has been ${i} days since...` will become `It has been 7 days since...`<br/><strong>Note: </strong>if you want to make use of <a href='http://www.kotive.com/how-to/design-taskflows/add-dynamic-field-tags/' target='_blank'>dynamic field tags</a> then use double <strong>{{</strong> brackets.<br/>E.g. <strong>{field.value:${i}}</strong> should be <strong>{{field.value:${{i}}}}</strong>",
         "default": ""
       },
       "readonly": false,
