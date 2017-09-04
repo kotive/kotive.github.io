@@ -32,7 +32,8 @@
   ],
   "headers": {
     "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "Accept": "text/plain; charset=UTF-8"
   },
   "method": "POST",
   "endpoint": "/group/{group.id}/process/{taskflow.id}/{field.action}",
