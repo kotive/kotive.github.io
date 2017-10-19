@@ -69,6 +69,10 @@
             "service": "googleanalytics"
         },
         {
+            "name": "Google Calendar",
+            "service": "googlecalendar"
+        },
+        {
             "name": "Google Contacts",
             "service": "googlecontacts"
         },
