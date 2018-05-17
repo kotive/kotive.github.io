@@ -1,0 +1,29 @@
+{
+  "name": "Convert dates in text",
+  "description": "Convert dates found in text.",
+  "documentation": "http://www.kotive.com/how-to/integrate/dateutilities/",
+  "fields": [
+    {
+      "label": "Text",
+      "properties": {
+        "parameter": "text",
+        "fieldType": "textarea",
+        "helptext": "All occurences of <strong>convertDates(</strong>*<strong>)</strong> found in the text will be converted to the new date format.<br/>E.g. '<em>He was born convertDates(December 17, 2000^MMMM D, YYYY^DDMMYY)</em>'' will be return in '<em>He was born 17122000</em>', where the first parameter is the date, the second is the current format and the third is the new format.<br/><strong>Important:</strong> Note that the parameters are separated by <strong>^</strong>.<br/>Refer to <a href='http://momentjs.com/docs/#/displaying/format/' target='_blank'>date formats</a> for more info."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "x-api-key": "{auth.taasApiKey}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/convertDatesInText",
+  "request": {
+    "text": "{field.text}"
+  },
+  "response": {}
+}
