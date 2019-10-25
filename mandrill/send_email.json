@@ -65,7 +65,7 @@
       "html":"{field.message}",
       "subject":"{field.subject}",
       "from_email":"{field.fromEmail}",
-      "from_name":"{field.fromName} (via Kotive)",
+      "from_name":"{field.fromName}",
       "to": "{comma_to_hash_array(field.to, email)}"
     }
   },

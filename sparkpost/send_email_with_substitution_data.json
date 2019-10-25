@@ -100,7 +100,7 @@
     "content": {
       "from": {
         "email": "{field.fromEmail}",
-        "name": "{field.fromName} (via Kotive)"
+        "name": "{field.fromName}"
       },
       "subject": "{field.subject}",
       "html": "{field.message}"
