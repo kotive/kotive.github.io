@@ -1,0 +1,43 @@
+{
+  "name": "Generate a random number",
+  "description": "Generate a random number between a minimum and maximum",
+  "documentation": "http://www.kotive.com/how-to/integrate/calculator/",
+  "fields": [
+    {
+      "label": "Minimum value",
+      "properties": {
+        "parameter": "min",
+        "fieldType": "number",
+        "helptext": "Greater than this number",
+        "default": "0"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Maximum value",
+      "properties": {
+        "parameter": "max",
+        "fieldType": "number",
+        "helptext": "Less than this number",
+        "default": "100"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "x-api-key": "{auth.taasApiKey}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/random",
+  "request": {
+    "min": "{field.min}",
+    "max": "{field.max}"
+  },
+  "response": {}
+}
