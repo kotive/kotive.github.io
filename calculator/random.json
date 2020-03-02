@@ -1,10 +1,10 @@
 {
   "name": "Generate a random number",
-  "description": "Generate a random number between a minimum and maximum",
+  "description": "Generate a random number between a minimum and maximum number",
   "documentation": "http://www.kotive.com/how-to/integrate/calculator/",
   "fields": [
     {
-      "label": "Minimum value",
+      "label": "Minimum number",
       "properties": {
         "parameter": "min",
         "fieldType": "number",
@@ -16,7 +16,7 @@
       "visible": true
     },
     {
-      "label": "Maximum value",
+      "label": "Maximum number",
       "properties": {
         "parameter": "max",
         "fieldType": "number",
