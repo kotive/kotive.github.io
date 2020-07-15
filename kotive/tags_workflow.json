@@ -1,0 +1,50 @@
+{
+  "name": "Tag/untag the current workflow",
+  "description": "Tag and/or untag the current workflow with the listed tags",
+  "documentation": "http://www.kotive.com/how-to/integrate/kotive",
+  "fields": [
+    {
+      "label": "Tag with these tags",
+      "properties": {
+        "parameter": "taggedTags",
+        "fieldType": "text",
+        "helptext": "A list of the tags with which the workflow will be tagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Untag with these tags",
+      "properties": {
+        "parameter": "untaggedTags",
+        "fieldType": "text",
+        "helptext": "A list of the tags with which the workflow will be untagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
+    "Content-Type": "application/json",
+    "Accept": "text/plain; charset=UTF-8"
+  },
+  "method": "POST",
+  "endpoint": "/group/{group.id}/tags/taguntag/tags/taskflow",
+  "request": {
+    "tag": {
+      "tags": "{comma_to_array(field.taggedTags)}",
+      "itemIds": "{comma_to_array_of_numbers({process.id})}"
+    },
+    "untag": {
+      "tags": "{comma_to_array(field.untaggedTags)}",
+      "itemIds": "{comma_to_array_of_numbers({process.id})}"
+    }
+},
+  "response": {
+    "success": {},
+    "error": {}
+  }
+}

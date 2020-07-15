@@ -11,8 +11,7 @@
         "choices": [
             {"key": "contact", "value": "Contacts"},
             {"key": "group", "value": "Groups"},
-            {"key": "person", "value": "People"},
-            {"key": "taskflow", "value": "Workflows"}
+            {"key": "person", "value": "People"}
         ]
       },
       "readonly": false,
@@ -20,18 +19,18 @@
       "visible": true
     },
     {
-      "label": "Items to be tagged...",
+      "label": "Items to be tagged and/or untagged...",
       "properties": {
-        "parameter": "taggedItemIds",
+        "parameter": "itemIds",
         "fieldType": "text",
-        "helptext": "A list of the ids of the items to be tagged (separated by commas)."
+        "helptext": "A list of the ids of the items to be tagged/untagged (separated by commas)."
       },
       "readonly": false,
       "required": true,
       "visible": true
     },
     {
-      "label": "With which tags?",
+      "label": "Tagged with these tags",
       "properties": {
         "parameter": "taggedTags",
         "fieldType": "text",
@@ -42,18 +41,7 @@
       "visible": true
     },
     {
-      "label": "Items to be untagged...",
-      "properties": {
-        "parameter": "untaggedItemIds",
-        "fieldType": "text",
-        "helptext": "A list of the ids of the items to be untagged (separated by commas)."
-      },
-      "readonly": false,
-      "required": true,
-      "visible": true
-    },
-    {
-      "label": "With which tags?",
+      "label": "Untagged with these tags",
       "properties": {
         "parameter": "untaggedTags",
         "fieldType": "text",
@@ -74,11 +62,11 @@
   "request": {
     "tag": {
       "tags": "{comma_to_array(field.taggedTags)}",
-      "itemIds": "{comma_to_array_of_numbers(field.taggedItemIds)}"
+      "itemIds": "{comma_to_array_of_numbers(field.itemIds)}"
     },
     "untag": {
       "tags": "{comma_to_array(field.untaggedTags)}",
-      "itemIds": "{comma_to_array_of_numbers(field.untaggedItemIds)}"
+      "itemIds": "{comma_to_array_of_numbers(field.itemIds)}"
     }
 },
   "response": {
