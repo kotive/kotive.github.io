@@ -36,11 +36,11 @@
   "request": {
     "tag": {
       "tags": "{comma_to_array(field.taggedTags)}",
-      "itemIds": "{comma_to_array_of_numbers(process.id)}"
+      "itemIds": "{comma_to_array_of_numbers(taskflow.id)}"
     },
     "untag": {
       "tags": "{comma_to_array(field.untaggedTags)}",
-      "itemIds": "{comma_to_array_of_numbers(process.id)}"
+      "itemIds": "{comma_to_array_of_numbers(taskflow.id)}"
     }
 },
   "response": {
