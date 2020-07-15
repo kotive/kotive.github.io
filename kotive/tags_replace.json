@@ -1,0 +1,88 @@
+{
+  "name": "Tags: replace existing tags with new ones",
+  "description": "Tag and Untag with the listed tags",
+  "documentation": "http://www.kotive.com/how-to/integrate/kotive",
+  "fields": [
+    {
+      "label": "What kind of items will be tagged/untagged?",
+      "properties": {
+        "parameter": "kind",
+        "fieldType": "radio",
+        "choices": [
+            {"key": "contact", "value": "Contacts"},
+            {"key": "group", "value": "Groups"},
+            {"key": "person", "value": "People"},
+            {"key": "taskflow", "value": "Workflows"}
+        ]
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Items to be tagged...",
+      "properties": {
+        "parameter": "taggedItemIds",
+        "fieldType": "text",
+        "helptext": "A list of the ids of the items to be tagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "With which tags?",
+      "properties": {
+        "parameter": "taggedTags",
+        "fieldType": "text",
+        "helptext": "A list of the tags with which the items will be tagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Items to be untagged...",
+      "properties": {
+        "parameter": "untaggedItemIds",
+        "fieldType": "text",
+        "helptext": "A list of the ids of the items to be untagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "With which tags?",
+      "properties": {
+        "parameter": "untaggedTags",
+        "fieldType": "text",
+        "helptext": "A list of the tags with which the items will be untagged (separated by commas)."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
+    "Content-Type": "application/json",
+    "Accept": "text/plain; charset=UTF-8"
+  },
+  "method": "POST",
+  "endpoint": "/group/{group.id}/tags/replace/tags/{field.kind}",
+  "request": {
+    "tag": {
+      "tags": "{comma_to_array(field.taggedTags)}",
+      "itemIds": "{comma_to_array_of_numbers(field.taggedItemIds)}"
+    },
+    "untag": {
+      "tags": "{comma_to_array(field.untaggedTags)}",
+      "itemIds": "{comma_to_array_of_numbers(field.untaggedItemIds)}"
+    }
+},
+  "response": {
+    "success": {},
+    "error": {}
+  }
+}
