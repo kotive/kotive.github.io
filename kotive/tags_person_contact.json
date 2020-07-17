@@ -1,16 +1,15 @@
 {
-  "name": "Tag/untag a group, person or contact",
-  "description": "Tag and Untag a group, person or contact with the listed tags",
+  "name": "Tag/untag a person or contact",
+  "description": "Tag and Untag a person or contact with the listed tags",
   "documentation": "http://www.kotive.com/how-to/integrate/kotive",
   "fields": [
     {
-      "label": "What kind of items will be tagged/untagged?",
+      "label": "What will be tagged/untagged?",
       "properties": {
         "parameter": "kind",
         "fieldType": "radio",
         "choices": [
             {"key": "contact", "value": "Contacts"},
-            {"key": "group", "value": "Groups"},
             {"key": "person", "value": "People"}
         ]
       },
