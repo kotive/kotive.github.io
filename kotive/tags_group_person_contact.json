@@ -1,6 +1,6 @@
 {
-  "name": "Tags: replace existing tags with new ones",
-  "description": "Tag and Untag with the listed tags",
+  "name": "Tag/untag a group, person or contact",
+  "description": "Tag and Untag a group, person or contact with the listed tags",
   "documentation": "http://www.kotive.com/how-to/integrate/kotive",
   "fields": [
     {
@@ -19,7 +19,7 @@
       "visible": true
     },
     {
-      "label": "Items to be tagged and/or untagged...",
+      "label": "Ids of items to be tagged and/or untagged...",
       "properties": {
         "parameter": "itemIds",
         "fieldType": "text",
@@ -30,7 +30,7 @@
       "visible": true
     },
     {
-      "label": "Tagged with these tags",
+      "label": "Tag with these tags",
       "properties": {
         "parameter": "taggedTags",
         "fieldType": "text",
@@ -41,7 +41,7 @@
       "visible": true
     },
     {
-      "label": "Untagged with these tags",
+      "label": "Untag with these tags",
       "properties": {
         "parameter": "untaggedTags",
         "fieldType": "text",
@@ -58,7 +58,7 @@
     "Accept": "text/plain; charset=UTF-8"
   },
   "method": "POST",
-  "endpoint": "/group/{group.id}/tags/replace/tags/{field.kind}",
+  "endpoint": "/group/{group.id}/tags/taguntag/tags/{field.kind}",
   "request": {
     "tag": {
       "tags": "{comma_to_array(field.taggedTags)}",
@@ -68,7 +68,7 @@
       "tags": "{comma_to_array(field.untaggedTags)}",
       "itemIds": "{comma_to_array_of_numbers(field.itemIds)}"
     }
-},
+  },
   "response": {
     "success": {},
     "error": {}
