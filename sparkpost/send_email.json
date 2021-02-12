@@ -66,6 +66,10 @@
   "method": "POST",
   "endpoint": "/transmissions",
   "request": {
+    "options": {
+      "open_tracking": false,
+      "click_tracking": false
+    },
     "recipients": "{comma_to_hash_array(field.to, address)}",
     "content": {
       "from": {
