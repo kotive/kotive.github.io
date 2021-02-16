@@ -52,7 +52,7 @@
   "endpoint": "/group/{group.id}/messages?linkedRoles={find_and_replace(field.roles|^|,)}",
   "request": [
     {
-      "groupId": "{group.id}",
+      "groupId": "{string_to_number(group.id)}",
       "topic": "notifications",
       "content": "{field.message}",
       "updatedAt": "{string_to_number(0)}",
