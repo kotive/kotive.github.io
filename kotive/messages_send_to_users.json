@@ -8,7 +8,7 @@
       "properties": {
         "parameter": "userids",
         "fieldType": "text",
-        "helptext": "A list of the user IDs who will receive this message (separated by <strong>,</strong>).<br/><strong>Important</strong>: restricted to the users in the current group."
+        "helptext": "A list of the user IDs who will receive this message (separated by <strong>^</strong>).<br/><strong>Important</strong>: restricted to the users in the current group."
       },
       "readonly": false,
       "required": true,
@@ -58,7 +58,7 @@
       "updatedAt": "{string_to_number(0)}",
       "updatedBy": "{string_to_number(1)}",
       "inform": "{field.inform}",
-      "linkedTo": "{comma_to_array(find_and_replace(field.userids|^|,))}"
+      "linkedTo": "{kappie_to_array(field.userids)}"
     }
   ],
   "response": {
