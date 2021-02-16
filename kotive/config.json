@@ -27,5 +27,5 @@
       }
     ]
   },
-  "domain": "http://127.0.0.1:9000/api"
+  "domain": "https://webapp.kotive.com/api"
 }
