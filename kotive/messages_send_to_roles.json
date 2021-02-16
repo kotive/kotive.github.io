@@ -1,0 +1,67 @@
+{
+  "name": "Send a Message to Roles",
+  "description": "Send a Message to all people who have these Roles",
+  "documentation": "http://www.kotive.com/how-to/integrate/kotive",
+  "fields": [
+    {
+      "label": "Roles",
+      "properties": {
+        "parameter": "roles",
+        "fieldType": "text",
+        "helptext": "A list of the roles who will receive this message (separated by commas).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Type of Message",
+      "properties": {
+        "parameter": "inform",
+        "fieldType": "radio",
+        "choices": [
+            {"key": "email", "value": "Email only"},
+            {"key": "display", "value": "Display in profile only"},
+            {"key": "all", "value": "Email and display in profile"}
+        ],
+        "default": "all",
+        "helptext": "How the users are subscribed"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Message",
+      "properties": {
+        "parameter": "message",
+        "fieldType": "textarea",
+        "helptext": "The message to be sent..."
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/group/{group.id}/messages?linkedRoles={find_and_replace(field.roles|^|,)}",
+  "request": [
+    {
+      "groupId": "{group.id}",
+      "topic": "notifications",
+      "content": "{field.message}",
+      "updatedAt": 0,
+      "updatedBy": 0,
+      "inform": "{field.inform}"
+    }
+  ],
+  "response": {
+    "success": {},
+    "error": {}
+  }
+}

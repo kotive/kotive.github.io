@@ -72,6 +72,7 @@ Helper tags for when you need to transform data or prep auth details:
 - **`{comma_to_hash_array(field.to, email)}`** [(example)](/mandrill/send_email.json#L69)
 - **`{json_to_xml(field.xmlpayload)}`**  [(example)](/googlesheets/add_row.json#L48)
 - **`{generate_uuid_v4}`**  [(example)](/googleanalytics/track_event.json#L63)
+- **`{find_and_replace(field.to|find|replacewith)}`** [(example)](/kotive/messages_send_to_roles.json#L52)
 
 _You can add many tasks in your `/awesomeapp/` folder by creating a copy of this task config, renaming it and updating its properties._
 
