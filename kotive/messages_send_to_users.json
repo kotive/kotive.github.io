@@ -58,7 +58,7 @@
       "updatedAt": "{string_to_number(0)}",
       "updatedBy": "{string_to_number(1)}",
       "inform": "{field.inform}",
-      "linkedTo": "{find_and_replace(field.userids|^|,)}"
+      "linkedTo": "{comma_to_array(find_and_replace(field.userids|^|,))}"
     }
   ],
   "response": {
