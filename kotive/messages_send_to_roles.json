@@ -56,7 +56,7 @@
       "topic": "notifications",
       "content": "{field.message}",
       "updatedAt": 0,
-      "updatedBy": 0,
+      "updatedBy": 1,
       "inform": "{field.inform}"
     }
   ],
