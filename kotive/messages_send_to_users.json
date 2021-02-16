@@ -58,7 +58,7 @@
       "updatedAt": "{string_to_number(0)}",
       "updatedBy": "{string_to_number(1)}",
       "inform": "{field.inform}",
-      "linkedTo": "{kappie_to_array(field.userids)}"
+      "linkedTo": "{kappie_to_array_of_numbers(field.userids)}"
     }
   ],
   "response": {
