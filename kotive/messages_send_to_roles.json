@@ -55,8 +55,8 @@
       "groupId": "{group.id}",
       "topic": "notifications",
       "content": "{field.message}",
-      "updatedAt": "{string_to_number(0)}",
-      "updatedBy": "{string_to_number(0)}",
+      "updatedAt": 0,
+      "updatedBy": "0",
       "inform": "{field.inform}"
     }
   ],
