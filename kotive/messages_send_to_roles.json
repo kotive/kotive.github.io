@@ -8,7 +8,7 @@
       "properties": {
         "parameter": "roles",
         "fieldType": "text",
-        "helptext": "A list of the roles who will receive this message (separated by commas).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
+        "helptext": "A list of the roles who will receive this message (separated by <strong>^</strong>).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
       },
       "readonly": false,
       "required": true,
@@ -25,7 +25,7 @@
             {"key": "all", "value": "Email and display in profile"}
         ],
         "default": "all",
-        "helptext": "How the users are subscribed"
+        "helptext": "Should the Message be distributed as an email only, displayed in the UI or both."
       },
       "readonly": false,
       "required": true,
@@ -55,8 +55,8 @@
       "groupId": "{group.id}",
       "topic": "notifications",
       "content": "{field.message}",
-      "updatedAt": 0,
-      "updatedBy": 0,
+      "updatedAt": "{string_to_number(0)}",
+      "updatedBy": "{string_to_number(0)}",
       "inform": "{field.inform}"
     }
   ],
