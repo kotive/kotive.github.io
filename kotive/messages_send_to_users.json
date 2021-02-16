@@ -1,14 +1,14 @@
 {
-  "name": "Send a Message to Roles",
-  "description": "Send a Message to all people who have these Roles",
+  "name": "Send a Message to People",
+  "description": "Send a Message to selected people",
   "documentation": "http://www.kotive.com/how-to/integrate/kotive",
   "fields": [
     {
-      "label": "Roles",
+      "label": "List of User IDs",
       "properties": {
-        "parameter": "roles",
+        "parameter": "userids",
         "fieldType": "text",
-        "helptext": "A list of the roles who will receive this message (separated by <strong>,</strong>).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
+        "helptext": "A list of the user IDs who will receive this message (separated by <strong>,</strong>).<br/><strong>Important</strong>: restricted to the users in the current group."
       },
       "readonly": false,
       "required": true,
@@ -49,7 +49,7 @@
     "Accept": "application/json"
   },
   "method": "POST",
-  "endpoint": "/group/{group.id}/messages?linkedRoles={find_and_replace(field.roles|^|,)}",
+  "endpoint": "/group/{group.id}/messages",
   "request": [
     {
       "groupId": "{string_to_number(group.id)}",
@@ -57,7 +57,8 @@
       "content": "{field.message}",
       "updatedAt": "{string_to_number(0)}",
       "updatedBy": "{string_to_number(1)}",
-      "inform": "{field.inform}"
+      "inform": "{field.inform}",
+      "linkedTo": "{find_and_replace(field.userids|^|,)}"
     }
   ],
   "response": {
