@@ -8,7 +8,7 @@
       "properties": {
         "parameter": "roles",
         "fieldType": "text",
-        "helptext": "A list of the roles who will receive this message (separated by <strong>,</strong>).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
+        "helptext": "A list of the roles who will receive this message (separated by <strong>^</strong>).<br/><strong>Important</strong>: all people who have at least one of these roles, in the current group and all its child groups, will receive the Message."
       },
       "readonly": false,
       "required": true,
