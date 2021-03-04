@@ -1,0 +1,45 @@
+{
+    "name": "Send a repliable SMS",
+    "description": "Reach any customer on any mobile phone, anywhere.",
+    "documentation": "https://www.bulksms.com/developer/json/v1/#tag/Message%2Fpaths%2F~1messages%2Fpost",
+    "fields": [
+        {
+            "label": "Send to these mobile numbers",
+            "properties": {
+                "parameter": "to",
+                "fieldType": "text",
+                "helptext": "Start with the country code (not zero), no spaces or other non-numeric characters. <strong>+</strong> infront of the number is optional.<br/>Add more than one mobile number and separate it with a comma, e.g. +44777777777,80555555555"
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        },
+        {
+            "label": "Message",
+            "properties": {
+                "parameter": "message",
+                "fieldType": "textarea",
+                "helptext": "Limit the number of characters to less than 160 if you want to restrict it to a single message."
+            },
+            "readonly": false,
+            "required": true,
+            "visible": true
+        }
+    ],
+    "headers": {
+        "Authorization": "Basic {base64_encode_username_password(auth.field.token:auth.field.secret)}",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    "method": "POST",
+    "endpoint": "/messages",
+    "request": {
+        "from": { "type": "REPLIABLE" },
+        "to": "{comma_to_array(field.to)}",
+        "body":"{field.message}"
+    },
+    "response": {
+        "success": {},
+        "error": {}
+    }
+}

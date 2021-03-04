@@ -1,0 +1,30 @@
+{
+  "name": "Bulksms",
+  "description": "Get your message across. A leading provider of business messaging solutions offering two-way SMS communication from anywhere at any time.",
+  "auth":{
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "Token Id",
+        "properties": {
+          "parameter": "token",
+          "fieldType": "text",
+          "helptext": "The Token Id of your API Token. Found in BulkSMS.com > Settings > Developer Settings"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      },{
+        "label": "Token Secret",
+        "properties": {
+          "parameter": "secret",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.bulksms.com/v1"
+}
