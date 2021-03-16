@@ -1,0 +1,47 @@
+{
+  "name": "Start a new Workflow",
+  "description": "Initiate a new Workflow in Kotive",
+  "documentation": "http://www.kotive.com/how-to/integrate/kotive",
+  "fields": [
+    {
+      "label": "Workflow ID",
+      "properties": {
+        "parameter": "workflowId",
+        "fieldType": "text",
+        "helptext": "ID of the Workflow to start"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+    {
+      "label": "Payload",
+      "properties": {
+        "parameter": "payload",
+        "fieldType": "textarea",
+        "helptext": "JSON data to start a Workflow. The <strong>id_t</strong> needs to be updated with the above <em>Workflow ID</em>.",
+        "default": "{{\"id\": -1, \"id_process\": 0, \"id_owning_process\": -1, \"id_t\": 0, \"fields\": [{{ \"id\": \"-1_..._...\", \"value\": \"\"}}]}}]",
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "POST",
+  "endpoint": "/hub/q/add/processes",
+  "request": [
+    {
+      "uri": "/hub/group/{group.id}/processes/{field.workflowId}",
+      "payload": "{field.payload}"
+    }
+  ],
+  "response": {
+    "success": {},
+    "error": {}
+  }
+}

@@ -49,7 +49,7 @@
     "Accept": "application/json"
   },
   "method": "POST",
-  "endpoint": "/group/{group.id}/messages",
+  "endpoint": "/api/group/{group.id}/messages",
   "request": [
     {
       "groupId": "{string_to_number(group.id)}",

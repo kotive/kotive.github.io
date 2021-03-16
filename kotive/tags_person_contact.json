@@ -57,7 +57,7 @@
     "Accept": "text/plain; charset=UTF-8"
   },
   "method": "POST",
-  "endpoint": "/group/{group.id}/tags/taguntag/tags/{field.kind}",
+  "endpoint": "/api/group/{group.id}/tags/taguntag/tags/{field.kind}",
   "request": {
     "tag": {
       "tags": "{comma_to_array(field.taggedTags)}",
