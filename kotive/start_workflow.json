@@ -13,14 +13,14 @@
       "readonly": false,
       "required": true,
       "visible": true
-    }
+    },
     {
       "label": "Payload",
       "properties": {
         "parameter": "payload",
         "fieldType": "textarea",
         "helptext": "JSON data to start a Workflow. The <strong>id_t</strong> needs to be updated with the above <em>Workflow ID</em>.",
-        "default": "{{\"id\": -1, \"id_process\": 0, \"id_owning_process\": -1, \"id_t\": 0, \"fields\": [{{ \"id\": \"-1_..._...\", \"value\": \"\"}}]}}]",
+        "default": "{{\"id\": -1, \"id_process\": 0, \"id_owning_process\": -1, \"id_t\": 0, \"fields\": [{{ \"id\": \"-1_..._...\", \"value\": \"\"}}]}}"
       },
       "readonly": false,
       "required": true,
