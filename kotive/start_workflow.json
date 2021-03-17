@@ -37,7 +37,7 @@
   "request": [
     {
       "uri": "/hub/group/{group.id}/processes/{field.workflowId}",
-      "payload": "{string_to_hash(field.payload)}"
+      "payload": "{json_stringify(field.payload)}"
     }
   ],
   "response": {
