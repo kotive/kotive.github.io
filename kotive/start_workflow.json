@@ -36,7 +36,7 @@
   "endpoint": "/hub/q/add/processes",
   "request": [
     {
-      "uri": "/hub/group/{group.id}/processes/{field.workflowId}",
+      "uri": "/group/{group.id}/processes/{field.workflowId}",
       "payload": "{json_stringify(field.payload)}"
     }
   ],
