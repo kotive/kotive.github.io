@@ -1,0 +1,61 @@
+{
+  "name": "Run a Kotive Bespoke task",
+  "description": "Execute a task available in Kotive Bespoke",
+  "documentation": "http://www.kotive.com/how-to/integrate/kotive",
+  "fields": [
+    {
+        "label": "Bespoke URL",
+        "properties": {
+            "parameter": "bespoke_url",
+            "fieldType": "text",
+            "helptext": "The URL of the bespoke task. Exclude <strong>https://webap.kotive.com/bespoke/</strong>"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+    },
+    {
+        "label": "Method",
+        "properties": {
+            "parameter": "method",
+            "fieldType": "radio",
+            "choices": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+            ],
+            "default": "POST",
+            "classes": "inline"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+    },
+    {
+      "label": "Payload",
+      "properties": {
+        "parameter": "payload",
+        "fieldType": "textarea",
+        "helptext": "JSON data to send to the bespoke task",
+        "default": "{\n  \"your\": \"JSON data here\"\n}"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "headers": {
+    "Authorization": "Basic {base64_encode_username_password(auth.field.username:auth.field.password)}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "method": "{field.method}",
+  "endpoint": "https://webapp.kotive.com/bespoke/{encode_uri(field.bespoke_url)}",
+  "request": "{string_to_hash_or_null(field.payload)}",
+  "response": {
+    "success": {},
+    "error": {}
+  }
+}
