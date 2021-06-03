@@ -8,7 +8,7 @@
         "properties": {
             "parameter": "bespoke_url",
             "fieldType": "text",
-            "helptext": "The URL of the bespoke task. Exclude <strong>https://webap.kotive.com/bespoke/</strong>"
+            "helptext": "The URL of the bespoke task. Exclude <strong>https://webapp.kotive.com/bespoke/</strong>"
         },
         "readonly": false,
         "required": true,
