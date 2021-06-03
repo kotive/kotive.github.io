@@ -52,7 +52,7 @@
     "Accept": "application/json"
   },
   "method": "{field.method}",
-  "endpoint": "https://webapp.kotive.com/bespoke/{encode_uri(field.bespoke_url)}",
+  "endpoint": "/bespoke/{encode_uri(field.bespoke_url)}",
   "request": "{string_to_hash_or_null(field.payload)}",
   "response": {
     "success": {},
