@@ -145,6 +145,10 @@
             "service": "pdf"
         },
         {
+            "name": "Postmark",
+            "service": "postmark"
+        },
+        {
             "name": "Reply",
             "service": "reply"
         },

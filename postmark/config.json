@@ -1,0 +1,20 @@
+{
+  "name": "Postmark",
+  "description": "Reliable delivery for your transactional emails.",
+  "auth": {
+    "method": "Custom",
+    "fields": [
+      {
+        "label": "API key",
+        "properties": {
+          "parameter": "apikey",
+          "fieldType": "text"
+        },
+        "readonly": false,
+        "required": true,
+        "visible": true
+      }
+    ]
+  },
+  "domain": "https://api.postmarkapp.com"
+}

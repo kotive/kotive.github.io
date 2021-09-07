@@ -1,0 +1,132 @@
+{
+  "name": "Send a transactional email",
+  "description": "Send a new transactional email.",
+  "documentation": "https://postmarkapp.com/developer/api/email-api#send-a-single-email",
+  "fields": [
+    {
+      "label": "From name",
+      "properties": {
+        "parameter": "fromName",
+        "fieldType": "text"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "From email",
+      "properties": {
+        "parameter": "fromEmail",
+        "fieldType": "email",
+        "helptext": "The email address to send this notification from"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Reply To email",
+      "properties": {
+        "parameter": "replyToEmail",
+        "fieldType": "email",
+        "helptext": "The email address which recipients will reply to"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "To",
+      "properties": {
+        "parameter": "to",
+        "fieldType": "text",
+        "helptext": "A comma separated list of email addresses"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Subject",
+      "properties": {
+        "parameter": "subject",
+        "fieldType": "text"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Message",
+      "properties": {
+        "parameter": "message",
+        "fieldType": "textarea",
+        "helptext": "Message can contain HTML for formatting"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Tag",
+      "properties": {
+        "parameter": "tag",
+        "fieldType": "text",
+        "helptext": "Tag that allows you to categorize outgoing emails and get detailed statistics"
+      },
+      "readonly": false,
+      "required": false,
+      "visible": true
+    },
+    {
+      "label": "Track when this email is opened",
+      "properties": {
+          "parameter": "trackOpens",
+          "fieldType": "radio",
+          "choices": [
+              {"key": "true", "value": "Yes"},
+              {"key": "false", "value": "No"}
+          ],
+          "default": "false",
+          "classes": "inline"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    },
+    {
+      "label": "Track when links in this email are clicked",
+      "properties": {
+          "parameter": "trackLinks",
+          "fieldType": "radio",
+          "choices": [
+              {"key": "HtmlAndText", "value": "Yes"},
+              {"key": "None", "value": "No"}
+          ],
+          "default": "None",
+          "classes": "inline"
+      },
+      "readonly": false,
+      "required": true,
+      "visible": true
+    }
+  ],
+  "method": "POST",
+  "headers": {
+    "X-Postmark-Server-Token": "{auth.field.apikey}",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "endpoint": "/email",
+  "request": {
+    "HtmlBody":"{field.message}",
+    "Subject":"{field.subject}",
+    "From":"{field.fromName} <{field.fromEmail}>",
+    "To": "{field.to}",
+    "ReplyTo": "{field.replyToEmail}",
+    "Tag": "{field.tag}",
+    "TrackOpens": "{string_to_boolean(field.trackOpens)}",
+    "TrackLinks": "{field.trackLinks}"
+  },
+  "response": {}
+}
